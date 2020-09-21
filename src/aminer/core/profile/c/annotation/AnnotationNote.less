@@ -1,0 +1,37 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.annotate {
+  // annotation zone
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+
+  // position: absolute; right: 0; bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+
+  :global {
+    .modifiers {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      // margin-left: 5px;
+    }
+
+    .btn {
+      margin-top: 0px;
+      margin-right: 12px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: right;
+
+      a { margin-left: 8px; }
+    }
+  }
+}

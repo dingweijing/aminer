@@ -1,0 +1,97 @@
+.aminer-main-wrap() {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.aminer-main-bigwrap() {
+  max-width: 2000px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.match-text(@fontSize: 13px, @color: @color-orange, @fontWeight: bold, @fontStyle: italic) {
+  font-size: @fontSize;
+  color: @color;
+  font-style: @fontStyle;
+  font-weight: @fontWeight;
+}
+.tiny-number(@fontSize: 13px) {
+  font-family: monospace;
+  font-size: @fontSize;
+}
+.btn-style-1 {
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-style-2 {
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn-style-confirm(@fontSize: 14px, @lineHeight: 30px) {
+  background: #418bca;
+  color: #fff;
+  .btn-style-2();
+  font-size: @fontSize;
+  line-height: @lineHeight;
+  padding: 0 10px;
+}
+.btn-style-cancel(@fontSize: 14px, @lineHeight: 30px) {
+  background: #eee;
+  color: #8d8d8d;
+  .btn-style-2();
+  font-size: @fontSize;
+  line-height: @lineHeight;
+  padding: 0 10px;
+}
+
+.flex-layout(@justifyContent: space-between, @alignItems: center) {
+  display: flex;
+  justify-content: @justifyContent;
+  align-items: @alignItems;
+}
+
+.sider-normal(@width: 200px) {
+  display: block;
+  width: @width;
+}
+
+.sider-tiny(@top: 0, @left: -15px, @width: 200px, @zIndex: 1, @maxHeight: 80vh) {
+  position: absolute;
+  z-index: @zIndex;
+  top: @top;
+  left: @left;
+  width: @width;
+  max-height: @maxHeight;
+  overflow-y: scroll;
+}
+
+.user-fz(@fontSize: 18, @base: 18) {
+  font-size: unit(@fontSize / @base, em);
+}
+.user-lh(@lh: 24, @base: 18) {
+  line-height: unit(@lh / @base, em);
+}
+
+.form-input-theme() {
+  background: #f3f3f4;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  color: #6e6d7a;
+}
+.form-input-focus-theme() {
+  box-shadow: 0 0 0 4px rgba(92, 30, 121, 0.1);
+  background: #fff;
+}
+.common-transition(@time: 300ms) {
+  transition: all @time;
+}

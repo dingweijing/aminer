@@ -1,0 +1,416 @@
+.timeLine {
+  width: 100%;
+  background: #aa4b6b;
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #d1fefe, #eccffd);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  :global {
+    .ant-back-top {
+      right: 150px;
+      bottom: 20px;
+    }
+    .ant-checkbox-wrapper {
+      min-width: 100px;
+      margin: 4px 8px 4px 0;
+      font-weight: normal;
+    }
+
+    .ant-timeline-item {
+      padding-bottom: 16px;
+    }
+    .feedbackBtn {
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 5px;
+      color: white;
+    }
+  }
+
+  .checkbox1 {
+    :global {
+      .ant-checkbox-wrapper:nth-child(3) {
+        padding-left: 20px;
+        width: 80px;
+      }
+    }
+  }
+  .feedback {
+    position: fixed;
+    z-index: 2;
+    top: 750px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 2px 3px 3px #888888;
+    outline: none;
+  }
+
+  .tips {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0px 0px 4px 0px #ccc;
+    img {
+      width: 100%;
+    }
+  }
+  .timeLineImgBox {
+    // display: flex;
+    position: relative;
+    height: 300px;
+    // min-height: 400px;
+    .imgWrap {
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .titleWrap {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #040872;
+      .title {
+        font-size: 46px;
+        font-weight: 500;
+        color: #040872;
+        margin-top: -38px;
+      }
+
+      .subTitle {
+        font-size: 20px;
+        font-weight: 400;
+        color: #040872;
+        text-align: center;
+        // margin-bottom: 10px;
+      }
+
+      .subSubTitle {
+        font-size: 16px;
+        margin-top: 4px;
+        color: #47496b;
+        text-align: center;
+      }
+    }
+  }
+
+  .newCheck {
+    position: relative;
+  }
+
+  .newCheck::after {
+    position: absolute;
+    top: -16px;
+    right: -18px;
+    content: '';
+    width: 30px;
+    height: 25px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url('../../../../public/sys/aminer/ncp/new.png');
+  }
+
+  .timeLineData {
+    // margin-top: 24px;
+    max-width: 800px;
+    margin: -46px auto 24px;
+    padding: 20px 32px;
+    background-color: #fff;
+    border-radius: 24px;
+    position: relative;
+    .LangIndicator {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      &>li {
+        list-style: none !important;
+      }
+    }
+    .filterWrap {
+      width: 100%;
+      color: #000;
+      margin-bottom: 20px;
+      .filter {
+        display: flex;
+        flex-wrap: wrap;
+        color: #444;
+      }
+      .filterItem {
+        font-weight: 500;
+        margin-top: 6px;
+        width: 100%;
+        .itemTitle {
+          font-weight: 500;
+          color: #000;
+        }
+        .topicOption {
+          min-width: 100px;
+          margin-right: 1em;
+        }
+      }
+      .otherInfo {
+        margin-top: 6px;
+        .updateTime {
+          margin-right: 12px;
+          color: #444;
+        }
+      }
+    }
+    .timeLineDate {
+      font-size: 18px;
+      font-style: italic;
+      color: #0095ff;
+      font-weight: 300;
+    }
+    .nodeInfo {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .like {
+        cursor: pointer;
+        margin-left: 6px;
+        :global {
+          .icon {
+            font-size: 16px;
+          }
+        }
+        .likeNum {
+          margin-left: 4px;
+          display: inline-block;
+        }
+      }
+    }
+    .timeLineTypeTag {
+      margin-left: 6px;
+      padding: 2px 6px;
+      font-size: 12px;
+      border: 1px solid #aaa;
+      border-radius: 2px;
+      color: #222222;
+      height: 22px;
+    }
+    .timeLineType {
+      margin: 0 12px;
+      padding: 3px 7px;
+      border-radius: 15px;
+      color: white;
+    }
+    .type {
+      background-color: #d62339;
+      color: white;
+    }
+    // .typeRed{
+    //   // background-color: rgba(192, 32, 33, 1);
+    //   color: rgba(192, 32, 33, 1);
+    // }
+    // .typeBlue{
+    //   // background-color: rgba(15, 45, 196, 1);
+    //   color: rgba(15, 45, 196, 1);
+    // }
+    // .typeGreen{
+    //   // background-color: rgba(55, 121, 35, 1);
+    //   color: rgba(55, 121, 35, 1);
+    // }
+    .titleRed {
+      color: rgba(192, 32, 33, 1);
+    }
+    .titleBlue {
+      color: #0095ff;
+    }
+    .titleGreen {
+      color: rgba(55, 121, 35, 1);
+    }
+  }
+}
+
+.expertsPoint {
+  display: flex;
+  padding: 5px 0;
+  .avatarBlock {
+    margin: 0 8px;
+    .avatarWrap {
+      width: 64px;
+      max-height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      .avatar {
+        width: 100%;
+      }
+    }
+    .expertName {
+      text-align: center;
+      margin-top: 6px;
+    }
+  }
+  .content {
+    text-align: left;
+  }
+}
+
+.expertsPoint.timeLine {
+  :global {
+    flex-direction: row-reverse;
+  }
+}
+
+.keyEvent {
+  display: flex;
+  padding: 5px 0;
+  .content {
+    text-align: left;
+  }
+}
+
+.keyEvent.timeLine {
+  :global {
+    flex-direction: row-reverse;
+  }
+}
+
+.timeLineLink {
+  color: black;
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.checkbox1 {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .timeLine {
+    :global {
+      .ant-back-top {
+        right: 80px;
+        bottom: 10px;
+      }
+    }
+    :global {
+      .ant-checkbox-wrapper {
+        min-width: 88px !important;
+      }
+
+      .ant-checkbox-wrapper:last-child {
+        margin-left: 5px;
+      }
+    }
+    .timeLineImgBox {
+      height: 160px;
+      .imgWrap {
+        .img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      .filterWrap {
+        position: static;
+        .filter {
+          display: block;
+        }
+      }
+      .titleWrap {
+        .title {
+          font-size: 26px;
+          margin-top: -24px;
+        }
+        .title_en {
+          font-size: 23px;
+        }
+        .subTitle {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: -1px;
+        }
+
+        .subTitle_en {
+          font-size: 16px;
+          // line-height: 19px;
+        }
+
+        .subSubTitle {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        .subSubTitle_en {
+          // line-height: 13px;
+        }
+
+      }
+    }
+    .timeLineData {
+      // margin: 24px 32px;
+      padding: 15px 24px;
+      margin: 0;
+      margin-top: -14px;
+    }
+    .tips {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 60px;
+    }
+    .feedback {
+      top: 550px;
+    }
+  }
+
+  .checkbox1 {
+    width: 100%;
+    :global {
+      /*  .ant-checkbox-wrapper:nth-child(3) {
+        margin-left: 5px;
+        padding-left: 0 !important;
+      }
+
+      .ant-checkbox-wrapper:nth-child(5) {
+        width: 100px;
+      } */
+      .ant-checkbox-group {
+        width: 100%;
+      }
+
+      .ant-checkbox-wrapper {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .checkbox2 {
+    :global {
+      .ant-checkbox-wrapper {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .timeLineImgBox_en {
+    // height: 192px !important;
+  }
+}
+
+.expertTitle {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #f7f7f7;
+  padding: 6px 4px;
+  margin: 0 5px 9px;
+}

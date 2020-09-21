@@ -1,0 +1,138 @@
+@import '~themes/vars';
+
+.article {
+  margin: 0 auto;
+  padding: 10px 40px;
+  width: 1920px;
+  // display: flex;
+  max-width: 1920px;
+  color: #333;
+  .loadingWrap {
+    position: relative;
+    min-height: 10px;
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .mainContent {
+    flex-grow: 1;
+    width: calc(100% - 420px);
+    overflow: hidden;
+    padding-top: 8px;
+    float: left;
+
+    h1 {
+      font-size: 22px;
+      line-height: 25px;
+      font-weight: bold;
+      font-family: 'Times New Roman';
+      margin-bottom: 20px;
+      vertical-align: baseline;
+
+      .titleLabel {
+        display: inline-block;
+        padding: 0 10px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 9px;
+        background: #ec6b10;
+        margin-left: 10px;
+        text-align: center;
+        font-family: 'PingFang SC';
+        vertical-align: baseline;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .abstract {
+      margin-bottom: 25px;
+      position: relative;
+      .headline {
+        margin: 10px 0;
+        border-bottom: 1px dotted #e9e7e7;
+        span {
+          font-size: 20px;
+          display: inline-block;
+          // border-bottom: 2px solid #428bca;
+        }
+      }
+      .abstractText {
+        color: #555;
+      }
+
+      .morebtn {
+        // position: absolute; bottom: 0; right: 1px;
+        font-size: 12px;
+        margin-left: 2px;
+        color: @color-high;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .fullText {
+      font-size: 20px;
+      p {
+        margin-bottom: 0;
+      }
+      .pdf {
+        border: 1px solid #eeeeee;
+      }
+    }
+  }
+
+  .cardContainer {
+    :global {
+      .ant-tabs-bar {
+        margin: 0;
+      }
+      .ant-tabs-nav-wrap {
+        background: #f5f5f5;
+        border: 1px solid #e8e8e8;
+      }
+      .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab.ant-tabs-tab-active {
+        color: @color-high;
+        border: none;
+        background: #fff;
+      }
+      .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+        margin: 0;
+        border: 0;
+        background: #f5f5f5;
+        width: 105px;
+        text-align: center;
+      }
+    }
+  }
+
+  .rightBar {
+    width: 400px;
+    min-width: 400px;
+    float: right;
+  }
+}
+
+// @media screen and(min-width: @content-wrapper) {
+//   .article {
+//     padding: 10px 40px;
+//   }
+// }
+
+@media screen and(max-width: 992px) {
+  .article {
+    padding: 10px 20px;
+    .mainContent {
+      width: 100%;
+    }
+    .rightBar {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+}

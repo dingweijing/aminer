@@ -1,0 +1,119 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.fieldPage {
+  // width: 100%;
+  padding-top: 40px;
+  .aminer-main-wrap();
+
+  :global {
+    .each_field {
+      margin-bottom: 15px;
+    }
+    .table_box {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 20px;
+      padding-left: 30px;
+    }
+    .search_word {
+      margin-bottom: 0;
+    }
+    .fields_list {
+      border: 1px solid #ccc;
+      min-width: 900px;
+      padding-left: 0;
+      .field_item.field_head {
+        font-weight: bold;
+      }
+      .field_item {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        // margin-bottom: 10px;
+        &:last-child {
+          border-bottom: none;
+        }
+        .radio {
+          position: absolute;
+          top: 0;
+          left: -30px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .name {
+          width: 200px;
+          max-width: 200px;
+          padding: 5px 8px;
+          // border-right: 1px solid #ccc;
+        }
+        .total_count {
+          width: 80px;
+          padding: 5px 8px;
+          text-align: center;
+          // border-right: 1px solid #ccc;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .years {
+          display: flex;
+          flex-grow: 1;
+          // background: red;
+        }
+        // span {
+        //   display: inline-block;
+        // }
+        .year_count {
+          // width: 60px;
+          width: calc(100% / 11);
+          padding: 5px 8px;
+          // border-right: 1px solid #ccc;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 1500px) {
+//   .orgPage {
+//   }
+// }
+
+@media screen and (max-width: 1200px) {
+  .fieldPage {
+    width: 100%;
+  }
+}
+
+// @media screen and (max-width: 1000px) {
+//   .orgPage {
+//     width: 760px;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .orgPage {
+//   }
+// }
+
+// @media screen and(min-width: 768px) {
+//   .article { width: 750px; }
+// }
+
+// @media screen and(min-width: 992px) {
+//   .article { width: 970px; }
+// }
+
+// @media screen and(min-width: @content-wrapper) {
+//   .article { .aminer-main-wrap() }
+// }

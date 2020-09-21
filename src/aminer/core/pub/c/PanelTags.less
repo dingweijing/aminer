@@ -1,0 +1,37 @@
+@import "~themes/vars";
+
+.content {
+  padding: 12px;
+  .tags {
+    display: flex; flex-wrap: wrap;
+    .tag {
+      border-radius: 2px; border: 1px solid #BCC7AE;
+      height: 21px; margin-right: 8px; display: flex;
+      line-height: 19px; align-items: center; margin-bottom: 8px;
+
+      .count {
+        background: #BCC7AE; color: #fff; width: 20px; text-align: center;
+      }
+      .label { padding: 0 5px;}
+      .opr { width: 20px; color: #BCC7AE; text-align: center; cursor: pointer; 
+        display: flex; justify-content: center; align-items: center; }
+      &.user {
+        border-color: #067C08;
+        .count { background: #067C08; }
+        .opr { color: #067C08; }
+      }
+    }
+  }
+
+  textarea { 
+    resize: none; padding: 6px 10px; outline: none;
+    font-size: 13px; line-height: 18px; color: #444;
+  }
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 0; margin-top: 8px; 
+      
+    }
+  }
+}

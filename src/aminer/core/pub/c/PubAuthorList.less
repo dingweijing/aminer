@@ -1,0 +1,79 @@
+@import "~themes/vars";
+
+
+.personList {
+  width: 100%;
+
+  .carousel {
+    position: relative; width: 100%; color: @color-base;
+    border-bottom: 1px solid @border-color-split; margin-bottom: 10px;
+    padding: 20px 0 14px 0; font-size: @font-size-13;
+  
+    .imgBox {
+      overflow: hidden; margin-right: 12px; width: 90px; min-width: 90px;
+  
+      img { width: 100%; }
+    }
+  
+    .content {
+      text-align: left;
+  
+      .title {
+        margin-right: 5px; overflow: hidden; padding-right: 130px; color: #555;
+        font-weight: 700; font-size: 20px; display: flex; align-items: baseline;
+        .sub { font-size: 16px; }
+        a { color: #555; }
+        i { color: #d3d3d3; margin-left: 5px; }
+        .bind { color: @color-high; }
+      }
+  
+      p {
+        margin: 2px 0;
+  
+        a { color: #555; }
+        i { width: 20px; }
+        &.black { color: #000; }
+        .mr { margin-right: 10px; }
+        &.desc {
+          min-height: 76px; max-height: 76px; overflow: hidden; margin-bottom: 30px;
+          font-size: 85%;
+        }
+        
+      }
+      .statsLine {
+        .statst { color: @color-high; font-weight: bold; }
+        .split { margin: 0 5px; }
+      }
+
+    }
+    
+
+    
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .carousel { display: flex; }
+}
+
+.small.personList {
+  .carousel {
+    padding: 10px 12px 0; margin-bottom: 0; border-bottom: none;
+    .imgBox {
+      width: 70px; min-width: 70px; height: 80px;
+      display: flex; align-items: flex-start;
+    }
+
+    .content {
+      padding-bottom: 15px; flex-grow: 1; min-height: 95px;
+      border-bottom: 1px solid #E8E8E8;
+      
+      .title {
+        font-size: 16px; line-height: 16px; padding-right: 0;
+      }
+    }
+    &:last-child .content { border-bottom: none; }
+  }
+  
+}

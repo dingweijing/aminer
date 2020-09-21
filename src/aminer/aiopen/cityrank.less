@@ -1,0 +1,251 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://fileserver.aminer.cn/sys/aminer/background@2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  :global {
+    .rank-tab {
+      position: fixed;
+      top: 114px;
+      left: 50%;
+      z-index: 99;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: row;
+    }
+
+    .testpoint {
+      position: fixed;
+      z-index: 99;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+    }
+
+    .active {
+      background-color: blue;
+    }
+
+    div.ant-tabs-tab {
+      color: #fff;
+    }
+
+    .antd-pro-aminer-aiopen-components-header-style-header .bottom {
+      display: none;
+    }
+
+    .myclose {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #fff;
+    }
+
+    .back {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+
+      .modal-wrapper {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+
+        flex-wrap: wrap;
+
+        &>div {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+
+    .rank {
+      position: absolute;
+      top: 83px;
+      left: 20px;
+      bottom: 0;
+      width: 454px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.05);
+
+      .rankheader {
+        position: fixed;
+        padding: 15px 15px 0 15px;
+        // background: rgba(0, 0, 0, .2);
+        // box-shadow: 0 2px 10px rgba(0, 0, 0, .33);
+        color: hsla(0, 0%, 100%, 1);
+        width: inherit;
+        height: 120px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .title {
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+
+      .search-box {
+        .ant-input {
+          background: #000000;
+          border-radius: 8px;
+          border: 1px solid #0095ff;
+          color: #ccc;
+        }
+
+        .ant-input-suffix {
+          svg {
+            color: #0095ff;
+          }
+        }
+      }
+
+      .ranklist {
+        position: absolute;
+        top: 60px;
+        bottom: 255px;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper:first-child .order {
+          color: red;
+        }
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper:nth-child(2) .order {
+          color: #fe7118;
+        }
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper:nth-child(3) .order {
+          color: #fe8f18;
+        }
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper:nth-child(4) .order {
+          color: #feb318;
+        }
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper:nth-child(5) .order {
+          color: #fecb18;
+        }
+
+        &>.antd-pro-aminer-aiopen-components-rank-list-rank-item-wrapper .order {
+          color: #ffdd64;
+        }
+      }
+
+      .ranklist::-webkit-scrollbar {
+        display: none;
+        /* Chrome Safari */
+      }
+
+    }
+
+    .detail {
+      width: 0 !important;
+      height: 0 !important;
+      // background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.05);
+      position: fixed;
+      overflow: hidden;
+      opacity: 1;
+
+      .box {
+        //background: rgba(255, 255, 255, 0.05);
+        color: hsla(0, 0%, 100%, 1);
+      }
+
+      .city {
+        width: 100%;
+        font-size: medium;
+        font-weight: 700;
+        margin: 10px 20px;
+      }
+
+      .tabs {
+        align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .tabpane {
+        color: hsla(0, 0%, 100%, 1);
+      }
+    }
+
+    .authorList {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9;
+
+      .inner {
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        white-space: nowrap;
+        overflow-y: hidden;
+      }
+    }
+
+    .detailOpen {
+      opacity: 1;
+      position: fixed;
+      top: 50% !important;
+      left: 50% !important;
+      width: 500px !important;
+      height: 500px !important;
+      transform: translate(-50%, -50%) !important;
+      transition: all ease 0.5s;
+      z-index: 99;
+    }
+
+
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    :global {
+      .rank {
+        top: 83px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .ranklist {
+        bottom: 0 !important;
+      }
+
+      .antd-pro-aminer-aiopen-components-city-card-index-wrapper,
+      .antd-pro-aminer-aiopen-components-city-feed-back-style-wrapper,
+      .back,
+      .rank-tab,
+      .authorList {
+        display: none;
+      }
+    }
+  }
+
+}

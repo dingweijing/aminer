@@ -1,0 +1,117 @@
+@import '~themes/vars';
+@import "~themes/theme-aminer-func";
+
+.article {
+  margin: 0 auto;
+  padding: 0px 40px;
+  color: #333;
+
+  .loadingWrap {
+    position: relative; height: 10px;
+    // margin-bottom: 8px;
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .pbc {
+    margin-bottom: 8px;
+  }
+
+  .content {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+
+    :global {
+      .btns_box .cat_list {
+        right: 0;
+      }
+      .category_list .category_item .color svg {
+        bottom: 3px;
+      }
+      .titleline {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        .titleInner {
+          line-height: 25px;
+          display: flex; flex-wrap: wrap;
+          .text {
+            margin-bottom: 12px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Times New Roman';
+          }
+          .btnWrap {
+            width: 270px;
+            .downloadBtn {
+              border-radius: 2px;
+              border: 1px solid #D5D5D5;
+              background-color: #fff;
+              color: #797979; padding: 0 8px;
+              height: 24px; margin-left: 10px;
+              display: inline-flex;
+              align-items: center;
+              font-size: 13px;
+              svg { margin-right: 4px; }
+              // i {
+              //   margin-right: 4px;
+              //   color: #d02f23;
+              // }
+            }
+          }
+        }
+        .rightconner {
+          display: flex;
+        }
+      }
+
+      .tagLine {
+        display: flex; align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        .label {
+          display: inline-block;
+          padding: 0 10px; margin-left: 8px;
+          font-size: 12px; color: #fff;
+          border-radius: 9px;
+          height: 18px; line-height: 18px;
+          background: #ec6b10;
+          font-family: 'PingFang SC';
+          vertical-align: middle;
+        }
+      }
+
+      .authorLine {
+        margin-top: 12px;
+      }
+    }
+
+
+    .confInfo {
+      font-size: 14px; color: #6b6b6b;
+      margin-bottom: 12px;
+    }
+
+  }
+
+  .rightBar {
+    width: 300px;
+    float: right;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .article {
+    padding: 0px 10px;
+    width: 100%;
+    .content { width: 100%; }
+    .rightBar {
+      display: none;
+    }
+  }
+}

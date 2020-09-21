@@ -1,0 +1,20 @@
+@import "~themes/vars";
+
+.markBts {
+  position: absolute; top: 10px; right: 15px; 
+
+  .btn {
+    position: absolute; top: 0; right: 0; width: 65px; text-align: center;
+    height: 20px; padding: 0; color:#6D6D6D;
+    i { margin-right: 5px; }
+  }
+  .markNum { position: absolute; top: 0; right: 70px; }
+
+  .markedBtn {
+    z-index: 1; background: #A1302F; border-color: #A1302F; color: #fff;
+  }
+
+  .unmarkBtn { z-index: 2;  display: none; }
+  .markBtnGroup { position: relative; }
+  .markBtnGroup:hover .unmarkBtn { display: block; }
+}

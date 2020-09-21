@@ -1,0 +1,157 @@
+@import "~themes/vars";
+.loginContainer {
+  .loginContainerLeft {
+    display: none;
+  }
+  .loginContainerRight {
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 4px 4px rgba(199, 199, 199, 0.7);
+    :global {
+      .ant-tabs-nav {
+        width: 100%;
+        padding-top: 20px;
+        .ant-tabs-tab {
+          margin: 0;
+          width: 50%;
+          text-align: center;
+          padding: 0px 0px 10px 0px;
+          &:first-child {
+            border-right: 1px solid #dadada;
+          }
+        }
+        .ant-tabs-tab-active {
+          color: #0095FF;
+        }
+      }
+      .ant-col {
+        min-height: 51px;
+      }
+      .ant-tabs-ink-bar {
+        background: #0095FF;
+        height: 1px;
+      }
+    }
+    .logToReg {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      font-size: 14px;
+      .linkToReg {
+        display: flex;
+        align-items: center;
+        :global {
+          .linkIcon {
+            margin-right: 5px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  :global {
+    .loginContainerLeft.hiddenLeft {
+      display: none;
+    }
+    .loginContainerRight.fullRight {
+      width: 100%;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+.otherLogin {
+  text-align: center;
+  margin-top: 20px;
+  .otherLoginTip {
+    font-size: 14px;
+    color: #969696;
+  }
+  .loginItem {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    .loginItemImg {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0px 2px 4px 0px rgba(158, 158, 167, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin: 0 12px;
+      img {
+        height: 18px;
+      }
+      .wechatlogin {
+        font-size: 24px;
+        color: #6DD400;
+      }
+      .ckcestlogin {
+        font-size: 24px;
+        color: #00AEEF;
+      }
+    }
+    .wechat {
+      border: 1px solid #6DD400;
+      &:hover {
+        background-color: #6DD400;
+        .wechatlogin {
+          color: white;
+        }
+      }
+    }
+    .ckcest {
+      border: 1px solid #00AEEF;
+      &:hover {
+        background-color: #00AEEF;
+        .ckcestlogin {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .otherLogin.autoOther {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: auto;
+    float: none;
+  }
+}
+
+@media screen and(min-width: 900px) {
+  .loginContainer {
+    display: flex;
+    .loginContainerLeft {
+      width: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: rgba(0, 14, 40, 1);
+      margin-right: 40px;
+      .imgTopWord {
+        font-weight: bold;
+        font-size: 24px;
+        span {
+          font-weight: normal;
+          font-size: 18px;
+        }
+      }
+      img {
+        width: 226px;
+        margin: 0 auto;
+      }
+      .imgBottomWord {
+        font-size: 16px;
+      }
+    }
+  }
+  .otherLogin {
+    width: 453px;
+    float: right;
+  }
+}

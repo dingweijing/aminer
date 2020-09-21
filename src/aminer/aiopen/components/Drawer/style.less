@@ -1,0 +1,25 @@
+.Drawer {
+  position: relative;
+  :global {
+    .top {
+      position: relative;
+      z-index: 2;
+    }
+    .hider {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      top: -100px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .active {
+      position: relative;
+      z-index: 2;
+      visibility: visible;
+      top: 0;
+      opacity: 1;
+      transition: all ease .3s;
+    }
+  }
+}

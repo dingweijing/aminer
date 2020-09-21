@@ -1,0 +1,139 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+h3 {
+  // padding-top: 0 !important;
+}
+
+.article {
+  width: 100%;
+
+  :global {
+    .top {
+      // background: #484393;
+      // background: rgba(0, 149, 255, .08);
+      padding-top: 70px;
+      position: relative;
+      background: #fff;
+
+      .resState {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        // max-width: 1185px; margin: 60px auto 40px; padding: 0 20px;
+        // .flex-layout();
+        // flex-wrap: wrap;
+      }
+    }
+
+    .menuWrapper {
+      max-width: 1185px;
+      margin: 30px auto 50px;
+      padding: 0 20px;
+      .flex-layout(space-between, stretch);
+      flex-wrap: wrap;
+    }
+
+    .imageSwipper {
+      max-width: 1185px;
+      margin: 15px auto 0;
+      padding: 0 20px;
+    }
+
+    .ads {
+      margin-top: 50px;
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 1185px;
+
+      img {
+        width: 100%;
+        ;
+        margin: 0 auto;
+      }
+    }
+
+    .advertiseCN {
+      max-width: 1185px;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+      .flex-layout(space-between, stretch);
+      flex-wrap: wrap;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .article .imageSwipper {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .article {
+    :global {
+      .top {
+        .resState {
+          right: -150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article {
+    :global {
+      .top {
+        padding-top: 45px;
+      }
+
+      .advertiseCN {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .article {
+    .wrapper {
+      max-width: 970px;
+    }
+
+    .guides {
+      padding: 0;
+    }
+
+    .main {
+      display: flex;
+
+      .left {
+        flex-grow: 1;
+        padding: 0;
+      }
+
+      aside {
+        width: 490px;
+        min-width: 490px;
+        margin-left: 50px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @content-wrapper) {
+  .article {
+    .wrapper {
+      max-width: @content-wrapper;
+    }
+
+    .main {
+      aside {
+        margin-left: 100px;
+      }
+    }
+  }
+}

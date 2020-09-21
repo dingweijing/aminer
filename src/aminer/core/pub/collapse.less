@@ -1,0 +1,146 @@
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headWrapper {
+  .flexCenter();
+  position: relative;
+  justify-content: space-between;
+  padding: 5px 14px;
+  color: #505050;
+  border-left: 3px solid #0095FF;
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 6px 2px rgba(224, 224, 224, 1);
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+  &>div {
+    display: flex;
+    flex-direction: row;
+    &>div:first-child {
+      font-size: 12px;
+      .flexCenter();
+      flex-direction: row;
+    }
+  }
+}
+
+.toggle {
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+.infoWrapper {
+  position: relative;
+  &>a {
+    z-index: 20;
+  }
+}
+.name {
+  .flexCenter();
+  justify-content: space-between;
+  &>a {
+    cursor: pointer;
+    color: #0095FF;
+    font-size: 18px;
+    padding-right: 14px;
+  }
+}
+
+.avatar {
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+}
+
+.description {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  &>span {
+    &>i {
+      margin-right: 5px;
+    }
+  }
+}
+
+.footerWrapper {
+  .flexCenter();
+  color: #020e26;
+  background-color: #f7f7f7;
+  height: 36px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.spinWrapper {
+  position: relative;
+  min-height: 50px;
+
+}
+
+.spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnWrapper {
+  position: absolute;
+  top: 8px;
+  ;
+  right: 0;
+  .blueBtn {
+    padding: 2px 6px;
+    background-color: #0095FF;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .blueBtn:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .name>a {
+    font-size: 12px !important;
+  }
+  .name {
+    margin-bottom: 4px;
+  }
+  .btnWrapper {
+    top: 3px !important;
+  }
+  .description {
+    .en_span {
+      /* 英文时增大间距 */
+      margin-bottom: 2px;
+    }
+  }
+  .blueBtn {
+    padding: 1px 3px !important;
+    margin-right: 5px !important;
+    border-radius: 3px;
+  }
+}

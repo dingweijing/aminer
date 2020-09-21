@@ -1,0 +1,85 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.followTopics {
+  display: flex;
+  flex-wrap: wrap;
+  :global {
+    .topic_btn {
+      position: relative;
+      display: flex;
+      margin-right: 8px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+      // &.edit_mode {
+      //   .close {
+      //     width: 18px;
+      //     height: 18px;
+      //     top: -9px;
+      //     right: -7px;
+      //   }
+      //   .mytopic {
+      //     cursor: pointer;
+      //   }
+      // }
+      &:hover {
+        .close {
+          width: 18px;
+          height: 18px;
+          top: -9px;
+          right: -7px;
+        }
+        .mytopic {
+          cursor: pointer;
+        }
+      }
+
+      .mytopic {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        height: 24px;
+        border-radius: 4px;
+        color: #fff;
+        // font-style: italic;
+
+        .user-fz(16);
+        line-height: 22px;
+        text-align: center;
+        padding: 0 10px;
+      }
+      .close {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 0;
+        background: rgba(0, 14, 40, 0.6);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        transition: all 200ms;
+        .close_svg {
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+    }
+    // :not(.active)
+
+    .topic_btn .close:hover {
+      background: rgba(224, 32, 32, 0.8);
+      .close_svg {
+        text-shadow: 0 1px 1px #6d7682;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

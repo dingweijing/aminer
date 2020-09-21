@@ -1,0 +1,89 @@
+.wrapper {
+  width: 300px;
+  min-height: 100px;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 80;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+.wrapper :global .banner {
+  width: 100%;
+  height: 182px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 1px 1px 10px #000;
+  border-radius: 5px 0 0;
+  padding: 17px 17px 8px 18px;
+}
+.wrapper :global .rank {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #1c73e7;
+  position: absolute;
+  z-index: 50;
+  left: 224px;
+  top: -30px;
+  cursor: pointer;
+}
+.wrapper :global .myclose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+}
+.wrapper :global .cardText {
+  position: relative;
+  padding: 24px;
+  margin-top: 16px;
+}
+.wrapper :global .cardText .title {
+  overflow-wrap: break-word;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 8px 0 4px 0;
+  color: #fff;
+}
+.wrapper :global .cardText .country {
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+.wrapper :global .cardText .basisIndex {
+  color: #F30001;
+}
+.wrapper :global .cardText .useIndex {
+  position: absolute;
+  color: #0095FF;
+  right: 10px;
+}
+.wrapper :global .cardText .description {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  max-height: 80px;
+  margin-top: 16px;
+  color: #fff;
+}
+.wrapper :global .cardActions {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+.wrapper :global .cardActions .cardButton {
+  width: 100%;
+}

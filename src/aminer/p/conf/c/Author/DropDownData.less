@@ -1,0 +1,64 @@
+.personTopPubs {
+  :global {
+    .hiddenList {
+      display: none;
+    }
+    .showList {
+      display: block;
+    }
+    .opr {
+      display: flex;
+      height: 18px;
+      margin-bottom: 10px;
+
+      &.up {
+        // background: #e6e6e6;
+      }
+      .pub_btn_item {
+        display: flex;
+        margin-right: 10px;
+
+        .loading_warp {
+          width: 10px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .pubBtn {
+        font-size: @font-size-12;
+        color: @color-high;
+        margin-right: 5px;
+        cursor: pointer;
+        padding: 0 4px;
+
+        & > span {
+          margin-right: 5px;
+        }
+        &.active {
+          background: @color-high;
+          color: #fff;
+          .fa {
+            color: #fff;
+          }
+        }
+      }
+
+      :global {
+        .ant-spin-spinning {
+          display: flex;
+          align-items: center;
+        }
+        .ant-spin-sm .ant-spin-dot {
+          font-size: 12px;
+          width: 0.7em;
+          height: 0.7em;
+        }
+        .ant-spin-sm .ant-spin-dot i {
+          width: 4px;
+          height: 4px;
+        }
+      }
+    }
+  }
+}

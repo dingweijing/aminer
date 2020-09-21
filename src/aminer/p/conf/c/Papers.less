@@ -1,0 +1,64 @@
+.active() {
+  cursor: pointer;
+  color: #0095ff;
+  background-color: #ffffff;
+  border: 1px solid #0095ff;
+  svg {
+    margin-right: 5px;
+    color: #0095ff;
+    transform: rotateY(180deg);
+    transition: all 200ms;
+    // transition: opacity .5s;
+  }
+}
+.Papers {
+  margin-left: 5px;
+  margin-right: 5px;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  :global {
+    .annotationArea{
+      border: 1px dashed #8fbc8f;
+      background-color: #f0fff0;
+      padding: 0px 8px;
+    }
+    .paper_legend {
+      margin-bottom: 9px;
+      font-size: 18px;
+      svg {
+        margin-right: 12px;
+        width: 18px;
+      }
+    }
+    .paperList {
+      .sort_block {
+        height: 40px;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .item {
+          color: #9e9ea7;
+          font-style: 14px;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 89px;
+          border-radius: 20px;
+          height: 20px;
+          &:hover {
+            .active;
+          }
+        }
+        .item.active {
+          .active;
+        }
+      }
+    }
+  }
+}

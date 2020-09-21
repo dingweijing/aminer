@@ -1,0 +1,75 @@
+@leftBlockWidth: 28%;
+.Roster {
+  width: calc(100% - @leftBlockWidth - 10px);
+  min-width: calc(100% - @leftBlockWidth - 10px);
+  display: flex;
+  flex-direction: row;
+  :global {
+    .leftBlock {
+      min-width: 18%;
+      width: 23%;
+      .roster_legend {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        color: #222222;
+        margin-top: 9px;
+        margin-bottom: 2px;
+        padding: 0 10px;
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+        font-size: 18px;
+        // height: 40px;
+        // background-color: #f9f9f9;
+        // border-bottom: 1px solid #e9e9e9;
+        & > div {
+          display: flex;
+          & > svg {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+          }
+        }
+      }
+      .conf_list {
+        border: 1px solid #e9e9e9;
+        border-top: 2px solid #0095ff;
+      }
+      .authorList {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 0 5px 30px;
+        &:hover {
+          color: #0095ff;
+          background-color: #f9f9f9;
+        }
+      }
+      .authorList.active {
+        color: #ffffff;
+        background-color: #0095ff;
+      }
+    }
+    .content {
+      margin: 0 20px;
+      flex-grow: 1;
+      width: calc(100% - 23%);
+      position: relative;
+      .ant-tabs-top-bar {
+        justify-content: flex-start !important;
+        margin: 0 5px;
+        .ant-tabs-tab {
+          padding: 8px;
+          margin-right: 24px;
+        }
+        svg {
+          margin-right: 16px;
+        }
+        // .ant-tabs-tab:first-child {
+        //   padding-left: 0px;
+        // }
+      }
+    }
+  }
+}

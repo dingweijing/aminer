@@ -1,0 +1,145 @@
+@import '~themes/vars';
+
+// .wrapper {
+//   max-width: 750px; margin: 0 auto; padding-top: 20px;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .wrapper { display: flex; }
+// }
+
+// @media screen and (min-width: 992px) {
+//   .wrapper { max-width: 970px; }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .wrapper { max-width: 1200px; }
+
+// }
+
+.report {
+  width: 90%;
+  display: flex;
+  max-width: 1520px;
+  margin: 0 auto;
+  .reportPage {
+    width: 76%;
+    .wrap {
+      margin-right: 30px;
+
+      :global {
+        .ant-spin-nested-loading > div > .ant-spin {
+          max-height: 600px;
+        }
+      }
+
+      .navsLine {
+        padding: 12px 0px;
+        box-shadow: 0 1px 0 0 #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+          font-size: 18px;
+          margin: 0;
+          font-weight: 500;
+        }
+        .sendEmail{
+          width: 74px;
+          height: 30px;
+          color: #000E28;
+          font-size: 14px;
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #d2d2d2;
+          border-radius: 2px;
+          background-color: #f3f3f3;
+          &:hover{
+            color: #0095ff;
+            border: 1px solid #0095ff ;
+          }
+        }
+
+        .navs {
+          font-size: 14px;
+          color: @color-high;
+          transition: color 0.28s;
+
+          .nav {
+            margin-right: 34px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #666;
+
+            &:hover {
+              color: rgba(0, 149, 255, 0.8);
+              transition: all 0.2s ease-in;
+            }
+
+            &.active {
+              color: #428bca;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .loadmore {
+        display: block;
+        padding: 8px 0 9px;
+        text-align: center;
+        margin: 46px auto;
+        font-size: 16px;
+        width: 200px;
+        color: #fff;
+        cursor: pointer;
+        background-color: @color-high;
+      }
+    }
+  }
+  .rightList {
+    width: 22%;
+    max-width: 335px;
+    min-width: 200px;
+  }
+}
+
+// @media (max-width: 600px) {
+//   .reportPage {
+//     width: 100%;
+//   }
+//   .rightList {
+//     display: none;
+//   }
+// }
+
+/*6+*/
+@media (min-width: 319px) and (max-width: 736px) {
+  .report {
+    :global {
+      .reportList {
+        padding-right: 0px;
+      }
+    }
+    .reportPage {
+      width: 100%;
+      .wrap {
+        margin: 0;
+        .navsLine {
+          display: block;
+          overflow-x: scroll;
+          .navs {
+            width: 146vw;
+            padding-left: 10px;
+          }
+          .sendEmail{
+            display: none;
+          }
+        }
+      }
+    }
+    .rightList {
+      display: none;
+    }
+  }
+}

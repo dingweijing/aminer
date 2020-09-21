@@ -1,0 +1,129 @@
+@import '../../../common.less';
+.DisplayTree {
+  width: 670px;
+  ul {
+    padding-inline-start: 19px;
+    ul {
+      padding-inline-start: 38px;
+    }
+  }
+  .title {
+    width: fit-content;
+    color: #636363;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    .flexVertical();
+    align-items: flex-start;
+    img {
+      height: 15px;
+      margin-right: 5px;
+    }
+    ul {
+      width: fit-content;
+    }
+  }
+
+  :global {
+    .treeLeaf {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .list {
+      transition: all ease 0.3s;
+    }
+    .SkeletonRoom {
+      width: 100%;
+    }
+    .ant-skeleton-paragraph {
+      width: 100% !important;
+    }
+  }
+}
+
+.DisplayCard {
+  width: 593px;
+  font-size: 16px;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 0;
+  /*   :global {
+    .singleLine {
+      height: fit-content;
+      transition: height ease .5s;
+    }
+  } */
+  &>.numWrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    .icon {
+      display: inline-block;
+      height: 12px;
+      margin-right: 5px;
+    }
+    .thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid #555;
+      background-color: #555;
+      margin-right: 5px;
+      .flexCenter();
+      .thumbIcon {
+        height: 12px;
+        margin-right: 0;
+      }
+    }
+    .userIcon {
+      position: absolute;
+      top: 4px;
+      left: -20px;
+    }
+    &>span {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &>p {
+    font-weight: normal;
+    margin: 0 0 0 0;
+  }
+  .desc1 {
+    color: #545454;
+  }
+  .desc2 {
+    color: #00936b;
+  }
+  .desc3 {
+    color: #000000;
+    font-size: 12px;
+  }
+  .desc4 {
+    color: #696969;
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .DisplayTree {
+    width: 100%;
+  }
+  :global {
+    .treeLeaf {
+      ul.list {
+        padding-left: 10px;
+      }
+    }
+  }
+}

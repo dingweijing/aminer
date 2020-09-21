@@ -1,0 +1,73 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.createProfile {
+  :global {
+    .panel_title {
+      justify-content: flex-start;
+    }
+    .profile_detail {
+      .info_content {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .create_form {
+      padding: 15px 0;
+      input {
+        height: 40px;
+        background: #f3f3f4;
+        border: none;
+        border-radius: 8px;
+      }
+      input:focus {
+        box-shadow: 0 0 0 2px rgba(92, 30, 121, 0.1);
+      }
+      .textarea {
+        height: 40px !important;
+        min-height: 40px !important;
+        max-height: 80px !important;
+        background: #f3f3f4;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 6px;
+      }
+
+      .label {
+        width: 25%;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .btnwrap {
+        display: flex;
+        justify-content: flex-end;
+
+        .subBtn {
+          height: 32px;
+          margin: 0;
+          border-color: #dadada !important;
+          background: #fff !important;
+          border-radius: 8px;
+          color: #000e28;
+          .user-fz(18);
+        }
+        .subBtn:hover {
+          background: rgba(92, 30, 121, 0.7) !important;
+          color: #fff;
+        }
+        button[ant-click-animating-without-extra-node]:after {
+          border: 0 none;
+          opacity: 0;
+          animation: none 0 ease 0 1 normal;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

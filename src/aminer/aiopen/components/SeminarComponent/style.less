@@ -1,0 +1,74 @@
+.SeminarComponent {
+  width: 380px;
+  height: 160px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 2px 6px 18px 0px rgba(172, 172, 172, 0.38);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform ease .5s;
+  :global {
+    .left {
+      width: 120px;
+      position: relative;
+      color: #fff;
+      font-size: 26px;
+      background: linear-gradient(129deg, rgba(57, 94, 176, 1) 0%, rgba(51, 18, 106, 1) 100%);
+      display: flex;
+      justify-content: center;
+      .date {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+        span {
+          font-size: 13px;
+        }
+      }
+      .city {
+        width: 30px;
+        writing-mode: vertical-lr; //垂直方向，从左向右
+        letter-spacing: .4em;
+
+      }
+    }
+    .right {
+      flex: 1;
+      text-align: start;
+      &>div {
+        margin: 29px auto;
+        width: 208px;
+        h4 {
+          color: #373D41;
+          font-size: 18px;
+          max-height: 48px;
+          overflow: hidden;
+          white-space: pre-wrap;
+        }
+        p {
+          font-size: 12px;
+          span {
+            color: #9B9EA0;
+          }
+        }
+        .p1 {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.SeminarComponent:not(:nth-child(3n)) {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .SeminarComponent:hover {
+    background-color: red;
+    transform: scale(1.05, 1.05);
+    transition: transform ease .5s;
+  }
+}

@@ -1,0 +1,139 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+@keyframes move_in {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.userPage {
+  .aminer-main-wrap();
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  font-family: 'Roboto';
+  // font-family: 'Hiragino Sans GB';
+  font-size: 18px;
+  line-height: 18px;
+  position: relative;
+
+  :global {
+    .aminer_common_modal {
+      z-index: 2000;
+    }
+
+    .toggle-menu-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 20;
+    }
+
+    .main_component {
+      margin-left: 40px;
+      margin-right: 20px;
+      flex-grow: 1;
+      max-width: calc(100% - 330px);
+      position: relative;
+    }
+
+    .sider {
+      width: 290px;
+      min-width: 290px;
+      position: sticky;
+      top: 0;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      // background: skyblue;
+    }
+
+    .top {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+:global {
+  .userpage-tooltip {
+    .ant-tooltip-inner {
+      font-size: 14px !important;
+    }
+  }
+}
+
+@media screen and(max-width: 2000px) {
+  .userPage {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .userPage {
+    :global {
+      .main_component {
+        margin-left: 20px;
+        flex-grow: 1;
+        // max-width: calc(100% - 200px);
+      }
+
+      // .sider {
+      //   width: 180px;
+      //   min-width: 180px;
+      // }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .userPage {
+    padding-bottom: 20px;
+
+    .movein {
+      animation: move_in 300ms;
+    }
+
+    :global {
+      .sider {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 10px;
+        width: calc(100% - 100px);
+        background: #fff;
+        z-index: 100;
+        height: 68vh;
+        max-height: 68vh;
+        overflow-y: auto;
+        box-shadow: 0 0 10px #999;
+
+        .pubList-menu {
+          padding: 0 15px;
+        }
+      }
+
+      .main_component {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .main_component.concern,
+      .main_component.notification {
+        .toggle-menu-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .userPage {}
+}

@@ -1,0 +1,157 @@
+.robot {
+  position: fixed;
+  top: 50px;
+  right: 100px;
+  width: 361px;
+  height: calc(100% - 280px);
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px 0px #c1c4c8;
+  background: #fff;
+
+  :global {
+    .ant-input-number-handler-wrap {
+      opacity: unset;
+    }
+
+    .head-line {
+      height: 50px;
+      width: 100%;
+      background: #806dab;
+      color: #fff;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 14px;
+      position: relative;
+      border: 1px solid #806dab;
+      border-radius: 8px 8px 0 0;
+      border-bottom: none;
+
+      &>span {
+        color: #fff;
+      }
+
+      &>span:first-child {
+        // margin-left: 20px;
+      }
+
+      &>span:last-child {
+        // margin-left: 240px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      &>span:last-child:hover {
+        color: #ff0000;
+      }
+    }
+
+    .content {
+      // display: flex;
+      // flex: 1;
+      // flex-direction: column;
+      // overflow: scroll;
+      // height: calc(100% - 220px);
+      background: #fff;
+      border: 1px solid #c1c4c8;
+      box-sizing: border-box;
+      padding: 18px 15px 10px;
+      overflow: scroll;
+      height: calc(100% - 200px);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .role-robot {
+        position: relative;
+        margin-left: 50px;
+      }
+
+      .role-robot:before {
+        display: block;
+        content: "";
+        position: absolute;
+        left: -50px;
+        width: 36px;
+        height: 36px;
+        background: url(https://originalstatic.aminer.cn/misc/dist/images/d2e3568377298e1ec03befd2e196a16b.png) no-repeat center center/20px 20px;
+        border: 1px solid #e3e7eb;
+        border-radius: 50%;
+      }
+
+      .role-robot:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -8px;
+        width: 8px;
+        height: 40px;
+        background: url(https://originalstatic.aminer.cn/misc/dist/images/e485c85437ac1a78ad016540dd6a7b24.png) no-repeat top left/auto 20px;
+      }
+
+      .role-user {
+        align-self: flex-end;
+        box-sizing: border-box;
+        position: relative;
+        margin-right: 50px;
+      }
+
+      .role-user:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -50px;
+        width: 34px;
+        height: 34px;
+        background: url(https://originalstatic.aminer.cn/misc/dist/images/6d37066de631be1c3ca7f7fc34bcf2b9.png) no-repeat center center/20px 20px;
+        border: 1px solid #806dab;
+        border-radius: 50%;
+      }
+
+      .role-user:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -8px;
+        width: 8px;
+        height: 40px;
+        background: url(https://originalstatic.aminer.cn/misc/dist/images/89b414cb60bb3ce68fa1bbcbc6f6b93d.png) no-repeat top right/auto 20px;
+      }
+    }
+
+    .bye {
+      position: fixed;
+      top: 400px;
+      background-color: #6a5acd;
+      height: 70px;
+      width: 70px;
+      border: 1px solid #e3e7eb;
+      border-radius: 50%;
+      right: 45px;
+      text-align: center;
+      line-height: 70px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .bottom {
+      // 高度和content 高度对齐
+      // height: 170px;
+      width: 361px;
+      background: #fff;
+      padding: 5px 20px 15px 20px;
+      box-sizing: border-box;
+      position: relative;
+      border: 1px solid #c1c4c8;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+}

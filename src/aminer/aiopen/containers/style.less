@@ -1,0 +1,89 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  .bottom {
+    display: flex;
+    :global {
+      .ant-select-selection--single {
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+      .right {
+        flex: 1;
+        .bottom {
+          display: flex;
+        }
+      }
+      .ant-select-selection {
+        border: none;
+        width: 90%;
+        margin: 0 auto;
+        border-bottom: 1px solid #c7c8c7;
+      }
+
+      .ant-select-focused .ant-select-selection,
+      .ant-select-selection:focus,
+      .ant-select-selection:active {
+        box-shadow: none;
+      }
+      /* .ant-select-dropdown {
+        background-color: red;
+        width: 10px !important;
+      } */
+    }
+  }
+
+  :global {
+    .head {
+      display: flex;
+      width: 95%;
+      border-bottom: 1px solid #979797;
+      margin: 0 auto;
+      padding: 4px 0 12px;
+      justify-content: space-between;
+    }
+    .treeWrapper {
+      min-height: 1000px;
+      min-width: 600px;
+      margin-top: 16px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      margin-left: 26px;
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #fafafa;
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.5);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c7c8c7;
+        /*滚动条的圆角*/
+      }
+    }
+    .bottom {
+      display: flex;
+      .messageBox {
+        flex: 1;
+        margin-left: 20px;
+        h3 {
+          color: #000000;
+          margin: 10px 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    :global {
+      .treeWrapper {
+        min-width: 100%;
+        margin-left: 0;
+        min-height: 400px;
+      }
+    }
+  }
+}

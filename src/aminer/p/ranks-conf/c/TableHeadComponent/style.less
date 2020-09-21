@@ -1,0 +1,97 @@
+.TableHeadComponent {
+  max-width: 594px;
+  text-align: left;
+
+  :global {
+    .title {}
+
+    .title:hover {
+      font-weight: bold;
+    }
+
+    svg {
+      margin-right: 3px;
+    }
+
+    p {
+      margin-top: 2px;
+      margin-bottom: 0;
+    }
+
+    p:first-child {
+      font-size: 17px;
+      font-weight: bold;
+
+    }
+
+    .shortname-wrapper {}
+
+    .shortname {
+      color: #067C08;
+      font-weight: bold;
+      padding-right: 5px;
+    }
+
+    .name {
+      color: #000;
+      word-break: normal;
+
+    }
+
+    p:last-child {
+      color: #666;
+    }
+
+    .location {
+      padding-left: 20px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 414px) {
+  .TableHeadComponent {
+    max-width: 110px;
+    overflow: hidden;
+
+    :global {
+      .shortname {
+        width: 70%;
+        color: #000;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: unset;
+      }
+
+      .mobileIndex {
+        padding-right: 8px;
+      }
+
+      .name {
+        display: inline-block;
+        max-width: 97px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .title {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+
+        &>span {
+          flex: unset;
+        }
+      }
+
+      .time {
+        display: block;
+      }
+
+      .location {
+        padding-left: 0;
+      }
+    }
+  }
+}

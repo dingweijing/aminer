@@ -1,0 +1,114 @@
+@import '~themes/vars';
+
+.qa_page {
+  position: relative;
+  :global {
+    .ant-form-item {
+      margin-bottom: 10px;
+    }
+    .home_title {
+      padding: 31px 0 20px 36px;
+      border-bottom: 1.5px solid #cccccc;
+      position: relative;
+      margin-bottom: 15px;
+
+      .pull_right {
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        margin: 0;
+        font-size: 14px;
+        .bell_icon {
+          font-size: 20px;
+        }
+        a {
+          color: #4a90e2;
+        }
+      }
+      .contact {
+        text-align: right;
+        a {
+          color: #3C80BC;
+          text-decoration: underline;
+        }
+      }
+    }
+    h1 {
+      font-size: 20px;
+    }
+    .center {
+      padding: 0 36px;
+
+      .qa_list {
+        padding: 0;
+        
+        .qa_item:last-child {
+         .item_content {
+           border-bottom: none;
+         } 
+        }
+        .qa_item {
+          position: relative;
+          padding: 0 0 0 60px;
+          color: #162330;
+          font-size: 14px;
+          .del_btn {
+            position: absolute;
+            top: 25px; left: -16px;
+            .btn {
+              cursor: pointer;
+            }
+          }
+          .item_content {
+            padding: 25px 0;
+            border-bottom: 1px dashed #CCCCCC;
+            .tip {
+              position: absolute;
+              top: 0;
+              left: -60px;
+              width: 45px;
+              height: 24px;
+              line-height: 22px;
+              font-size: 18px;
+              text-align: center;
+              border: 1px solid #ccc;
+              border-radius: 2px;
+              font-weight: normal;
+              font-style: normal;
+            }
+            .q {
+              position: relative;
+              .tip {
+                color: #E02020;
+              }
+            }
+            .a {
+              position: relative;
+              font-weight: bold;
+              font-style: italic;
+              .tip {
+                color: #0095FF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .qa_page {
+    :global {
+      .home_title {
+        padding: 31px 15px 20px 15px;
+        .menu_icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

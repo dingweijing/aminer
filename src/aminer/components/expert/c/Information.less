@@ -1,0 +1,26 @@
+@import '~themes/vars';
+
+.information {
+  font-size: 13px;
+  :global {
+    .person_info_item {
+      margin: 2px 0;
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.information.shorthand {
+  color: #6D7682;
+
+  :global {
+    .person_info_item:not(:last-child)::after {
+      content: ', ';
+      display: inline-block;
+      margin-right: 6px;
+    }
+  }
+
+}

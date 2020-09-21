@@ -1,0 +1,74 @@
+@import "~themes/vars";
+
+.content {
+  transition: all 2000ms; height: auto;
+  .authorTiny {
+    display: flex; justify-content: flex-start; padding: 20px;
+
+    div { margin-right: 9px; }
+    div:last-child { margin-right: 0; }
+  }
+
+  .imageBox {
+    width: 52px; height: 60px; 
+    background: #f9f9f9; 
+    a { 
+      width: 100%; height: 100%; 
+      display: flex; align-items: center; overflow: hidden; 
+      justify-content: center;
+    }
+    img { width: 100%; height: auto; }
+    img.autoWidth { height: 100%; width: auto; }
+  }
+  .sqmore {
+    width: 52px; height: 60px; background: #f9f9f9; cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+
+    span {
+      width: 5px; height: 5px; border-radius: 50%; background: #BBC7AD;
+      margin: 0 2px;
+    }
+  }
+  .more {
+    width: 100%; height: 30px; background: #f9f9f9; cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+
+    span {
+      width: 5px; height: 5px; border-radius: 50%; background: #BBC7AD;
+      margin: 0 2px;
+    }
+  }
+}
+
+:global {
+  .paperPanelAuthor {
+    display: flex; flex-wrap: wrap; border: 1px solid #EFF1EB; padding: 20px;
+    max-height: 50vh;
+
+    .inner {
+      border: 1px solid #d5d5d5; height: 100%; max-height: calc(50vh - 40px); padding: 10px; width: 100%;
+
+      .content {
+        width: 100%; display: flex; flex-wrap: wrap; max-height: calc(50vh - 60px);
+        overflow-y: scroll; 
+
+        a {
+          background: #eee; color: #313231; font-size: 13px; line-height: 20px; 
+          padding: 0 5px; margin: 2px 5px 2px 0; display: flex;
+    
+          &:hover {
+            background: #EFF1EB; color: #067C08;
+          }
+        }
+    
+        span {
+          background: #eee; color: #999; font-size: 13px; line-height: 20px; 
+          padding: 0 5px; margin: 2px 5px 2px 0; display: flex;
+        }
+      }
+    }
+    
+  }
+  
+  
+} 

@@ -1,0 +1,102 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.followEntities {
+
+  // .content_item {
+  //   animation: fade_out 2000ms;
+  // }
+  .content_item.active {
+    animation: fade_in 200ms;
+  }
+
+  :global {
+    .tabs_control {
+      background: #fff;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      // box-shadow: 0 2px 4px 0 #e4e6ec;
+
+      .tab_btn {
+        .user-fz(20);
+        color: #000e28;
+        margin-right: 40px;
+        display: flex;
+        cursor: pointer;
+        transition: all 200ms;
+
+        .count {
+          background: #dedede;
+          padding: 0 8px;
+          color: #0d0c22;
+          height: 16px;
+          border-radius: 8px;
+          margin-left: 10px;
+          .user-fz(14);
+        }
+      }
+
+      .tab_btn:hover {
+        color: rgba(0, 149, 255, 0.7);
+      }
+
+      .tab_btn.active {
+        color: #0095ff;
+        cursor: text;
+      }
+
+      .tab_btn.disable {
+        color: #9e9ea7;
+      }
+    }
+
+    .tabs_content {
+      position: relative;
+
+      .content_item {
+        width: 100%;
+        display: none;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // opacity: 0;
+        // transition: all 200ms;
+      }
+
+      .content_item.active {
+        // opacity: 1;
+        z-index: 10;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {}
+
+@media screen and(max-width: 768px) {}

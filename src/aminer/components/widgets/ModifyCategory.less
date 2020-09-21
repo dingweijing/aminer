@@ -1,0 +1,115 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.modifyCategory {
+  background: #fff;
+  // border: 1px solid #0095ff;
+  // box-shadow: 0 2px 4px 0 #dadada;
+  padding: 7px 10px;
+  :global {
+    .category_list {
+      padding-left: 0;
+      margin-bottom: 0;
+      .category_item {
+        padding: 5px;
+        // display: flex;
+        color: inherit;
+        font-size: 14px;
+        align-items: center;
+        cursor: pointer;
+        transition: all 200ms;
+        overflow: hidden; //超出的文本隐藏
+        text-overflow: ellipsis; //溢出用省略号显示
+        white-space: nowrap; //溢出不换行
+
+        .color {
+          margin-right: 6px;
+          width: 16px;
+          min-width: 16px;
+          height: 16px;
+          background: inherit;
+          display: inline-block;
+          vertical-align: top;
+          border-radius: 4px;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+
+          svg {
+            color: #fff;
+            font-size: 12px;
+            position: relative;
+            left: 2px;
+            bottom: 1px;
+            transition: all 200ms;
+          }
+          svg.not_exist {
+            color: inherit;
+          }
+        }
+        .name {
+          font-weight: bold;
+          line-height: 18px;
+          color: #222222;
+        }
+        .name.exist {
+          color: inherit;
+        }
+
+        &:hover {
+          background: #f4f4f4;
+        }
+        .color_list {
+          top: -33px;
+          .color-list {
+            padding: 6px;
+            height: 56px;
+          }
+          .color-list::before {
+            top: 40px;
+          }
+        }
+      }
+    }
+    .create_btn {
+      padding: 5px 5px 5px 7px;
+      font-size: 14px;
+      display: flex;
+
+      .btn {
+        color: #222;
+        cursor: pointer;
+        padding: 0 !important;
+        .common-transition();
+        .icon {
+          margin-right: 6px;
+        }
+      }
+      .btn:hover {
+        color: @zp_blue;
+      }
+    }
+
+    .up .right {
+      .opr_btn {
+        width: 16px;
+        height: 16px;
+      }
+      .opr_btn.confirm_btn {
+        margin-right: 2px;
+      }
+    }
+    .under_color {
+      border-bottom: none !important;
+    }
+    .color_list {
+      position: absolute;
+      left: 22px;
+      top: -18px;
+      z-index: 4;
+      transition: all 300ms linear;
+      transform-origin: left center;
+      transform: scale(1) rotateX(0deg);
+    }
+  }
+}

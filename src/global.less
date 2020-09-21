@@ -1,0 +1,58 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+// .ant-layout { min-height: 100vh; }
+
+
+// --------------------------------------
+// 关于系统中的一些特殊 class
+// --------------------------------------
+// .mainlayout { 这是全局的 layouts/2b 的一个className，用来定义基础样式。注意：会被component中的样式覆盖。 }
+.mainlayout {
+  .layout-header {}
+
+  .layout-body {
+    .layout-sider {}
+
+    .layout-content {}
+
+    .layout-footer {}
+  }
+}
+
+// .defaulthomepage { 默认主页的样式，可以用来覆盖背景图等。}
+
+
+.ant-tag {
+  border-radius: 2px;
+  transition: none;
+}

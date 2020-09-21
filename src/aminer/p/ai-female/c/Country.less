@@ -1,0 +1,299 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.country {
+  :global {
+    .desc {
+      margin-bottom: 8px;
+    }
+    .all_institutes_list {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #e5e5e5;
+      border-bottom: none;
+      padding: 0;
+      border-right: none;
+
+      li {
+        width: 20%;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+      }
+    }
+    .org {
+      position: relative;
+      .img_box {
+        padding: 15px 20px 10px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        img {
+          height: 100%;
+        }
+      }
+      .winner {
+        text-align: center;
+      }
+
+      &:hover {
+        .mask {
+          opacity: 1;
+        }
+      }
+
+      .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(22, 35, 48, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: @font-helvetica;
+        opacity: 0;
+
+        .texts {
+          color: #fff;
+          display: flex;
+          justify-content: stretch;
+          align-items: center;
+          flex-direction: column;
+          font-size: 16px;
+          hr {
+            width: 100%;
+            margin: 0;
+          }
+          p {
+            margin: 0;
+          }
+        }
+
+        .number {
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          top: 0;
+          left: 0;
+          background: #000;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &.small {
+          .texts {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .conclusion {
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+    .desc_title {
+      // font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: bold;;
+    }
+  }
+}
+
+.countryComponent, .genderComponent, .orgComponent {
+  margin-bottom: 20px;
+  :global {
+    .desc_title {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    .conclusion {
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+    .desc {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.counterDistribution, .domainDistribution {
+  :global {
+    // .part {
+    //   margin-top: 36px;
+    //   font-size: 12px;
+    //   h2 {
+    //     font-size: 14px;
+    //     color: #162330;
+    //     font-weight: bold;
+    //     margin-bottom: 12px;
+    //   }
+    // }
+    // .list.gender_list li {
+    //   flex-direction: column;
+
+    //   & > span {
+    //     border-right: none;
+    //     max-width: 100%;
+    //     padding: 10px 0 6px 15px;
+    //   }
+    // }
+    .list {
+      padding: 0;
+      border: 1px solid #e5e5e5;
+      border-radius: 1px;
+      margin-top: 0px;
+      li {
+        display: flex;
+        height: 54px;
+
+        & > span {
+          // padding: 15px 3px;
+          border-right: 1px solid #e5e5e5;
+          min-width: 220px;
+          max-width: 220px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .desc {
+          padding: 5px 15px;
+          align-items: center;
+          transform: scale(0.92);
+          flex-grow: 1;
+          transform-origin: 0;
+          .jconf {
+            margin: 0;
+            .jconf_name {
+              margin-right: 10px;
+            }
+          }
+          .jconf.spare {
+            color: #666;
+          }
+        }
+      }
+      li:nth-child(odd) {
+        background: #f8f8f8;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+    .gender {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .candidates {
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+
+        .candidates_left {
+          padding-right: 20px;
+          color: #4a90e2;
+          img {
+            margin-left: 4px;
+          }
+          .label {
+            margin-left: 10px;
+          }
+          .number {
+            margin-left: 10px;
+          }
+        }
+        .candidates_right {
+          padding-left: 20px;
+          color: #e66b7a;
+          img {
+            margin-right: 4px;
+          }
+          .label {
+            margin-right: 10px;
+          }
+          .number {
+            margin-right: 10px;
+          }
+        }
+        .head {
+          display: flex;
+          align-items: flex-end;
+          img {
+            height: 30px;
+          }
+
+          // .number { margin: 0 15px; }
+        }
+      }
+
+      .lines {
+        height: 4px;
+        width: 100%;
+        // background: red;
+        margin-top: 3px;
+        display: flex;
+        .lines_left {
+          background: #4a90e2;
+          width: 50%;
+        }
+        .lines_right {
+          background: #e66b7a;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .country {
+    :global {
+      .all_institutes_list .org {
+        width: 25%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .country {
+    :global {
+      .all_institutes_list .org {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .country {
+    :global {
+      .list li {
+        flex-direction: column;
+        height: auto;
+      }
+      .list li > span {
+        justify-content: flex-start;
+        // min-width: 140px; max-width: 140px;
+        text-align: left;
+        border-right: none;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 10px 14px 0;
+        // font-weight: bold;
+      }
+      .list li > .desc {
+        width: calc(100% * 1 / 0.92);
+      }
+    }
+  }
+}

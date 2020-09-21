@@ -1,0 +1,159 @@
+@import "~themes/vars";
+
+
+.imageSwipper {
+  // background: #F6FBFF;
+  display: flex; align-items: stretch;
+
+  :global {
+    .outer {
+      width: calc(100%/4);
+      // cursor: pointer;
+      // padding: 25px 0; // 增加 ncp 模块，暂时修改样式
+      // padding: 16px 0; // 增加 ncp 模块，暂时修改样式
+      background-color: #DBEDFB;
+      border: 1px solid transparent;
+      transition: all 200ms;
+
+      .outer_content {
+        height: 90px; padding: 20px 13px; display: flex;
+        // border-right: 1px dotted #979797;
+      }
+      .outer_footer {
+        height: 36px; background-color: #0095FF;
+        padding: 0 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        .footerIcon { font-size: 30px; }
+        .footerMore {
+          cursor: pointer; color: white;
+          .moreIcon { margin-left: 5px; }
+        }
+      }
+      .icon_section {
+        height: 41px; width: 41px; margin-right: 10px;
+        svg { font-size: 41px; color: #333333}
+      }
+      .introduce {
+        font-size: 12px; line-height: 20px;
+        // width: calc(100% - 50px);
+        .title {
+          // color: #222222; font-weight: bold; display: block;
+          // transition: all 200ms; overflow: hidden;
+          // text-overflow: ellipsis;
+          // white-space: nowrap;
+          font-size:17px;
+          font-family:Roboto-Bold,Roboto,'Helvetica Neue', Arial;
+          font-weight:bold;
+          color:rgba(0,120,203,1);
+          line-height:21px;
+          display: block;
+          margin-bottom: 10px;
+          img { width: 28px; position: relative; top: -5px; left: 5px;}
+        }
+        .desc, .desc_link {
+          font-size:12px;
+          font-family:Roboto-Regular,Roboto,'Helvetica Neue', Arial;
+          font-weight:400;
+          color:rgba(84,84,84,1);
+          line-height:16px;
+          // color: #5A5A5A; display: block;
+          // transition: all 200ms;
+          // max-height: 41px;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          // display: -webkit-box;
+          // -webkit-line-clamp: 2;
+          // -webkit-box-orient: vertical;
+        }
+        .desc_link {
+          display: inline;
+        }
+      }
+    }
+    .outer + .outer { margin-left: 10px; }
+    .outer:last-child {
+      .outer_content {
+        border-right: none;
+      }
+    }
+    .outer:hover {
+      // border-color: #0097ff;
+      // border-bottom-style: solid;
+      background: rgba(219, 237, 251, 0.8);
+      box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.15);
+      transform: translate3d(0, 1px, -2px);
+      .outer_footer {
+        background: #0C74DD;
+      }
+      .footerMore{
+        :global {
+          span { margin-right: 8px; transition: all 0.2s ease-in; }
+          .moreIcon {
+            margin-right: -4px;
+            transition: all 0.2s ease-in;
+          }
+        }
+      }
+      // .icon_section {
+      //   svg { color: #0097ff}
+      // }
+      // // .outer_content {
+      // //   border-right: none;
+      // // }
+      // .introduce {
+      //   .title{ color: #0097ff; }
+      // }
+    }
+    .icon_section:hover {
+      svg { color: #0097ff}
+    }
+    .introduce .title:hover {
+      color: #0097ff;
+    }
+    .desc_link:hover {
+      color: #0097ff !important;
+    }
+    
+    .ncp:hover {
+      .icon_section {
+        svg { color: #DD4B39}
+      }
+      .introduce {
+        .desc { color: #5A5A5A; }
+      }
+    }
+    .ncp {
+      .introduce {
+        .desc:hover { color: #DD4B39; text-decoration: underline;}
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .imageSwipper {
+    display: none;
+    // flex-wrap: wrap;
+    // :global {
+    //   .outer {
+    //     width: 100%;  border-bottom-color: #979797; border-bottom-style: dotted;
+    //     .outer_content {
+    //       border-right: none;
+    //     }
+
+    //     &:last-child {
+    //       border-bottom-color: transparent;
+    //     }
+
+    //     &:hover {
+    //       border-bottom-color: #0097ff;
+    //     }
+    //   }
+    //   .outer + .outer { margin: 10px 0 0; }
+    // }
+  }
+}

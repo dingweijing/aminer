@@ -1,0 +1,60 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.followsConfs {
+  :global {
+    .follow_list {
+      background: #fff;
+      // width: calc((100% - 20px) / 2);
+    }
+
+    .conf-list-item {
+      border-bottom: none;
+      padding: 22px 35px;
+      &:after {
+        display: block;
+        content: '';
+        border-bottom: 1px dashed #979797;
+        width: calc(100% - 144px);
+        position: absolute;
+        bottom: 0;
+        left: 109px;
+      }
+
+      &:last-child:after {
+        width: calc(100% - 70px);
+        left: 35px;
+      }
+    }
+
+    .loadmore {
+      font-weight: bold;
+      background: #fff;
+      // margin-top: 18px;
+      padding: 20px 35px;
+
+      .loadmore_btn {
+        background: rgba(228, 230, 236, 0.3);
+        color: #9097a1;
+        border-radius: 8px;
+        display: block;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 200ms;
+
+        &:hover {
+          background: rgba(228, 230, 236, 0.7);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

@@ -1,0 +1,39 @@
+.subscribe {
+  margin-top: 1px;
+  display: flex;
+  .subscribeBtn {
+    border-radius: 3px;
+    // padding: 6px;
+    margin-left: 8px;
+    :global {
+      .icon { margin-right: 5px; }
+    }
+ }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe { display: none;}
+}
+
+
+.form {
+  padding: 12px 32px;
+  max-height: 80vh;
+  :global {
+    .ant-input-affix-wrapper .ant-input {
+      padding-right: 0px;
+    }
+  }
+  .formItem {
+    margin: 12px 0;
+  }
+  .btnLine {
+    margin-top: 12px;
+    text-align: right;
+    .submitBtn {
+      display: inline-block;
+      margin-left: 12px;
+    }
+  }
+  
+}

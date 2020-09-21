@@ -1,0 +1,88 @@
+.articleList {
+  font-size: 12px;
+  .advImg{
+    object-fit: cover;
+    width: 100%;
+  }
+  .legend {
+    font-size: 18px;
+    &::before {
+      content: '';
+      border: 2px solid red;
+      margin-right: 10px;
+    }
+  }
+  .legend:first-of-type{
+    margin-top: 20px;
+  }
+  .alertInfo {
+    background-color: #d6dde7;
+    padding: 10px;
+    border-radius: 0;
+    text-align: center;
+    border: 1px solid transparent;
+    h1 {
+      color: #305d8c;
+      text-align: center;
+      font-size: 28px;
+      line-height: 35px;
+      margin: 10px 0;
+    }
+  }
+}
+
+// @media only screen and (min-width: 320px) and (max-width: 360px) {
+//   .articleList {
+//     font-size: 13.65px;
+//   }
+// }
+
+// @media only screen and (min-width: 360px) and (max-width: 375px) {
+//   .articleList {
+//     font-size: 15.36px;
+//   }
+// }
+
+// @media only screen and (min-width: 375px) and (max-width: 390px) {
+//   .articleList {
+//     font-size: 16px;
+//   }
+// }
+
+// @media only screen and (min-width: 390px) and (max-width: 414px) {
+//   .articleList {
+//     font-size: 16.64px;
+//   }
+// }
+
+// @media only screen and (min-width: 414px) and (max-width: 640px) {
+//   .articleList {
+//     font-size: 17px;
+//   }
+// }
+
+// @media screen and (min-width: 640px) {
+//   .articleList {
+//     font-size: 12px;
+//   }
+// }
+@media (min-device-width: 319px) and (max-device-width: 736px) {
+  :global {
+    .reportList {
+      padding-right: 0px;
+    }
+  }
+  .reportPage {
+    .wrap {
+      width: 100%;
+      .navsLine {
+        display: block;
+        overflow-x: scroll;
+        .navs {
+          width: 146vw;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

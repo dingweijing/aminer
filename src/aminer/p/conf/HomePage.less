@@ -1,0 +1,187 @@
+@leftWidth: 75%;
+
+.homepage {
+  flex-grow: 1;
+  margin-top: -16px;
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: row;
+  :global {
+    .left_block {
+      width: @leftWidth;
+      margin-right: 46px;
+      flex-grow: 1;
+    }
+    .right_block {
+      width: calc(100% - @leftWidth);
+      .weChart {
+        margin-top: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 50%;
+        }
+      }
+      .nextConf {
+        background-image: url('https://originalfileserver.aminer.cn/sys/aminer/search_iclr2020_bg.jpg');
+        height: 199px;
+      }
+    }
+
+    .parent_legend {
+      display: flex;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .parent_legend:nth-child(1) {
+      background-color: #f8f9fa;
+      padding-top: 20px;
+      // position: absolute;
+      // z-index: 1;
+      width: 100%;
+    }
+    .parent_legend:nth-child(3) {
+      margin-top: 60px;
+    }
+    #cloud {
+      background-color: #f8f9fa !important;
+    }
+    .author_rank {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      .scholar,
+      .student {
+        width: 49%;
+        margin-right: 1%;
+        padding: 18px 20px;
+        border: 1px solid #e0e0e0;
+      }
+      .student {
+        margin-right: 0px;
+      }
+    }
+    .children_legend {
+      font-size: 20px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      color: #000000;
+      border-bottom: 1px solid #d8d8d8;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .more_btn {
+        font-size: 16px;
+        color: #9e9ea7;
+        cursor: pointer;
+        svg {
+          font-size: 14px;
+        }
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+    // .chinese_first {
+    //   margin-top: 20px;
+    // }
+    .authors_content {
+      .imgBox > .views {
+        display: none;
+      }
+      .imgBox {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        // img {
+        //   border-radius: 50%;
+        // }
+      }
+      .content > p:first-child {
+        display: none;
+      }
+    }
+    .authors_content > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .authors_content > div > div {
+      // width: 19%;
+      // margin-right: 1%;
+      box-shadow: none;
+      &:hover {
+        cursor: pointer;
+        // box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        // transition: all 200ms;
+      }
+      .image_box {
+        width: 90px;
+        min-width: 90px;
+        height: 130px;
+      }
+      .itemRightTop {
+        right: 4px;
+        top: -2px;
+      }
+    }
+  }
+}
+.homepage > div:nth-child(2) {
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+}
+.personRanking {
+  .top {
+    svg {
+      font-size: 18px;
+    }
+  }
+  .no {
+    color: #999;
+    font-size: 18px;
+    font-family: @font-helvetica;
+    font-style: italic;
+  }
+  .no.top {
+    color: peru;
+  }
+  .no.red {
+    span {
+      box-shadow: 0 0 2px rgba(255, 102, 49, 0.3);
+      border-color: #ffbc1d;
+      background: rgba(255, 102, 49, 1);
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    :global {
+      .left_block {
+        width: 100%;
+        margin-right: 0px;
+      }
+      .authors_content > div > div {
+        width: 100% !important;
+      }
+      .author_rank {
+        flex-direction: column;
+        .scholar,
+        .student {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

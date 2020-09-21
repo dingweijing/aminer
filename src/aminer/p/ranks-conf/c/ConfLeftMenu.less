@@ -1,0 +1,35 @@
+.confLeftMenu {
+  width: 100%;
+
+  :global {
+    .menu_title {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+
+  .confLeftMenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    width: calc(100% / 3 * 2);
+    background: #fff;
+    z-index: 10;
+    max-height: 68vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px #999;
+
+    :global {
+      .menu_title {
+        display: block;
+        padding: 5px 10px 5px 20px;
+        font-weight: bold;
+      }
+    }
+
+  }
+}

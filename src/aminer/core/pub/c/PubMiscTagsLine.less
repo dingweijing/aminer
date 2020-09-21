@@ -1,0 +1,87 @@
+@import "~themes/vars";
+
+.misctags {
+  margin-right: 12px;
+  font-size: 13px;
+  .cited {
+    color: @color-high;
+    font-size: 13px;
+    svg {
+      position: relative;
+      top: -2px;  
+    }
+    &.zero {
+      color: #999;
+    }
+  }
+  .bibtex {
+    color: @color-high-green;
+    cursor: pointer;
+    font-weight: bold;
+    i {
+      margin-right: 2px;
+    }
+  }
+  :global {
+    .url {
+      i, svg {
+        color: #666;
+        position: relative;
+      }
+      .url-link {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 15px;
+      }
+      &:hover svg {
+        color: @color-high;
+      }
+      &:hover .url-link {
+        display: inline-block;
+      }
+    }
+    .views {
+      color: #3C80BC;
+      font-size: 13px;
+      font-weight: bolder;
+      svg, i {
+        margin-right: 4px;
+      }
+    }
+  }
+  .split {
+    margin: 0 10px;
+    color: @border-color-split;
+  }
+
+  // .btns {
+  //   float: right;
+  //   display: flex;font-size: 12px;
+  //   :global {
+  //     .ant-btn {
+  //       padding: 0 10px; font-size: 12px; background: #F5F5F5;
+  //     }
+  //   }
+  //   .btn {
+  //     margin-left: 24px;
+  //     &:hover { z-index: 5; }
+  //     i { margin-right: 5px; }
+
+  //     &.mark {}
+
+  //     &.marked {
+  //       // position: relative;
+  //       .mark {
+  //         background: @color-high; color: #fff; border-color: @color-high;
+  //       }
+  //       .unmark { display: none; }
+
+  //       &:hover {
+  //         .unmark { display: block; }
+  //         .mark { display: none; }
+  //       }
+  //     }
+  //   }
+  // }
+}

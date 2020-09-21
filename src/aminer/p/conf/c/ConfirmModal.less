@@ -1,0 +1,42 @@
+.confirmModal {
+  background-color: #020e26;
+  // TODO: 可配置
+  height: 204px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  
+  position: absolute;
+  z-index: 1;
+  opacity: 95%;
+  top: 50%;
+  .content {
+    display: flex;
+    align-items: center;
+    .title {
+      color: #e77a77;
+    }
+    .action {
+      color: #222222;
+      font-size: 14px;
+      margin-left: 60px;
+      button {
+        width: 80px;
+        height: 30px;
+        &:last-child {
+          margin-left: 43px;
+        }
+        &:hover {
+          @active();
+        }
+      }
+    }
+  }
+
+  @active: {
+    background-color: #0095ff;
+    color: #ffffff;
+  };
+}

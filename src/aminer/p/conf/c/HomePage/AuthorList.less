@@ -1,0 +1,55 @@
+.leftAuthorList {
+  :global {
+    .authorList {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 0 5px 30px;
+      &:hover {
+        color: #0095ff;
+        background-color: #f9f9f9;
+      }
+    }
+    .authorList.active {
+      color: #ffffff;
+      background-color: #0095ff;
+    }
+
+    .filterControll {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px 0px 30px;
+      margin-bottom: 10px;
+      .expandBtn {
+        padding: 0;
+        color: #666;
+        border: none;
+        height: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        .expandIcon {
+          fill: #999;
+          margin: 0px 8px 0 1px;
+          width: 14px;
+          height: 14px;
+        }
+        &:focus,
+        &:active {
+          color: #666;
+          border: none;
+          background-color: none;
+        }
+        &:hover {
+          color: #0095ff;
+          border: none;
+          background-color: none;
+          .expandIcon {
+            fill: #0095ff;
+          }
+        }
+      }
+    }
+  }
+}

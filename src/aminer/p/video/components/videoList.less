@@ -1,0 +1,15 @@
+.videoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .videoMeta {
+    border: 1px solid red;
+    :global {
+      .ant-card-meta-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

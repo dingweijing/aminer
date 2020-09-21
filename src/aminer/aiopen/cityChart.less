@@ -1,0 +1,43 @@
+.cityChart {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('https://fileserver.aminer.cn/sys/aminer/background@2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  :global {
+    .topBar {
+      height: 64px;
+      background: rgba(32, 49, 68, 1);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 76px;
+      align-items: center;
+
+      .title {
+        color: #75D4FF;
+        font-size: 32px;
+      }
+
+      .options {
+        display: flex;
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &>div {
+    margin: 0 1em;
+  }
+}

@@ -1,0 +1,17 @@
+.editContainer {
+  width: 900px; margin: 0 auto;
+  .inputArea, .personInfo { width: 70%; }
+  .inputArea {
+    display: flex;
+    :global {
+      .ant-input-group-addon { padding: 0 3px }
+      .ant-input-affix-wrapper { input{ padding-left: 3px; } }
+    }
+    form {
+      width: 100%;
+      input {
+        border-left: 0; padding-left: 0;
+      }
+    }
+  }
+}

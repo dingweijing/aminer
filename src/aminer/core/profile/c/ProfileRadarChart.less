@@ -1,0 +1,22 @@
+@import "~themes/theme-aminer-func";
+.profileRadar {
+  display: flex; justify-content: space-between; align-items: center;
+  :global {
+    .content p { 
+      margin-bottom: 10px; line-height: 16px; 
+      display: flex;
+      .label { width: 78px; text-align: right; margin-right: 5px; }
+      .num {
+        background: #ebebeb; padding: 0 5px;
+      }
+    }
+    .radarChart {
+      position: relative;
+      width: 180px; height: 180px;
+      i { 
+        position: absolute; bottom: -5px; right: -5px; 
+        .btn-style-1(); padding: 5px;
+      }
+    }
+  }
+}

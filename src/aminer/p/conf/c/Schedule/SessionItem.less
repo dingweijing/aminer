@@ -1,0 +1,126 @@
+@paperBorderColor: #d5d5d5;
+@leftBlockWidth: 26%;
+
+.sessionItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  :global {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+      border-left: 2px solid #daa000;
+      box-shadow: 0px 0px 6px 2px #f3f3f3;
+
+      .headMain {
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+        .action {
+          width: 28px;
+          min-width: 28px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          background-color: #FFC935;
+          border-radius: 14px;
+          svg {
+              color: #fff;
+          }
+          &:hover {
+              cursor: pointer;
+          }
+          .arrow {
+              color: #fff;
+          }
+      }
+      
+        .right {
+          font-size: 13px;
+          font-weight: bold;
+          color: #fff;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 100%;
+          .title {
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            // font-weight: bold;
+            font-weight: 500;
+            color: #daa000;
+            flex-wrap: wrap;
+            .chair {
+              margin-left: 10px;
+              color: #545454;
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
+          .time {
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            span {
+              margin-right: 5px;
+              color: #545454;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .operate {
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        i {
+          color: #1890ff;
+          margin-right: 12px;
+        }
+        > svg {
+          color: #e02020;
+        }
+      }
+    }
+    .footer {
+      min-width: 100px;
+      border-left: 2px solid @paperBorderColor;
+      // border-right: 1px solid @paperBorderColor;
+      // display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sessionItem {
+    .schedule {
+      margin: 0 0;
+      .headMain {
+        align-items: center;
+        .right {
+          flex-wrap: wrap;
+
+          .title {
+            font-size: 14px;
+            .chair {
+              margin-left: 0px !important;
+              font-size: 12px;
+            }
+          }
+          .time {
+            margin-left: 0px !important;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

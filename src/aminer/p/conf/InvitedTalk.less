@@ -1,0 +1,31 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+@leftBlockWidth: 28%;
+.invitedTalkPage {
+  width: calc(100% - @leftBlockWidth - 10px);
+  min-width: calc(100% - @leftBlockWidth - 10px);
+  :global {
+    .keynote_item {
+      border-color: #b8cefe #9dafd8 #9dafd8 #b8cefe;
+      background: linear-gradient(#cadafe, #c0d4fe);
+    }
+
+    .invited_talk_item {
+      background: #fff;
+      border: none;
+      margin-bottom: 0;
+      margin-top: 15px;
+
+      .image_box {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .invitedTalkPage {
+    flex-grow: 1;
+  }
+}

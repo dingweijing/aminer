@@ -1,0 +1,93 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.patentList {
+  :global {
+    .patent-item {
+      border-bottom-style: dashed;
+      border-bottom-width: 1px;
+      border-bottom-color: @border-color-split; 
+      display: flex;
+      padding: 20px 0 14px 0; 
+      position: relative;
+
+      &.end:last-child { border-bottom: none; }
+      &:last-child { margin-bottom: 0; }
+    
+      .content { 
+        flex-grow: 1; position: relative; top: -2px; line-height: 18px; 
+        width: calc(100% - 49px;); font-size: 12px;
+      }
+      .patent_title {
+        // display: flex; align-items: center; 
+        // vertical-align: middle;
+        // font-weight: bold;
+        color: #000; line-height: 22px;  font-size: 16px;
+        margin-bottom: 0; vertical-align: middle;
+        a { color: #000; }
+      }
+    
+      .patentee-line {
+        font-size: @font-size-12;
+        margin-top: 8px;
+
+        .patentee-lable {
+          color: #666;
+        }
+        .patentees {
+          .patentee {
+            color: #222; margin-right: 6px;
+          }
+        }
+        
+    
+        .author { color: rgba(6, 124, 8, .7); padding-bottom: 3px; }
+        .author.link { color: rgba(6, 124, 8, 1); }
+        // .author.link:hover { text-decoration: underline; }
+        .author.link.underline { text-decoration: underline; }
+        .mr { margin-right: 5px; }
+        .author.highlight { color: #EC6B10; font-style: italic; }
+      }
+
+      .abstract {
+        color: #444;
+      }
+
+    
+      .patent-info {
+        display: flex; align-items: center; flex-wrap: wrap;
+        font-size: @font-size-12; margin-top: 5px;
+        .info-item {
+          margin-right: 15px; color: #000;
+          .item-label {
+            color: #666; 
+          }
+          // strong { .tiny-number(12px) }
+        }
+
+        .split { margin: 0 10px; color: #d5d5d5; }
+        
+      }
+    
+      .content-right {
+        position: absolute; top: 18px; right: 0;
+      }
+      
+    }
+  }
+}
+
+.aminerPaperList.profile {
+  :global {
+    .paper-item {
+      .oprs .cited {
+        color: #EC6B10;
+      }
+    }
+  }
+}
+
+.test {
+  position: absolute; padding: 40px; border: 1px solid #000;
+  display: none; z-index: 10; background: #fff;
+}

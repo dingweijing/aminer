@@ -1,0 +1,25 @@
+.Indicator {
+  width: 100px;
+  height: 23px;
+  border-radius: 11px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  background-color: #201D5B;
+  cursor: pointer;
+  overflow: hidden;
+
+  .left, .right {
+    flex: 1;
+    color: #fff;
+    text-align: center;
+  }
+  .left {
+    border-right: .5px solid #201D5B;
+  }
+
+  .active {
+    background-color: #fff;
+    color: #201D5B;
+  }
+}

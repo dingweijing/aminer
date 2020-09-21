@@ -1,0 +1,34 @@
+.TinyPlayer {
+  position: relative;
+
+  :global {
+    .videoIcon {
+      cursor: pointer;
+      position: absolute;
+      height: 100%;
+      /* border: 1px solid red; */
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+
+      svg {
+        width: 49px;
+        height: 49px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &:hover {
+        svg {
+          transition: all 200ms;
+          color: rgba(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

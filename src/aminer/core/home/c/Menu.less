@@ -1,0 +1,176 @@
+@import "~themes/vars";
+
+// 545454  999
+
+.homeMenu {
+  width: 100%;
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  :global {
+    .menu {
+      width: 32.5%; position: relative; border: 1px solid #E6E6E6;
+      transition: all 200ms; margin-bottom: 20px;
+
+
+      &:hover {
+        box-shadow: 0 2px 6px 3px #ECECEC;
+        border-color: #0097ff;
+        .headLine { background: #0097ff;
+          h2 a { color: #fff; } 
+        } 
+      }
+    
+      .headLine {
+        height: 46px; position: relative; line-height: 46px;
+        color: #222; border-bottom: 1px solid #E6E6E6;
+        background: #fff; transition: all 200ms;
+
+        a { color: #222; }
+
+        h2 {
+          font-size: 18px; font-family: @font-helvetica;
+          font-weight: 400; padding: 0 14px; color: #222;
+          transition: all 200ms;
+        }
+    
+      }
+      .menuIcon {
+        background-image: url('/sys/aminer/homepage/menu-icon.png');
+        background-size: 147px 395px; background-repeat: no-repeat;
+        position: absolute; top: -50px; right: 0; width: 100px; height: 100px;
+      }
+    
+      .menu_content {
+        padding: 8px 14px; 
+        .menu_head {
+          margin-bottom: 15px;
+          margin-right: 5px;
+
+          .react-autosuggest__input--focused {
+            border-color: #0097ff;
+          }
+          .react-autosuggest__suggestions-list {
+            max-height: 260px;
+            overflow-y: auto;
+          }
+          // .react-autosuggest__input {
+          //   border-radius: 0;
+          // }
+        }
+        .menuList {
+          margin: 0; padding-left: 0;
+      
+          .listItem {
+            font-family: @font-helvetica; margin-bottom: 12px;
+            // cursor: pointer;
+            .itemContent { display: flex; align-items: center; justify-content: space-between; }
+            .contentLeft { flex: 1; }
+            .itemIcon {
+              width: 33px;
+              height: 33px;
+              display: inline-block;
+              text-align: center;
+              font-weight: bold;
+              line-height: 33px;
+              border-radius: 50%;
+              margin-right: 11px;
+            }
+      
+            .title {
+              font-size: 14px; color: #545454; transition: all .2s;
+
+              &:hover {
+                text-decoration: underline; color: #0097ff;
+              }
+            }
+            .marked { width: 28px; position: relative; top: -5px; left: 5px;}
+            .desc { font-size: 12px; color: #999; margin-bottom: 0; }
+            .itemImg {
+              width: 85px;
+              height: 50px;
+              margin-left: 10px;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              img { height: 100%; }
+            }
+      
+            &:last-child { margin-bottom: 0; }
+          }
+        }
+  
+        .menu_image {
+          display: flex;
+          margin-top: 20px;
+          img {
+            width: 100%; border: 1px solid #E6E6E6; border-radius: 4px;
+          }
+          a + a { margin-left: 16px; }
+        }
+
+        .image_from {
+          margin: 0;
+          text-align: right;
+          color: #9E9EA7;
+          font-size: 12px;
+          line-height: 18px;
+          margin-top: 6px;
+        }
+      }
+      
+    }
+    .menu.thuaitr {
+      .menu_content {
+        max-height: 308px; overflow: hidden; overflow-y: auto;
+
+        .title {
+          span {
+            text-align: justify;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* autoprefixer: off */ 
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+    .menu.required {
+      .contentLeft {
+        width: 100%;
+        .title {
+          width: 100%;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .menu.experts {
+      .listItem { margin-bottom: 10px; }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .homeMenu {
+    :global {
+      .menu {
+        width: 49%;
+      }
+    }
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .homeMenu {
+    :global {
+      .menu {
+        width: 100%;
+      }
+    }
+  }
+}

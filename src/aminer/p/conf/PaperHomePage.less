@@ -1,0 +1,180 @@
+@leftBlockWidth: 28%;
+.flexGrow {
+  flex-grow: 1;
+}
+.homePage {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - @leftBlockWidth - 10px);
+  min-width: calc(100% - @leftBlockWidth - 10px);
+  // flex-grow: 1;
+  :global {
+    // .leftAndCenter {
+    //   display: flex;
+    //   flex-direction: row;
+    // }
+    .left-tab {
+      font-size: 16px;
+      svg {
+        margin-right: 6px;
+      }
+    }
+    .tabIcon {
+      margin-right: 10px;
+    }
+    .center-tab {
+      font-size: 16px;
+    }
+    .innerMarginTop60 {
+      margin-top: 60px;
+    }
+    .leftBlock {
+      position: relative;
+      min-width: 18%;
+      width: 23%;
+      background-color: #ffffff;
+      // margin-top: 60px;
+      .ant-tabs-top-bar {
+        justify-content: flex-start;
+        margin-bottom: 0px;
+      }
+      .ant-tabs-tab {
+        padding: 8px;
+        margin-right: 12px;
+      }
+    }
+
+    .centerContent {
+      margin: 0 20px;
+      flex-grow: 1;
+      width: calc(100% - 23%);
+      position: relative;
+      .downloadAllPdf {
+        position: absolute;
+        right: 11px;
+        z-index: 10;
+        margin-top: 10px;
+        cursor: pointer;
+        width: auto;
+        height: 40px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        max-width: 600px;
+        .downloadpdfs {
+          margin: 0 5px;
+        }
+      }
+      .outside_chain {
+        position: absolute;
+        right: 11px;
+        z-index: 10;
+        margin-top: 4px;
+        img{
+          width: 33px;
+        }
+      }
+
+      .refresh {
+        display: flex;
+      }
+      .ant-tabs-top-bar {
+        justify-content: flex-start !important;
+        // margin-left: 5px;
+        // margin-right: 5px;
+        // margin-bottom: 0px;
+        margin: 0 5px;
+        .ant-tabs-tab {
+          padding: 8px;
+          margin-right: 24px;
+        }
+        .ant-tabs-tab:first-child {
+          padding-left: 0px;
+        }
+      }
+      // .ant-tabs-tab-prev,
+      // .ant-tabs-tab-next {
+      //   display: none;
+      // }
+      // .ant-tabs-nav-container-scrolling{
+      //   padding-left: 0px;
+      //   padding-right: 0px;
+      // }
+      .mobile_left_filter_icon {
+        position: absolute;
+        right: 10px;
+        top: -15px;
+      }
+    }
+    // .ant-tabs-top-bar {
+    //   justify-content: flex-start;
+    //   margin-bottom: 0px;
+    // }
+    .ant-collapse-content-box {
+      padding: 0;
+    }
+
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+      padding-left: 16px;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+      right: 16px;
+      left: auto;
+    }
+  }
+}
+@media screen and (max-width: 1366px) {
+  .homePage {
+    :global {
+      .centerContent {
+        .downloadAllPdf {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1266px) {
+  .homePage {
+    :global {
+      .centerContent {
+        .downloadAllPdf {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .homePage {
+    :global {
+      .centerContent {
+        .downloadAllPdf {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homePage {
+    // position: absolute !important;
+    flex-grow: 1;
+    :global {
+      .tabIcon {
+        margin-right: 0px;
+      }
+      .centerContent {
+        margin: 10px 0px !important;
+      }
+      .leftBlock {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        width: 70%;
+        height: 65vh;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

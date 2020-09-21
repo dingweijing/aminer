@@ -1,0 +1,40 @@
+@import '~themes/vars';
+
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(126, 133, 146, .6);
+  img {
+    height: 100%;
+    display: block;
+  }
+
+  :global {
+    .default_icon {
+      color: #D8D8D8;
+      font-size: 15px;
+    }
+  }
+}
+
+.profile.login {
+  border: none;
+  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.profile.home {
+  background: transparent;
+
+  :global {
+    .default_icon {
+      color: #0095ff;
+      font-size: 30px;
+    }
+  }
+}

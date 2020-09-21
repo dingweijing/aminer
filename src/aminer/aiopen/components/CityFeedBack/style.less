@@ -1,0 +1,71 @@
+:global {}
+
+.wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 500px;
+  right: 1px;
+  width: 300px;
+  // height: 90px !important;
+  //background-color: #cccccc;
+  color: #fff;
+
+  :global {
+    .vsbar-wrapper {
+      // position: absolute;
+      width: 100%;
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+
+      .iicon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #aaa;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .bar {
+        // position: absolute;
+        height: 8px;
+        width: calc(90% - 40px);
+        border: 2px solid #fff;
+        margin: 0 10px;
+        background: linear-gradient(to right, #FF8300 50%, #fff 50%);
+        margin-bottom: 160px;
+      }
+
+      .buttonOne {
+        position: absolute;
+        bottom: 130px;
+        left: 50px;
+        background: #021B4D;
+        color: blue;
+        cursor: pointer;
+      }
+
+      .buttonTwo {
+        position: absolute;
+        bottom: 130px;
+        right: 50px;
+        background: #021B4D;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

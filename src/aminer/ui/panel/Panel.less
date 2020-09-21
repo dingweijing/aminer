@@ -1,0 +1,48 @@
+@import "~themes/vars";
+
+.panel {
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 2px 4px rgba(236, 236, 236, .5);
+  margin-bottom: 20px;
+
+  .head {
+    height: 32px;
+    padding: 0 10px;
+    font-size: @font-size-base;
+    color: #020202;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .oprs {
+      display: flex;
+      align-items: center;
+    }
+    i {
+      font-weight: 200;
+      color: @color-high;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 8px;
+      &:last-child {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .body {
+    &.hide {
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+
+  :global {
+    // TODO global styles.
+    .commentTip {
+      max-width: 300px;
+    }
+  }
+
+}

@@ -1,0 +1,333 @@
+@import "~themes/vars";
+
+// .wrapper {
+//   max-width: 750px; margin: 0 auto; padding-top: 20px;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .wrapper { display: flex; }
+// }
+
+// @media screen and (min-width: 992px) {
+//   .wrapper { max-width: 970px; }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .wrapper { max-width: 1200px; }
+
+// }
+
+.reportPage {
+  padding: 0 20px; width: 100%;
+  ul, ol { list-style: outside; }
+
+  pre {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  // .braft_output_content
+  .braft_output_content {
+    :global{
+      p {
+        min-height:1em
+      }
+      .image-wrap img {
+        max-width:100%;
+        // width: 100% !important;
+        height:auto
+      }
+       ul,  ol {
+        margin:16px 0;
+        padding:0;
+        border: 1px solid red;
+      }
+      blockquote {
+        margin:0 0 10px 0;
+        padding:15px 20px;
+        background-color:#f1f2f3;
+        border-left:solid 5px #ccc;
+        color:#666;
+        font-style:italic
+      }
+
+      pre {
+        max-width:100%;
+        max-height:100%;
+        margin:10px 0;
+        padding:15px;
+        overflow:auto;
+        background-color:#f1f2f3;
+        border-radius:3px;
+        color:#666;
+        font-family:monospace;
+        font-size:14px;
+        font-weight:normal;
+        line-height:16px;
+        word-wrap:break-word;
+        white-space:pre-wrap
+      }
+
+      pre pre {
+        margin:0;
+        padding:0
+      }
+    }
+  }
+  // .braft_output_content
+  // .braft_output_content ul, .braft_output_content ol {
+  //   margin:16px 0;
+  //   padding:0;
+  // }
+  .wrap {
+    width: 796px; margin: 0 auto; padding-top: 30px; position: relative;
+
+    .bread {
+      font-size: 16px;
+      .back {
+        color: #551a8b;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .author {
+      font-size: 16px;
+      color: #282828; margin-bottom: 0;
+    }
+    .time {
+      color: #9d9d9d;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .keywords {
+      color: #9d9d9d;
+      font-size: 16px;
+    }
+
+    .reportTitle {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 1.12;
+      color: #282828;
+      margin: 24px 0 20px;
+    }
+
+    .abstract {
+      line-height: 1.65;
+      font-size: 16px;
+      color: #717171;
+      margin: 30px 0 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .reportContent {
+      // font-size: 16px;
+      img {width: 80%;}
+    }
+
+    .qrfix {
+      width: 100%; position: fixed; left: 0; top: 32px;
+      .qrcenter {
+        width: 796px; position: relative; margin: 0 auto;
+        .qrWrap {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 50px;
+          right: -100px;
+          align-items: center;
+          .wxlinkTip {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .downfix {
+    width: 100%; position: fixed; left: 0; top: 32px;
+    .downcenter {
+      width: 796px; position: relative; margin: 0 auto;
+      .pdflink {
+        position: absolute; color: #fff; background: @color-high;
+        top: 50px; left: -100px; height: 34px; width: 80px;
+        line-height: 34px; text-align: center;
+      }
+    }
+  }
+
+}
+
+.footerReco {
+  width: 796px;
+  margin: 0 auto;
+  margin-top: 32px;
+  position: relative;
+  .recommend {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    .recoMore {
+      color: #551a8b;;
+    }
+  }
+  .recoList {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    .reco {
+      width: 30%;
+      box-shadow: 0 1px 6px 0 hsla(0,0%,61.6%,.2);
+      transition: transform .28s;
+      .recoImg {
+        height: 175px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .recoInfo {
+        padding: 8px 12px 16px 12px;
+        height: 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .recoTitle {
+          color: #000;
+          font-size: 14px;
+          line-height: 24px;
+          max-height: 48px;
+          text-align: justify;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .recoBottom {
+          display: flex;
+          justify-content: space-between;
+          color: #717171;
+          .recoAuthor {
+            display: inline-block;
+            font-size: 12px;
+            span {
+              padding-left: 8px;
+            }
+          }
+          .recoView {
+            display: inline-block;
+            font-size: 12px;
+            span {
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+    }
+    .reco:hover {
+      transform: scale(1.01);
+      box-shadow: 0 1px 8px 0 rgba(157, 157, 157, 0.356);
+    }
+  }
+}
+:global{
+  #cnzz_stat_icon_1277666986{display:none};
+}
+
+@media (max-width: 1366px) {
+  .reportPage {
+    .wrap {
+      width: 664px;
+
+      .qrfix {
+        .qrcenter {
+          width: 664px;
+        }
+      }
+    }
+    .image-wrap img{
+      width: 100% !important;
+    }
+  }
+  .footerReco {
+    width: 664px;
+    .recoImg {
+      height: 144px !important;
+      overflow: hidden;
+      img {
+        height: auto;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 992px) {
+  .reportPage {
+    .wrap {
+      width: 750px;
+
+      .qrfix {
+        display: none;
+      }
+    }
+    .image-wrap img{
+      width: 100% !important;
+    }
+  }
+  .footerReco {
+    width: 750px;
+    .recoImg {
+      height: 144px !important;
+      overflow: hidden;
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reportPage {
+    .wrap {
+      width: 100%;
+    }
+    .image-wrap img{
+      width: 100% !important;
+    }
+  }
+  .footerReco {
+    width: 100%;
+    .recoImg {
+      height: 175px !important;
+      overflow: hidden;
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (min-device-width: 319px) and (max-device-width: 736px) {
+  .footerReco {
+    width: 100%;
+    .recoList {
+      flex-direction: column;
+      .reco {
+        width: 100%;
+        margin: 8px 0;
+        .recoImg {
+          height: 175px !important;
+          overflow: hidden;
+          img {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

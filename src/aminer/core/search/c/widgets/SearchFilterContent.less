@@ -1,0 +1,221 @@
+.checkList {
+  :global {
+    .ant-collapse-header {
+      padding: 6px 12px !important;
+    }
+    .ant-collapse-content-box {
+      padding: 0 12px 12px 12px !important;
+    }
+    .ant-checkbox {
+      margin-top: 4px;
+    }
+    .ant-tree li {
+      padding: 0;
+    }
+    // .ant-tree li span.ant-tree-checkbox {
+    //   padding: 4px 4px 4px 0;
+    // }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      white-space: normal;
+      height: auto !important;
+      padding: 0 8px;
+      // width: 140px;
+    }
+    .ant-checkbox-wrapper-checked {
+      color: #0095ff;
+    }
+    .ant-checkbox-checked::after {
+      border: none;
+    }
+
+    .ant-tree li span.ant-tree-switcher {
+      display: none;
+    }
+
+    .ant-tree-treenode-switcher-open {
+      .ant-tree-node-content-wrapper {
+        // word-break: break-word;;
+        width: 114px;
+        height: auto !important;
+        white-space: normal;
+        &:hover {
+          color: #0095ff;
+          background-color: transparent !important;
+        }
+      }
+      .ant-tree-node-selected {
+        color: #0095ff;
+        background-color: transparent !important;
+      }
+    }
+
+    .ant-tree-treenode-checkbox-checked {
+      .ant-tree-node-content-wrapper-normal {
+        .ant-tree-title {
+          color: #0095ff;
+        }
+      }
+      .ant-tree-node-content-wrapper-open {
+        .ant-tree-title {
+          color: #0095ff;
+        }
+      }
+    }
+  }
+  .fieldType {
+    font-size: 14px;
+    color: #999;
+    margin: 4px 0;
+  }
+  .checkboxItem {
+    display: flex;
+    margin-bottom: 4px;
+    font-size: 14px;
+    align-items: flex-start;
+    &:hover {
+      color: #0095FF;
+    }
+  }
+}
+
+.checkListScroll {
+  max-height: 500px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #a9a9a9;
+    border-radius: 16px;
+  }
+}
+
+.filterControll {
+  .expandBtn {
+    padding: 0;
+    color: #666;
+    border: none;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    .expandIcon {
+      fill: #999;
+      margin: 0px 8px 0 1px;
+      width: 14px;
+      height: 14px;
+    }
+    &:focus, &:active {
+      color: #666;
+      border: none;
+      background-color: none;
+    }
+    &:hover {
+      color: #0095FF;
+      border: none;
+      background-color: none;
+      .expandIcon {
+        fill: #0095FF;
+      }
+    }
+
+  }
+}
+
+.treeNodeTitle {
+  display: flex;
+  align-items: center;
+  width: 125px;
+  .treeNodeText {
+    white-space: normal;
+    display: inline-block;
+  }
+
+  .treeNodeParentIcon {
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    fill: #666;
+    transform: rotate(180deg);
+    transition: transform .2s ease-in-out;
+  }
+  .treeNodeExpanded {
+    transform: rotate(0deg);
+    transition: transform .2s ease-in-out;
+  }
+}
+.collapseIconRotate {
+  transform: rotate(180);
+}
+
+.filterValue {
+  .timeRangeFilter {
+    display: flex;
+    align-items: flex-end;
+    height: 22px;
+    margin-bottom: 8px;
+    .timeRange {
+      border-bottom: 1px solid #d8d8d8;
+      .timeInput {
+        width: 34px;
+        border: none !important;
+        padding: 0;
+        font-size: 12px;
+        height: 18px;
+        text-align: center;
+      }
+
+    }
+    .timeInputValued {
+      color: #0095FF;
+      font-style: italic;
+    }
+    .timeClearBtn {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0;
+      width: 16px;
+      height: 20px;
+      font-size: 12px;
+      margin-left: 1px;
+      color: #ff0000;
+    }
+    .timeFilterBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      width: 28px;
+      margin-left: 8px;
+      height: 20px;
+      border-radius: 2px;
+      font-size: 12px;
+
+
+      .timeRangeIcon {
+        width: 10px;
+        height: 10px;
+        fill: #888;
+      }
+
+      &:hover {
+        border-color: #0095FF;
+        .timeRangeIcon {
+          fill: #0095FF;
+        }
+      }
+
+    }
+    .timeFilterBtnCancel {
+      &:hover {
+        border-color: #ff0000;
+        .timeRangeIcon {
+          fill: #ff0000;
+        }
+      }
+    }
+
+  }
+}

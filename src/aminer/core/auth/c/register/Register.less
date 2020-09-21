@@ -1,0 +1,136 @@
+
+.formContent {
+  padding: 24px 24px 40px 40px;
+
+  .formItem {
+    margin-bottom: 0;
+    margin-right: 16px;
+    :global{
+      .ant-col{
+        min-height: 72px;
+      }
+    }
+  }
+
+  .marginGap {
+    margin-top: 12px;
+  }
+
+  .phoneInput {
+    display: flex;
+    flex-wrap: wrap;
+    .phoneAreaSelect {
+      max-width: 128px; min-width: 40px;
+      color: #000;
+      margin: 12px 12px 12px 0px;
+    }
+    .formItem {
+      flex: 1;
+      min-width: 180px;
+      margin: 12px 16px 0px 0px;
+    }
+  }
+
+  .error { color: #f00; }
+
+  .sendCodeWrap {
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    .codeInput {
+      // width: 78px;
+      max-width: 128px; min-width: 40px;
+      margin-right: 12px;
+      margin: 8px 12px 12px 0px;
+    }
+    .sendCodeBtn {
+      // width: 120px;
+      // float: right;
+      // width: 230px;
+      flex: 1;
+      min-width: 180px;
+      margin: 8px 0px 12px 0px;
+      cursor: not-allowed;
+      background-color: #eee;
+      &:hover, &:active, &:focus {
+        border-color: #D5D5D5;
+        color: #000;
+      }
+      &::after {
+        box-shadow: none;
+      }
+    }
+    .ready {
+      cursor: pointer;
+      background-color: #fff;
+    }
+    .error {
+      color: #f00;
+    }
+  }
+
+  .formItemRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .formItem {
+      // width: 46%;
+      min-width: 160px;
+      flex: 1;
+    }
+  }
+
+  .btnLine {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      height: 30px;
+      padding: 0 22px;
+      margin-top: 10px;
+      margin-left: 5px;
+      font: 300 15px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+      cursor: pointer;
+    }
+  }
+
+  .loginBtn {
+    width: 100%; line-height: 48px; border: none; background: #eee; height: 48px; margin: 0;
+    font-size: 16px; color: #8D8D8D;
+
+    &.ready { background: #0095FF; color: @color-white; }
+  }
+  .signinBtn { float: right; color: #0095FF; cursor: pointer; font-size: 16px; margin-top: 5px; margin-right: 16px; }
+
+  .forgot { float: right; color: #0095FF; cursor: pointer; }
+
+
+  :global {
+    .ant-btn-primary {
+      background-color: #0095FF; color: @color-white;
+    }
+    .has-error .ant-input { border: none; border-bottom: 1px solid #E9E9E9; }
+    .ant-input { border: none; background: #fff; font-size: 16px; border-bottom: 1px solid #E9E9E9; outline: none; padding: 4px 0; }
+    .ant-select-selection__placeholder { font-size: 16px; }
+    .ant-input:focus { box-shadow: none; -webkit-box-shadow: 0 0 0px 1000px white inset;
+      -webkit-text-fill-color: #333;}
+    input:-internal-autofill-selected { -webkit-box-shadow: 0 0 0px 1000px white inset;
+      -webkit-text-fill-color: #333;}
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @color-high;
+      border-color: @color-high;
+    }
+    .ant-checkbox:hover .ant-checkbox-inner {
+      border-color: @color-high;
+    }
+    .has-error .ant-select-selection {
+      border-color: #f5222d;
+    }
+    .has-error .ant-input:not([disabled]) {
+      border-color: #f5222d;
+    }
+    .ant-select-selection { border: none; border-bottom: 1px solid #E9E9E9; }
+    .ant-select-selection:focus { box-shadow: none; }
+    .ant-select-selection__rendered { margin: 0; padding-right: 30px; }
+  }
+}

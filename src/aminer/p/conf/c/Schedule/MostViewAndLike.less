@@ -1,0 +1,42 @@
+.mostViewAndLike {
+    .upArrow {
+        color: red;
+    }
+    .leftZone {
+        min-width: 41px;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+        border-left: 1px dotted #E9E9E9;
+    }
+    :global {
+        .outBlock{
+            border: 1px solid #d9d9d9;
+        }
+        .ant-tabs-top-bar {
+            margin-bottom: 0px;
+            justify-content: left !important;
+        }
+        // .ant-tabs-top-content {
+        //     border: 1px solid #d9d9d9;
+        // }
+        .paper-item {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+            .title-line {
+                font-size: 12px !important;
+                padding-right: 0px;
+            }
+            .authors {
+                font-size: 10px !important;
+                margin-top: 0px;
+            }
+            .venue-line,
+            .oprs {
+                display: none;
+            }
+        }
+    }
+}

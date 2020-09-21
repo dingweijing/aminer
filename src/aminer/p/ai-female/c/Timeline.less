@@ -1,0 +1,65 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.timeline {
+  padding: 10px 40px;
+  :global {
+    .desc {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.eventItem {
+  font-size: 16px;
+  font-family: @font-helvetica;
+  :global {
+    .line {
+      margin-bottom: 4px;
+    }
+
+    .year {
+      font-style: italic;
+    }
+
+    .event_type {
+      border: 1px solid #eaeaea;
+      border-radius: 2px;
+      padding: 0 10px;
+      margin-left: 18px;
+    }
+
+    .title {
+      color: #020e26;
+      a {
+        color: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .scholars {
+      font-size: 12px;
+      .author {
+        // margin-right: 4px;
+        color: rgba(6,124,8,1);
+      }
+      .author.link {
+        color: #067c08;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .desc {
+      font-size: 14px;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,36 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.data {
+  .aminer-main-bigwrap();
+  width: 100%;
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
+  :global {
+    .dataset {
+      .inner-results {
+        h3 {
+          font-weight: 400px !important;
+        }
+        ul {
+          padding-left: 0px;
+          // li p {
+          //   text-indent: 1cm;
+          // }
+        }
+        .headline {
+          margin-top: 25px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .data {
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,55 @@
+/**
+ *  Created by BoGao on 2019-05-06;
+ */
+@import "~themes/vars";
+
+.personEditor {
+  display: flex;
+  flex-direction: column;
+  .subBtn {
+    margin-right: 12px;
+  }
+  :global {
+    .header {
+      display: flex;
+      flex-direction: row;
+      background: #eee;
+      padding: 4px 8px;
+      border: solid 1px #ddd;
+
+      .left {
+        flex: 2
+      }
+
+      .right {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+      }
+
+    }
+
+    .toolbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: dashed 1px darkgoldenrod;
+      margin: 4px 0;
+      padding: 2px;
+
+      .left {
+        flex: 1 auto;
+      }
+
+      .right {
+        // flex: 1 auto;
+        align-items: flex-end;
+        display: flex;
+        text-align: right;
+      }
+
+    }
+
+    .form {}
+  }
+}

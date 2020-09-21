@@ -1,0 +1,75 @@
+.editEb {
+  .basicInfo {
+    box-shadow: 0 0 3px #d3d3d3;
+    background-color: #ffffff;
+    min-height: 120px;
+    width: 66%;
+    margin-bottom: 16px;
+    padding: 0 15px 15px;
+    .title {
+      padding-top: 15px;
+    }
+    .note {
+      margin-bottom: 12px;
+      color: #333;
+      font-size: 12px;
+      .iconwrap {
+        margin-right: 16px;
+        svg { margin-right: 6px; }
+      }
+    }
+    .publicNote {
+      float: right;
+      clear: both;
+      padding: 0 1px;
+      font-size: 12px;
+      line-height: 15px;
+      color: #999;
+    }
+    .editBox {
+      padding-top: 25px;
+      li {
+        margin: 4px 0;
+      }
+    }
+
+    .comment {
+      color: #333;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .noteName { color: #333; }
+
+    :global {
+      .labelText { width: auto; }
+      .largeWidth {
+        .normalWidth {
+          width: auto;
+        }
+      }
+      .titleEditIcon {
+        float: right;
+        margin-top: 13px;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+      .commentIcon {
+        cursor: pointer;
+      }
+      .ant-radio-wrapper {
+        margin-left: 30px;
+      }
+      .iconStyle {
+        display: flex;
+        align-items: center;
+        .labelText {
+          flex-shrink: 0;
+        }
+        .ant-checkbox-wrapper {
+          margin-left: 80px;
+        }
+      }
+    }
+  }
+}

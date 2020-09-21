@@ -1,0 +1,144 @@
+@import "~themes/vars";
+
+.searchAssistant {
+  display: flex; flex-direction: column;
+  margin: 5px 0 10px; padding: 16px 12px 8px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 2px;
+  background-color: #FFFDEC; //rgb(249, 249, 249);
+  color: #000; position: relative;
+
+  .legend{
+    // display: flex; justify-content: flex-end;
+    font-size: 14px; font-weight: 700;
+    color: #909090;  position: absolute; top: 4px; right: 6px;
+    // float: right; height: 0;
+
+    // span { float: right; }
+  }
+
+  .columnBox { display: flex; flex-direction: column; }
+  .rowBox { display: flex; flex-direction: row; font-size: 12px; }
+
+  .rowBox .leftBox {
+    .rowBox; justify-content: flex-start; flex-wrap: wrap; align-items: center;
+  }
+
+  .spliter {
+    border-bottom: solid 1px #eee;
+    margin-bottom: 6px;
+    height: 6px;
+  }
+
+  .w, .ww { width: 95px; }
+  .w.zh, .ww.zh { width: 55px;}
+  .w { .columnBox }
+  .ww { .rowBox; flex-shrink: 0; justify-content: space-between; align-items: center; }
+
+  .kgBlock {
+    align-items: flex-start;
+    :global {
+      .ant-checkbox {
+        top: 0;
+      }
+      // .ant-checkbox-inner {
+      //    width: 14px; height: 14px;
+      // }
+      .ant-checkbox-group {
+        display: flex; flex-wrap: wrap; align-items: center;
+      }
+      .ant-checkbox-wrapper {
+        margin-left: 0; padding-right: 8px;
+        padding-left: 4px;
+        // padding-bottom: 1px;
+        display: flex; align-items: center;
+      }
+    }
+    .rowBox; margin-top: 5px;
+  }
+
+  .randomWord, .randomIconColor { color: #aaaaaa; }
+
+  .paddingRight {
+    .columnBox; padding-right: 4px;
+    .kgNote { color: #999; }
+    font-size: 12px;
+  }
+
+  .box1, .leftBox {
+    :global {
+      .ant-checkbox {
+         top: 0;
+      }
+      .ant-checkbox-wrapper {
+        margin-left: 0; padding-right: 8px;
+        padding-left: 4px;
+        // padding-bottom: 1px;
+        display: flex; align-items: center;
+      }
+      .ant-checkbox-wrapper:hoer {
+        border-radius: 2px;
+        background-color: #eee;
+      }
+    }
+  }
+
+  .paddingLeftButton { padding-left: 10px; }
+
+  .clearBtnStyle {
+    padding: 0 0px;
+    font-size: 12px;
+    border-radius: 0px;
+    // height: 0px;
+    border: 0px;
+    // color: #1890ff;
+    color: #3c80bc; box-shadow: none;
+    background: transparent; line-height: 1; height: auto;
+  }
+
+  //.boxButton {
+  //  margin-top: 8px;
+  //
+  //  :global .ant-btn {
+  //    padding: 0 18px 0 18px; font-size: 12px; height: 24px;
+  //  }
+  //}
+
+  :global {
+    .ant-checkbox-wrapper {
+      margin-left: 0; padding-right: 8px;
+      padding-left: 4px; font-size: 12px;
+      // padding-bottom: 1px;
+    }
+    .ant-checkbox-wrapper:hover {
+      border-radius: 2px;
+      background-color: #eee;
+    }
+
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+      border-color: #3c80bc;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #3c80bc;
+      border-color: #3c80bc;
+  }
+  }
+
+
+}
+
+//@media (min-width: 375px) {
+//  .searchAssistant {
+//    flex-wrap: wrap;
+//    .box {
+//      flex-wrap: wrap;
+//    }
+//    .kgBlock {
+//      flex-wrap: wrap;
+//    }
+//    .leftBox {
+//      flex-wrap: wrap;
+//    }
+//  }
+//}

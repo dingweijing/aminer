@@ -1,0 +1,131 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.modalBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .masker {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 101;
+    background: rgba(0, 14, 40, 0.35);
+  }
+
+  .modal {
+    // width: 100%; height: 100%;
+    position: absolute;
+    z-index: 102;
+    padding: 0 10px;
+    max-height: 98vh;
+
+    .contentClose {
+      position: absolute;
+      right: -12px;
+      top: -24px;
+      /* width: 18px; */
+      /* height: 18px; */
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .closeSvg {
+        &:hover {
+          color: #e31917;
+        }
+      }
+    }
+
+    .modalContainer {
+      // position: fixed; top: 150px; left: 50%; margin-left: -300px; z-index: 200;
+      // height: 100%;
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-width: 90vw;
+
+      header {
+        min-height: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 14, 40, .8);
+        color: #fff;
+        font-size: 18px;
+        padding: 0 22px 0 28px;
+      }
+
+      article {
+        background: #fff;
+        // max-height: 60vh;
+        overflow: auto;
+        flex-grow: 1;
+        position: relative;
+
+        &.extra {
+          padding: 0;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        .closeSvg {
+          color: rgba(255, 255, 255, .8);
+
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+      footer {
+        background: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+
+        .btns {
+          button {
+            margin-left: 10px;
+
+            &.cancelBtn {
+              .btn-style-cancel();
+            }
+
+            &.confirmBtn {
+              .btn-style-confirm();
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal.delete {
+    .modalContainer {
+      header {
+        color: #f00;
+      }
+    }
+  }
+
+}

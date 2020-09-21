@@ -1,0 +1,30 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+@zpl: #0095ff;
+
+.mustReadSort {
+  // border-bottom: 1px solid #979797;
+  // padding-bottom: 10px;
+  :global {
+    .sortItem {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 13px;
+      margin: 0 4px;
+      color: #6d7682;
+      .user-fz(18, 18);
+      line-height: 21px;
+
+      &:hover {
+        color: @zpl;
+        border-bottom: 2px solid @zpl;
+      }
+    }
+    .sortSelected {
+      color: @zpl;
+      font-weight: 500;
+      border-bottom: 2px solid @zpl;
+    }
+  }
+}

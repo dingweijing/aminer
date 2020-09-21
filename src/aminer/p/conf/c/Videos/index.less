@@ -1,0 +1,132 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.videoList + div {
+  display: none;
+}
+.videoList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  :global {
+    .right_weibo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .svg_outer {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background: #f3f3f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        color: rgb(13, 12, 34, 0.3);
+        // background: #fa6400;
+      }
+
+      .legend {
+        .user-fz(13, 18);
+        margin-top: 10px;
+        color: #0d0c22;
+        visibility: hidden;
+        transition: 0.5s;
+      }
+    }
+    .right_weibo:hover {
+      cursor: pointer;
+      .legend {
+        visibility: visible;
+      }
+      .svg_outer {
+        color: #ffffff;
+      }
+    }
+    .right_weibo:hover .svg_outer {
+      background: #fa6400;
+    }
+
+     .TinyPlayer {
+      position: relative;
+      width: 300px;
+      :global {
+        .videoIcon {
+          cursor: pointer;
+          position: absolute;
+          height: 100%;
+          /* border: 1px solid red; */
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.5);
+          svg {
+            width: 49px;
+            height: 49px;
+            color: rgba(0, 0, 0, 0.5);
+          }
+          &:hover {
+            svg {
+              transition: all 200ms;
+              color: rgba(0, 0, 0);
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .video_block {
+      margin-right: 10px;
+      max-width: 320px;
+      border: 1px solid #eee;
+      padding: 10px;
+      box-shadow: 4px 4px 7px #eee;
+      width: 30%;
+    }
+    .video_block:hover {
+    }
+    .pub_title {
+      margin-top: 10px;
+      display: flex;
+      line-height: initial;
+    }
+    .name {
+      font-size: 16px;
+      margin-right: 10px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .videoIcon {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .name_org {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+}
+:global {
+  .video + .statsBlock {
+    .ant-tabs-bar {
+      border: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .videoList {
+    :global {
+      .video_block {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

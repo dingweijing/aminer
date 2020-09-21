@@ -1,0 +1,33 @@
+@import "~themes/vars";
+
+.bibContent {
+  padding: 20px 30px;
+
+  :global {
+    .ant-tabs .ant-tabs-top-content {
+      max-height: 50vh; overflow-y: auto;
+    }
+
+    textarea {
+      resize: none; 
+    }
+    .ant-input {
+      border-color: #e8e8e8;
+    }
+    .ant-input-disabled {
+      color: #181818; cursor: text; border: none;
+    }
+    .ant-input[disabled]:hover {
+      border-color: #e8e8e8;
+    }
+    .bibtex-content {
+      padding: 0 8px;
+
+      .part { 
+        margin-bottom: 8px;
+
+        p { margin-bottom: 0; font-weight: bold; }
+      }
+    }
+  }
+}

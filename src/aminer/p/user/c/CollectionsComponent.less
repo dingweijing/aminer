@@ -1,0 +1,439 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+// @keyframes check_show {
+//   0% {
+//     // background-color: rgba(165, 165, 165, 0.1);
+//     width: 20%;
+//   }
+//   50% {
+//     width: 80%;
+//   }
+//   100% {
+//     width: 20%;
+//   }
+// }
+
+.collectionsComponent {
+  :global {
+    // .margin {
+    //   margin-bottom: 20px;
+    // }
+    .info-right-zone {
+      margin-left: auto;
+    }
+    .title_part {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+
+      .title_name {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .cat_desc {
+        color: #666;
+      }
+    }
+    .function_part {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+
+      .func_btn {
+        width: calc((100%-40px) / 3);
+        max-width: calc((100%-40px) / 3);
+        background: #01936d;
+        border-radius: 2px;
+        color: #fff;
+        padding: 20px 25px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: all 200ms;
+
+        .func_title {
+          margin-bottom: 12px;
+          font-weight: bold;
+          .user-fz(22);
+          display: flex;
+          align-items: center;
+
+          svg {
+            // .user-fz(18);
+            margin-right: 8px;
+            font-size: 24px;
+          }
+        }
+        .func_desc {
+          margin-bottom: 0;
+          .user-fz(18);
+        }
+      }
+      .func_btn.open {
+        opacity: 0.7;
+        cursor: text;
+      }
+      .func_btn:not(.disable, .open):hover {
+        background: rgba(0, 147, 107, 0.8);
+      }
+      .func_btn:last-child {
+        margin-right: 0;
+      }
+      .func_btn.disable {
+        background: #a7acb6;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: text;
+      }
+    }
+    .publist_content {
+      position: relative;
+      display: flex;
+
+      .review_control.show {
+        visibility: visible;
+        opacity: 1;
+      }
+      .review_control {
+        position: relative;
+        width: 65px;
+        min-width: 65px;
+        top: 0;
+        left: -75px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 300ms;
+        z-index: 50;
+
+        .review_content {
+          position: sticky;
+          top: 40px;
+          .check_all {
+            background: #00936b;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: 6px;
+            padding: 14px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .text {
+              margin-top: 8px;
+            }
+
+            .ant-checkbox-inner {
+              width: 18px;
+              height: 18px;
+            }
+            .ant-checkbox-inner::after {
+              left: 26%;
+            }
+
+            .ant-checkbox-checked .ant-checkbox-inner {
+              background-color: #fff;
+              border-color: #fff;
+            }
+            .ant-checkbox-checked .ant-checkbox-inner::after {
+              border-color: #00936b;
+            }
+          }
+          .confirm_review.disable {
+            background: #a7acb6;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: text;
+          }
+          .confirm_review {
+            width: 100%;
+            background: #00936b;
+            padding: 20px;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 300ms;
+            position: relative;
+
+            .count {
+              top: 9px;
+              right: 11px;
+              position: absolute;
+              font-size: 9px;
+              background: #fff;
+              color: #00936b;
+              border-radius: 50%;
+              width: 22px;
+              height: 22px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transform: rotate(-90deg);
+              font-style: normal;
+            }
+
+            .icon {
+              font-size: 24px;
+              margin-bottom: 18px;
+              position: relative;
+              left: -2px;
+            }
+          }
+          .close {
+            background: #ff5562;
+            border-radius: 0 0 4px 4px;
+            margin-bottom: 6px;
+            padding: 14px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 6px;
+            cursor: pointer;
+
+            .icon {
+              font-size: 16px;
+            }
+
+            .text {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      .pub_list {
+        margin-left: -65px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+
+        .mark_pub_list_item {
+          background: #fff;
+          border: 1px solid #eeeeef;
+          margin-bottom: 10px;
+          display: flex;
+
+          .checkbox {
+            width: 0;
+            // max-width: 0;
+            opacity: 0;
+            transition: all 300ms;
+
+            .ant-checkbox-inner {
+              width: 18px;
+              height: 18px;
+              border-color: #00936b;
+            }
+            .ant-checkbox-checked .ant-checkbox-inner {
+              background-color: #00936b;
+              border-color: #00936b;
+            }
+            .ant-checkbox-checked::after {
+              border-color: #00936b;
+            }
+          }
+          .checkbox.open {
+            padding: 20px 0 0 14px;
+            display: flex;
+            justify-content: flex-end;
+            width: 32px;
+            opacity: 1;
+            // min-width: 80px;
+          }
+
+          .pub_info.open {
+            padding-left: 14px;
+          }
+          .pub_info {
+            width: calc(100% - 70px);
+            flex-grow: 1;
+            padding: 0 20px;
+            transition: all 300ms;
+            .bottom_line {
+              min-height: 38px;
+              padding: 10px 0;
+              border-top: 1px solid #dfe1e5;
+              display: flex;
+              justify-content: space-between;
+              .user-fz(16);
+
+              .reason {
+                display: flex;
+                align-items: flex-start;
+                color: @zp_blue;
+
+                svg {
+                  color: @zp_blue;
+                }
+
+                // .note_time {
+                //   color: #007f00;
+                //   margin-right: 5px;
+                //   // white-space:nowrap;
+                // }
+                .comment {
+                  // padding: 8px 0;
+                }
+                .note {
+                  margin-left: 10px;
+                  // background: #F3F3F4;
+                  color: #545454;
+                  padding: 0 10px;
+                }
+              }
+              .time {
+                display: flex;
+                color: #545454;
+                justify-content: flex-end;
+                min-width: 200px;
+              }
+            }
+
+            .paper-item {
+              padding: 20px 0 10px;
+
+              .authors {
+                padding-right: 100px;
+              }
+              // .title-line {
+              //   padding-right: 0;
+              //   display: flex;
+              //   justify-content: space-between;
+              //   .title-right-zone {
+              //     min-width: 100px;
+              //   }
+              // }
+              .content {
+                .title-line {
+                  padding-right: 140px;
+                }
+                .oprs {
+                  margin-top: 8px;
+                  min-height: 22px;
+                  // TODO xenaluo -- 修改 PublicationItem infoline 结构
+                  .info-right-zone {
+                    order: 1;
+                    flex-grow: 1;
+                    max-width: 60%;
+                    margin-left: 0;
+                    margin-right: auto;
+                  }
+                  .cited {
+                    order: 2;
+                  }
+                  .bibtex {
+                    order: 3;
+                  }
+                  .urlPart {
+                    order: 4;
+                  }
+                  .notion {
+                    order: 5;
+                  }
+                  .un-follow {
+                    order: 6;
+                  }
+                  // & > *:last-child {
+                  //   margin-left: auto;
+
+                  //   &::before {
+                  //     display: none;
+                  //   }
+                  // }
+                }
+              }
+
+              .content-right {
+                position: absolute;
+                top: 18px;
+                right: 0;
+
+                .time {
+                  // display: flex;
+                  height: 16px;
+                  .mark_time {
+                    color: #545454;
+                    font-size: 12px;
+                    // margin-right: 30px;
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+            }
+            .paper-item:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    .list_total {
+      margin-bottom: 6px;
+      .user-fz(16);
+      color: #666;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      // background: #fff;
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .collectionsComponent {
+    :global {
+      .function_part {
+        .sum {
+          width: 100%;
+          max-width: 100%;
+          margin-right: 0;
+        }
+        .disable {
+          display: none;
+        }
+      }
+      .publist_content {
+        .review_control {
+          left: calc(100% - 80px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .collectionsComponent {
+    :global {
+      .paper-item {
+        .content-right {
+          display: none;
+        }
+        .info-right-zone {
+          display: none;
+        }
+        .title-line, .authors {
+          padding-right: 0 !important;
+        }
+      }
+      .bottom_line {
+        position: relative;
+        .reason {
+          flex-direction: column;
+
+          .note {
+            margin-left: 0 !important;
+            margin-top: 4px;
+            padding: 0 !important;
+          }
+        }
+        .time {
+          position: absolute;
+          top: 10px;
+          right: 0;
+        }
+      }
+    }
+  }
+}

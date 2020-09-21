@@ -1,0 +1,111 @@
+.wrapper {
+  width: 100%;
+  .article {
+    width: 90%;
+    margin: 20px auto 0px;
+    a {
+      color: #0095ff;
+    }
+    .title {
+      font-size: 36px;
+    }
+    .imgBox {
+      position: relative;
+
+      .showDetail {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+    .imgWrap {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .citeTip {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 2px;
+      color: #0d0c22;
+      color: red;
+      .highLight {
+      }
+    }
+    .paper {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 8px;
+      color: #0d0d23;
+    }
+    .citeWrap {
+      position: relative;
+      width: fit-content;
+      max-width: 100%;
+      .copyContent {
+        width: fit-content;
+        max-width: 100%;
+        padding: 16px;
+        border: 1px solid #dadada;
+        background-color: #fdfdfd;
+      }
+      .copyBtn {
+        position: absolute;
+        right: 4px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        .copyIcon {
+          width: 16px;
+          max-height: 16px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  :global {
+    .word_wrap {
+      margin-top: 50px;
+    }
+    .WordSection1 {
+      max-width: 100%;
+      margin: 0 auto;
+
+      .MsoNormal:first-child {
+        font-size: 24px;
+      }
+
+      img {
+        margin: 10px auto;
+        display: block;
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: bold;
+      }
+
+      h1 {
+        font-family: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .article {
+    .title {
+      font-size: 22px;
+    }
+    .citeTip {
+      font-size: 16px;
+    }
+  }
+}

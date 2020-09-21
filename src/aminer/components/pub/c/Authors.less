@@ -1,0 +1,58 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.authors {
+  :global {
+    .authors {
+      font-size: @font-size-12;
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      .no_id {
+        .no_id_inner {
+          color: rgba(6, 124, 8, 0.7);
+        }
+        .to_search {
+          font-size: 10px;
+          color: rgb(6, 124, 8);
+          opacity: 0.4;
+          margin: 0 4px;
+          position: relative;
+          top: -1px;
+          transition: all 200ms;
+        }
+        &:hover {
+          .to_search {
+            opacity: 1;
+            svg {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      .author {
+        color: rgba(6, 124, 8, 0.7);
+        padding-bottom: 3px;
+      }
+      .author.link {
+        color: rgba(6, 124, 8, 1);
+        cursor: pointer;
+      }
+      .author.nolink {
+        color: rgba(6, 124, 8, 1);
+      }
+      // .author.link:hover { text-decoration: underline; }
+      .author.link.underline {
+        text-decoration: underline;
+      }
+      .mr {
+        margin-right: 5px;
+      }
+      .author.highlight {
+        color: #ec6b10;
+        font-style: italic;
+      }
+    }
+  }
+}

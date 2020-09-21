@@ -1,0 +1,46 @@
+.TopicIntro {
+  .item {
+    position: relative;
+    min-width: 280px; width: 280px;
+    margin-bottom: 10px;
+    padding: 0 1px;
+    cursor: pointer;
+    .topicBgImgWrap {
+      width: 100%;
+      display: flex; justify-content: center; align-items: center;
+      overflow: hidden;
+      .topicBgImg {
+        width: 100%;
+      }
+    }
+    .topicIntroTip {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; line-height: 26px; color: #fff;
+      text-align: center;
+      text-shadow: 0px 3px 2px #1F5076;
+      padding: 0px 12px;
+    }
+    .arrowImg {
+      width: 22px;
+      margin-left: 20px;
+      vertical-align: top;
+    }
+    .iclrIntro {
+      flex-direction: column;
+      font-size: 16px;
+      .title {
+        font-size: 22px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .TopicIntro .item {
+    display: none;
+  }
+}

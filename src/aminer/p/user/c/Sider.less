@@ -1,0 +1,87 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.sider {
+  width: 100%;
+
+  :global {
+    .part {
+      border-bottom: 1px solid #eeeeef;
+      background: #fff;
+      margin-bottom: 6px;
+      border-radius: 2px;
+      padding: 0 15px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title_line {
+        padding-top: 12px;
+        padding-bottom: 6px;
+        // line-height: .user-fz(24);
+        .user-lh(24);
+        .user-fz(18);
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #e4e6ec;
+      }
+      .route_container {
+        padding: 5px 0;
+        .user-lh(36);
+        .user-fz(17);
+        color: #222;
+        display: flex;
+
+        .route {
+          color: inherit;
+          transition: all 300ms;
+          width: 90%;
+          margin-left: -15px;
+          padding-left: 15px;
+          border-radius: 0 4px 4px 0;
+
+          svg {
+            color: #00c7ff;
+            margin-right: 6px;
+            font-size: 18px;
+            transition: all 300ms;
+          }
+        }
+        .route.active {
+          background: #0095ff;
+          color: #fff;
+          svg {
+            color: #fff;
+          }
+        }
+        .route:hover {
+          background: #e4e6ec;
+          color: #222;
+        }
+        .route.active:hover {
+          background: rgba(0, 149, 255, 0.8);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  // .sider {
+  //   :global {
+  //     .part .route_container .route {
+  //       width: 80%;
+  //     }
+  //   }
+  // }
+}
+
+@media screen and(max-width: 992px) {
+  
+}
+
+@media screen and(max-width: 768px) {
+}

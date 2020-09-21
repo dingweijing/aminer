@@ -1,0 +1,48 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+
+.recommendTopics {
+  max-height: 18px;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  :global {
+    .tag {
+      // border: 1px solid #9e9ea7;
+      font-style: italic;
+      height: 18px;
+      // border-radius: 8px;
+      margin: 0 7px 4px 0;
+      padding: 1px 8px 1px 0;
+      // background: #f6f7f9;
+      outline: none;
+      // cursor: pointer;
+      font-weight: 400;
+      .user-fz(18);
+      // .user-lh(18, 16);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 200ms;
+      // font-size: 14px;
+
+      &:hover {
+        color: #181818;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 2000px) {
+  
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

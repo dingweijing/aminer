@@ -1,0 +1,203 @@
+.paperItem {
+  display: flex;
+  padding: 20px 0 14px 0;
+  position: relative;
+
+  :global {
+    .content {
+      flex-grow: 1;
+      position: relative;
+      top: -2px;
+      line-height: 18px;
+      width: calc(100% - 49px);
+    }
+    .title-line {
+      // display: flex; align-items: center;
+      // vertical-align: middle;
+      display: flex;
+      padding-right: 100px;
+      margin-bottom: 0;
+      font-size: 18px;
+
+      .pdf-icon {
+        color: #ff5e5c;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+      .paper-title {
+        // font-size: 18px;
+        color: #000;
+        line-height: 22px;
+        margin-bottom: 0;
+        vertical-align: middle;
+        // font-family: "Helvetica Neue", "PingFang SC"; font-weight: bold;
+      }
+      .title-zone {
+        flex-grow: 1;
+      }
+    }
+
+    .authors {
+      font-size: @font-size-12;
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .no_id {
+        .no_id_inner {
+          color: rgba(6, 124, 8, 0.7);
+        }
+        .to_search {
+          font-size: 10px;
+          color: rgb(6, 124, 8);
+          opacity: 0.4;
+          margin: 0 4px;
+          position: relative;
+          top: -1px;
+          transition: all 200ms;
+        }
+        &:hover {
+          .to_search {
+            opacity: 1;
+            svg {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      .author {
+        color: rgba(6, 124, 8, 0.7);
+        padding-bottom: 3px;
+      }
+      .author.link {
+        color: rgba(6, 124, 8, 1);
+        cursor: pointer;
+      }
+      .author.nolink {
+        color: rgba(6, 124, 8, 1);
+      }
+      // .author.link:hover { text-decoration: underline; }
+      .author.link.underline {
+        text-decoration: underline;
+      }
+      .mr {
+        margin-right: 5px;
+      }
+      .author.highlight {
+        color: #ec6b10;
+        font-style: italic;
+      }
+    }
+
+    // .venue-line {
+    //   font-size: @font-size-13;
+    //   color: #444;
+    //   margin: 5px 0 0;
+    // }
+    .conf-info-zone {
+      font-size: @font-size-13;
+      color: #444;
+      line-height: 28px;
+    }
+
+    .abstract {
+      margin: 5px 0;
+      color: #444444;
+      font-size: @font-size-13;
+      // word-break: break-all;
+      overflow: hidden;
+      &.fixbug {
+        word-wrap: break-word;
+      }
+    }
+    .tags {
+      max-height: 24px;
+      overflow: hidden;
+      margin: 8px 0 6px;
+
+      .tag {
+        border: 1px solid #e7e7e7;
+        border-radius: @border-radius-base;
+        margin: 0 5px 4px 0;
+        padding: 1px 5px;
+        background: #f6f7f9;
+        outline: none;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 12px;
+        color: #555;
+
+        a {
+          color: @color-base;
+        }
+
+        &:hover {
+          border-color: #61b611;
+        }
+      }
+    }
+
+    .oprs {
+      display: flex;
+      align-items: center;
+      font-size: @font-size-12;
+      margin-top: 5px;
+
+      & > *:not(.info-right-zone) {
+        &::before {
+          content: '|';
+          margin: 0 10px;
+          color: #d5d5d5;
+        }
+        &:first-child::before {
+          display: none;
+        }
+      }
+
+      .labels {
+        .label {
+          padding: 0 8px;
+          border: 1px solid #dddddd;
+          border-radius: 8px;
+          color: #ec6b10;
+          line-height: 16px;
+          margin-left: 8px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      .split {
+        margin: 0 10px;
+        color: #d5d5d5;
+      }
+      .url {
+        i,
+        svg {
+          color: #666;
+          margin-right: 4px;
+          position: relative;
+        }
+        .url-link {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 15px;
+        }
+        &:hover svg {
+          color: @color-high;
+        }
+        &:hover .url-link {
+          display: inline-block;
+        }
+      }
+    }
+
+    .content-right {
+      // position: absolute;
+      // top: 18px;
+      // right: 0;
+    }
+  }
+}

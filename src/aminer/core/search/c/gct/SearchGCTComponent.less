@@ -1,0 +1,61 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+
+.gctComponent {
+
+  :global {
+    .gct_search {
+      .result_line {
+        font-size: 13px;
+        .keyword { color: #EC6B10; }
+      }
+
+      .gct_content {
+        .list_content {
+          display: flex; position: relative;
+          // .paperList { overflow: hidden; }
+          .gct_list {
+            flex-grow: 1;
+          }
+          .searchKgContent { }
+        }
+    
+      }
+    }
+  }
+
+  .paperSearch {
+    // position: relative;
+
+    
+
+    .resultTip {
+      margin: 0 0 10px 0; padding-left: 10px; font-size: 13px;
+
+      .searchQuery {
+        // color: @color-orange;
+        // .match-text();
+        font-style: italic;
+      }
+      em {
+        font-style: normal;
+        // .tiny-number()
+      }
+    }
+
+  }
+}
+
+
+@media screen and(min-width: 768px) {
+
+}
+
+@media screen and(min-width: 992px) {
+
+}
+
+@media screen and(min-width: @content-wrapper) {
+
+}

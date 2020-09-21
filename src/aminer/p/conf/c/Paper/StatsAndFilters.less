@@ -1,0 +1,48 @@
+.statsAndFilters {
+  min-height: 50px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px 2px #f3f3f3;
+  border-top: 1px solid #e9e9e9;
+  min-width: 100%;
+  padding: 5px 0;
+  // margin-bottom: 10px;
+  :global {
+    .resultStats {
+      padding-left: 8px;
+      margin-bottom: 0;
+      .count {
+        color: #d62339;
+        font-weight: bold;
+        font-family: 'Helvetica Neue';
+        margin-right: 8px;
+        font-style: italic;
+      }
+      // .stats { margin-right: 5px; }
+      .stats:first-child {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .statsAndFilters {
+    // flex-direction: column;
+    // justify-content: normal;
+    :global {
+      .resultStats {
+        margin-bottom: 4px;
+        // margin-left: 27px;
+        text-align: center;
+      }
+      .filters {
+        margin-left: 7px;
+      }
+    }
+  }
+}

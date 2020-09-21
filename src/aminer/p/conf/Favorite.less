@@ -1,0 +1,21 @@
+@leftBlockWidth: 28%;
+.favorite {
+  width: 100%;
+  min-width: calc(100% - @leftBlockWidth);
+  :global {
+    .ant-tabs-top-bar {
+      justify-content: flex-start!important;
+      // margin-left: 5px;
+      // margin-right: 5px;
+      // margin-bottom: 0px;
+      margin: 0 5px;
+      .ant-tabs-tab {
+        padding: 8px;
+        margin-right: 24px;
+      }
+      .ant-tabs-tab:first-child {
+        padding-left: 0px;
+      }
+    }
+  }
+}

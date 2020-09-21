@@ -1,0 +1,131 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.followsExperts {
+  :global {
+    .person-list-item {
+      margin-bottom: 0;
+
+      .content-bottom-zone {
+        margin-top: 10px;
+
+        .show_recent_pub {
+          font-size: 14px;
+          color: #0095ff;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .type_title {
+      height: 50px;
+      padding: 0 24px;
+      background: #fff;
+
+      .title_inner {
+        border-bottom: 1px solid #979797;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+          .user-fz(20);
+          font-weight: bold;
+        }
+
+        .count {
+          margin-left: 10px;
+          .user-fz(18);
+          color: #6d7682;
+          // font-weight: bold;
+          // cursor: pointer;
+          // transition: all 300ms;
+        }
+
+        // .more:hover {
+        //   color: #0095ff;
+        // }
+      }
+    }
+
+    .follow_list {
+      background: #fff;
+
+      // width: calc((100% - 20px) / 2);
+      .contentBottom {
+        margin-top: 10px;
+
+        .show_recent_pub {
+          .user-fz(14);
+          color: #0095ff;
+        }
+      }
+    }
+
+    .follow_list.end .person-list-item {
+      &:last-child:after {
+        width: calc(100% - 70px);
+        left: 35px;
+        display: none;
+      }
+    }
+
+    .person-list-item {
+      border-bottom: none;
+      padding: 22px 35px;
+
+      &:after {
+        display: block;
+        content: '';
+        border-bottom: 1px dashed #979797;
+        width: calc(100% - 144px);
+        position: absolute;
+        bottom: 0;
+        left: 109px;
+      }
+
+      &:last-child:after {
+        width: calc(100% - 70px);
+        left: 35px;
+      }
+
+      .content-right-zone {
+        min-width: 120px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .loadmore {
+      font-weight: bold;
+      background: #fff;
+      // margin-top: 18px;
+      padding: 20px 35px;
+
+      .loadmore_btn {
+        background: rgba(228, 230, 236, 0.3);
+        color: #9097a1;
+        border-radius: 8px;
+        display: block;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 200ms;
+
+        &:hover {
+          background: rgba(228, 230, 236, 0.7);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {}
+
+@media screen and(max-width: 768px) {}

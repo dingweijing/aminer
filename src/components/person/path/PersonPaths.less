@@ -1,0 +1,66 @@
+
+@import "~themes/vars";
+
+.personPaths {
+  display: flex; flex-direction: column;
+  margin: 5px;
+
+
+
+  .pathLine{
+    display:flex;flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 12px;padding-bottom:8px; border-bottom:solid 1px #eee;
+
+
+    .info { background-color: #fff;
+      padding: 6px;
+      span{
+      }
+      .label{color:green;font-weight: bold; font-size: 16px;}
+      .isSelect { color: #1089ff; }
+      .key {margin-left: 8px;}
+      .value {padding-right:8px; font-weight: bold;}
+    }
+
+    .path{
+      display:flex;flex-direction: row;justify-content: flex-start;
+      padding-left:40px;
+
+      .key {padding-left:8px;color:gray}
+      .value {padding-left:2px;}
+
+      .nodeContainer{
+        display: flex;flex-direction: row;justify-content: flex-start; align-items:center;
+        // border:solid 1px red;
+        padding:8px;
+
+        .avatar {
+          border:solid 1px #ddd;
+          width:48px;height:53px;
+          img {width:46px;}
+        }
+        .arrow {
+          height: 24px; width: 70x;
+          margin-bottom: 28px;
+          padding: 2px 6px;
+          background-color: #eee;
+          //border-bottom: solid 20px #eee;
+          text-align: center;
+        }
+        .jian {
+          margin-bottom: 27px;margin-left:-12px;margin-right:16px;
+          width: 0; height: 0;
+          border-bottom: 18px solid #eee;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          transform: rotate(90deg);
+        }
+
+      }
+    }
+
+
+  }
+
+}

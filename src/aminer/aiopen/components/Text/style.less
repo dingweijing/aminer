@@ -1,0 +1,35 @@
+.Text {
+  font-size: 14px;
+  :global {
+    .label {
+      position: relative;
+      display: inline-block;
+      color: #A5A5A5;
+      padding-right: 10px;
+    }
+    .label::after {
+      position: absolute;
+      right: 0;
+      content: '';
+      width: 1px;
+      height: 60%;
+      top: 25%;
+      background-color: #A5A5A5;
+    }
+    .value {
+      color: #000;
+      padding-left: 10px;
+    }
+  }
+}
+
+.Paragraph {
+  font-size: 14px;
+  width: 100%;
+  &>span {
+    color: #A5A5A5;
+  }
+  &>p {
+    color: #000;
+  }
+}

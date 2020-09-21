@@ -1,0 +1,68 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.suggest {
+  width: calc(100% - 90px);
+  position: relative;
+
+  :global {
+    .add_btn {
+      width: 90px;
+      position: absolute;
+      top: 0;
+      right: -90px;
+      .ant-input-group .ant-input {
+        display: none;
+      }
+      .ant-btn-primary {
+        box-shadow: none;
+        border-radius: 0 4px 4px 0;
+      }
+      .ant-input-group-addon {
+        border-radius: 4px;
+      }
+    }
+    .ant-select-auto-complete.ant-select .ant-input {
+      height: 32px !important;
+      border: 1px solid #dadada;
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+      background: rgba(255, 255, 255, 0.6);
+      color: #000e28;
+
+      &::-webkit-input-placeholder {
+        color: #6d7682;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: #6d7682;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #6d7682;
+      }
+      &:-ms-input-placeholder {
+        color: #6d7682;
+      }
+    }
+    .ant-input-search-button {
+      // height: 38px !important;
+      background: #ffffff !important;
+      border-color: #dadada !important;
+      color: #000e28;
+      width: 100%;
+      padding-left: 25px;
+      padding-right: 25px;
+      .user-fz(16, 14);
+    }
+    .ant-select-auto-complete.ant-select .ant-select-selection--single {
+      background: transparent;
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

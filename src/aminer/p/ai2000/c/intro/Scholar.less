@@ -1,0 +1,134 @@
+@import '~themes/vars';
+
+
+.page {
+  :global {
+    .scholar {
+      display: flex;
+      position: relative; width: 100%; color: #555;
+
+      &.small {
+        display: block;
+
+        .content { width: 100%; margin-top: 10px; }
+        .statsLine {
+          .split:nth-child(4) {
+            display: none;
+          }
+          // .statst:nth-child(7) {
+          //   display: inline-block;
+          // }
+        }
+      }
+
+      .imgBox {
+        overflow: hidden; margin-right: 10px;
+        width: 90px; height: 95px; min-width: 90px;
+
+        img { width: 100%; }
+      }
+
+      .content {
+        text-align: left; width: calc(100% - 105px); color: #181818;
+
+        .title {
+          margin-right: 5px; max-height: 34px; overflow: hidden;
+          font-weight: 700; font-size: 15px; line-height: 17px;
+          margin-bottom: 10px;
+
+          a { color: #555; }
+          // span { color: #d3d3d3; margin-left: 5px; }
+          .bind { color: #428bca; }
+          .sub {
+            font-weight: normal;
+          }
+        }
+
+        p {
+          margin: 7px 0;
+
+          a { color: #555; }
+          i { width: 20px; }
+          &.black {
+            margin: 3px 0; width: 100%; color: #000; line-height: 20px;
+            overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+            // span {
+            //   // text-overflow: ellipsis;
+            //   // display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+            //   // -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            //   // -webkit-line-clamp: 2; /** 显示的行数 **/
+            //   // overflow: hidden;  /** 隐藏超出的内容 **/
+            // }
+            svg { margin-right: 5px; }
+          }
+          .mr { margin-right: 10px; }
+
+          &.desc {
+            min-height: 76px; max-height: 76px; overflow: hidden; margin-bottom: 30px;
+            font-size: 85%;
+          }
+
+        }
+        .statsLine {
+          .tip { display: inline-block; }
+          .statst {
+            // color: #3C80BC;
+            color: #a94442; font-weight: bold;
+          }
+          .split { margin: 0 5px; }
+        }
+      }
+
+    }
+
+    .province_list {
+      padding: 0;
+
+      .province_item {
+        margin-bottom: 2px;
+        .ranking {
+          color: #3C80BC; width: 34px; display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .page {
+    :global {
+      .scholar {
+        display: block;
+
+        .content { width: 100%; margin-top: 10px; }
+        .statsLine {
+          .split:nth-child(4) {
+            display: none;
+          }
+          .tip:nth-child(5) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    :global {
+      .scholar, .scholar.small {
+        display: flex;
+        .content {
+          width: calc(100% - 105px); margin: 0;
+        }
+        .statsLine {
+          .split:nth-child(4) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

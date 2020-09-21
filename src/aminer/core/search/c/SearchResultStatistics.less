@@ -1,0 +1,155 @@
+.searchResultStatistics {
+  margin-bottom: 10px;
+  // margin-left: 20px;
+  min-width: 280px;
+  width: 280px;
+  box-shadow: none;
+  border: 1px solid #dfdfdf;
+  background: white;
+  padding: 12px 0px;
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 8px;
+    }
+    .ant-tabs-nav-container {
+      .ant-tabs-nav-wrap {
+        border: none;
+        .ant-tabs-nav-scroll {
+          background-color: #fff;
+          // border-bottom: 1px solid #0095ff;
+          border-bottom: none;
+          border-top: 1px solid #ebebeb;
+        }
+        .ant-tabs-nav {
+          width: 100%;
+          .ant-tabs-tab {
+            width: 50%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+            margin: 0;
+          }
+          .ant-tabs-tab-active {
+            border-top: none;
+            border-bottom: 1px solid #0095ff;
+          }
+        }
+      }
+    }
+  }
+
+  .topicIntro {
+    position: relative;
+    min-width: 280px; width: 280px;
+    margin-left: 20px; margin-bottom: 10px;
+    padding: 0 1px;
+    cursor: pointer;
+    .topicBgImgWrap {
+      width: 100%;
+      display: flex; justify-content: center; align-items: center;
+      overflow: hidden;
+      .topicBgImg {
+        width: 100%;
+      }
+    }
+    .topicIntroTip {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; line-height: 26px; color: #fff;
+      text-align: center;
+      text-shadow: 0px 3px 2px #1F5076;
+      padding: 0px 12px;
+    }
+  }
+
+  .statisticsDesc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #757575;
+    margin: 0 12px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .desc {
+      margin: 2px 0;
+    }
+    .yearSelect {
+      min-width: 80px;
+      font-size: 12px;
+      height: 24px;
+      :global {
+        .ant-select-selection__rendered {
+          line-height: 24px;
+          margin-right: 24px;
+          margin-left: 6px;
+        }
+        .ant-select-selection {
+          height: 24px !important;
+        }
+        .ant-select-selection-selected-value {
+          width: 100%;
+          text-align: center;
+        }
+        .ant-select-arrow {
+          font-size: 8px;
+          right: 8px;
+        }
+      }
+    }
+  }
+  .relativeStatistics {
+    padding: 0 12px;
+    .topItemsRow {
+      margin: 8px 8px 0 0;
+      display: flex;
+      .colorBlock {
+        width: 12px;
+        height: 4px;
+        border-radius: 2px;
+        margin: 10px 2px 10px 0;
+        display: inline-block;
+      }
+      .valueBlock {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 0 6px;
+        .value {
+          color: #3c80f6;
+        }
+        .clickAble {
+          cursor: pointer;
+        }
+        .clickDisabled {
+          cursor: not-allowed;
+        }
+        &:hover {
+          background-color: #f3f3f3;
+        }
+      }
+    }
+
+    .expandBtn {
+      cursor: pointer;
+      margin-top: 6px;
+      display: inline-block;
+      color: #757575;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .searchResultStatistics {
+    display: none;
+  }
+}

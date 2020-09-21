@@ -1,0 +1,354 @@
+@import '~themes/vars';
+@leftBlockWidth: 28%;
+@innerLeftBlockWidth: 23%;
+@commentLeftBorderColor: #ffc935;
+@F3F3F3: #f3f3f3;
+
+.flexGrow{
+  flex-grow: 1;
+}
+@keyframes test {
+  // form {
+  //   transform: scale(0);
+  //   opacity: 1;
+  // }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.commented {
+  // padding: 25px 20px
+  width: calc(100% - @leftBlockWidth - 10px);
+  // min-width: 100%;
+  min-width: calc(100% - @leftBlockWidth - 10px);
+  display: flex;
+  flex-direction: row;
+  margin-top: 9px;
+  :global {
+    // start ripper btn
+    .ripple {
+      position: absolute;
+      background: rgba(0, 149, 255, 0.35);
+      border-radius: 100%;
+      transform: scale(0);
+      pointer-events: none;
+      // animation: test 0.75s ease-out;
+      opacity: 1;
+    }
+
+    .ripple.show {
+      // animation: test 0.75s ease-out;
+      transition: all 0.85s;
+      transform: scale(1);
+      opacity: 0;
+    }
+    // end ripper btn
+
+    .leftBlock {
+      width: @innerLeftBlockWidth;
+    }
+    .centerBlock {
+      width: calc(100% - @innerLeftBlockWidth - 18px);
+      margin-left: 18px;
+      .submit_header_legend {
+        svg {
+          color: #6d7278;
+          margin-right: 16px;
+        }
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+    }
+    .submitBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      // margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 6px 2px @F3F3F3;
+
+      border-left: 3px solid @commentLeftBorderColor;
+      padding: 18px 18px;
+      form {
+        flex-grow: 1;
+        .ant-form-explain {
+          display: block;
+        }
+        textarea {
+          background-color: @F3F3F3;
+        }
+      }
+      .commit {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 10px;
+        align-items: center;
+        position: relative;
+        // overflow: hidden;
+        button {
+          position: relative;
+          border: 1px solid #ebebeb;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          width: 109px;
+          margin-left: 12px;
+          // height: 30px;
+          height: 104px;
+          // height: calc(100% - 4px);
+          margin-bottom: 4px;
+          outline: none;
+          cursor: pointer;
+          overflow: hidden;
+          user-select: none;
+          &:hover {
+            border-color: #0095ff;
+            box-shadow: 0 2px 4px rgba(0, 149, 255, 0.1);
+          }
+        }
+        button.commit:nth-child(2) {
+          color: #fff;
+          background: #4285f4;
+        }
+
+        button.commit:nth-child(3) {
+          color: #fff;
+          background: #00bad2;
+        }
+
+        button.commit:nth-child(4) {
+          color: #fff;
+          background: #ff8a80;
+        }
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    // 改变组件中的样式
+    .formBlock {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 5px;
+      form {
+        flex-grow: 1;
+      }
+      .commit {
+        margin-bottom: 0px;
+        margin-top: 3px;
+        margin-left: 10px;
+        position: relative;
+        button {
+          position: relative;
+        }
+      }
+    }
+    .commentsBox {
+      .commentList {
+        border-top: 1px dotted #979797;
+        .item {
+          .name {
+            font-size: 18px;
+            color: @commentLeftBorderColor;
+            margin-bottom: 5px;
+            font-weight: bold;
+            margin-left: 50px;
+          }
+          .text {
+            font-size: 14px;
+            margin-left: 50px;
+          }
+          .imageBox {
+            float: left;
+            top: 4px;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            position: inherit;
+            border-radius: 2px;
+            margin-top: 5px;
+          }
+          .infos {
+            margin-left: 50px;
+            width: calc(100% + 35px - 50px);
+            border-bottom: 1px dotted #979797;
+            padding-bottom: 20px;
+          }
+          // .infos:last-child {
+          //   border-bottom: 0px;
+          // }
+        }
+      }
+    }
+  }
+  input {
+    width: 100%;
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+    border-color: #d7d7d7;
+    border-radius: 2px;
+    font-size: @font-size-13;
+    line-height: 18px;
+    color: #444;
+    padding: 6px 10px;
+    outline: none;
+    margin-bottom: 8px;
+  }
+
+  .commentList {
+    // border-top: 1px solid #e8e8e8;
+    padding-left: 0;
+
+    .item {
+      // padding-bottom: 16px;
+      display: flex;
+
+      .content {
+        font-family: 'Helvetica Neue';
+        flex-grow: 1;
+        position: relative;
+        .topicMessage {
+          display: flex;
+        }
+        .topicBlock {
+          padding: 18px 18px;
+          display: flex;
+          flex-direction: row;
+          flex-grow: 1;
+          border-left: 3px solid @commentLeftBorderColor;
+          // border-bottom: 1px solid @F3F3F3;
+          // justify-content: space-between;
+          .left {
+            width: 48px;
+            min-width: 48px;
+            border-radius: 50%;
+            box-lines: 0 2px 4px 0 #000000;
+            margin-right: 11px;
+            margin-top: 5px;
+            img {
+              width: 100%;
+              border-radius: 50%;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+          .right {
+            flex-grow: 1;
+            .topic_right_top {
+              p {
+                margin-bottom: 11px;
+              }
+              .name {
+                color: @commentLeftBorderColor;
+                font-weight: bold;
+                font-size: 18px;
+                margin-right: 12px;
+                a {
+                  color: @commentLeftBorderColor;
+                }
+              }
+              .text {
+                font-size: 16px;
+                word-break: break-all;
+              }
+            }
+            .topic_right_bottom {
+              display: flex;
+              justify-content: space-between;
+              .time {
+                font-size: 14px;
+                color: #545454;
+              }
+              .action {
+                display: flex;
+                & > div {
+                  display: flex;
+                  padding-right: 31px;
+                  padding-left: 31px;
+                  border-right: 1px solid #dfdfdf;
+                  cursor: pointer;
+                  &:hover .outSvgBoard {
+                    background-color: #0095ff;
+                  }
+                }
+                & > div:last-child {
+                  padding-right: 0px;
+                  border-right: 0px;
+                }
+                .outSvgBoard {
+                  width: 24px;
+                  height: 24px;
+                  background-color: #b7b7b7;
+                  border-radius: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-right: 13px;
+                  svg {
+                    color: #ffffff;
+                  }
+                }
+                .outSvgBoard.active {
+                  background-color: #0095ff;
+                }
+              }
+            }
+          }
+          .delTopic {
+            cursor: pointer;
+          }
+        }
+
+        .text {
+          font-size: 18px;
+          color: #373737;
+          margin-bottom: 10px;
+        }
+        .childrenComment {
+          border-top: 1px solid @commentLeftBorderColor;
+          padding: 10px;
+          background-color: @F3F3F3;
+          margin-left: 15px;
+          max-height: 500px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+      }
+    }
+  }
+
+  .loadMore {
+    border: 1px solid #d7d7d7;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .commented {
+    flex-grow: 1;
+    :global {
+      .centerBlock {
+        flex-grow: 1;
+        margin-left: 0px;
+        .submitBlock > .commit > button {
+          height: 52px;
+          background-color: #fff;
+        }
+        .submitBlock {
+          textarea {
+            height: 52px !important;
+            min-height: 52px !important;
+            max-height: 52px !important;
+          }
+        }
+      }
+    }
+  }
+}

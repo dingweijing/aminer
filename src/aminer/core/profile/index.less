@@ -1,0 +1,224 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.profilePage {
+  // width: @content-wrapper; padding: 0 15px; margin: 0 auto;
+  .aminer-main-wrap();
+
+  :global {
+    .profile_info {
+      width: 100%;
+      padding-top: 20px;
+
+      .profile_line {
+        display: flex;
+        justify-content: space-between;
+        // flex-grow: 1; margin-right: 10px;
+
+        .profileRandar {
+          border: 1px solid #eee;
+          margin-top: 10px;
+          height: 290px;
+          box-shadow: 0 2px 4px rgba(236, 236, 236, 0.8);
+
+          .title {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            font-size: 16px;
+          }
+          .content {
+            padding: 20px;
+          }
+        }
+        .left_part {
+          flex-grow: 1;
+        }
+        .right_part {
+          min-width: 375px;
+          width: 375px;
+          margin-left: 10px;
+          z-index: 0;
+        }
+      }
+      .profile_line.info_line {
+        align-items: stretch;
+        .right_part {
+          z-index: 1;
+        }
+      }
+    }
+
+    .domain_info {
+      margin: 10px 0 0;
+      padding-left: 10px;
+      .domain_infoline {
+        margin: 5px 0;
+      }
+      .statistic {
+        margin-left: 20px;
+      }
+      .more_btn {
+        .pointer_btn {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .go_back {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #3c80bc;
+      color: #fff;
+      padding: 3px 10px;
+      z-index: 50;
+    }
+
+    .profile_resume {
+      display: flex;
+      margin-top: 10px;
+
+      .left {
+        flex-grow: 1;
+
+        .part {
+          margin-bottom: 10px;
+          // padding: 20px 36px; border: 1px solid #eee;
+          // height: 210px; width: calc((100% - 10px)/2);
+          // max-width: calc((100% - 10px)/2);
+        }
+      }
+
+      .right {
+        width: 375px;
+        min-width: 375px;
+        margin-left: 10px;
+
+        .similar_part {
+          border: 1px solid #eee;
+          height: 390px;
+          box-shadow: 0 2px 4px rgba(236, 236, 236, 0.8);
+
+          .title {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .list_part {
+      display: flex;
+      margin-top: 10px;
+      .left {
+        flex-grow: 1;
+        max-width: calc(100% - 385px);
+
+        #menu_patent,
+        #menu_project {
+          margin-top: 20px;
+        }
+      }
+      .right {
+        width: 375px;
+        min-width: 375px;
+        margin-left: 10px;
+
+        .menus {
+          width: 60%;
+          // border: 1px solid #eee;
+          // padding: 10px 20px;
+          position: sticky;
+          top: 0;
+          // box-shadow: 0 2px 4px rgba(236, 236, 236, 0.8);
+
+          .menu_item {
+            // border-bottom: 1px solid #eee;
+            background: #f5f5f5;
+            text-align: center;
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            display: block;
+            color: #222;
+            font-weight: bold;
+
+            &.active {
+              // color: #408AC9;
+              color: #fff;
+              background: rgba(0, 120, 215, 0.83);
+            }
+            &.disable {
+              color: #aaa !important;
+              cursor: initial;
+            }
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    .axis path {
+      fill: none;
+      stroke: #000;
+      /* shape-rendering: crispEdges; */
+    }
+  }
+
+  // .profileResume.three {
+  //   :global {
+  //     .part {
+  //       // padding: 20px 36px; border: 1px solid #eee;
+  //       height: 210px; width: calc((100% - 10px)/2);
+  //       max-width: calc((100% - 10px)/2);
+
+  //       &.part1 {
+  //         order: 3; height: 100%;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .note {
+    margin-top: 10px;
+  }
+
+  :global {
+    
+    // .paper_rank {
+    //   position: absolute; top: -10px; left: 0;
+    // }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profilePage {
+    :global {
+      .profile_info {
+        .profile_line {
+          .right_part {
+            display: none;
+          }
+        }
+      }
+      .profile_resume {
+        .right {
+          display: none;
+        }
+      }
+      .list_part {
+        .left {
+          max-width: 100%;
+        }
+        .right {
+          display: none;
+        }
+      }
+    }
+  }
+}

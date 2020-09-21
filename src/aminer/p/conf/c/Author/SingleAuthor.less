@@ -1,0 +1,316 @@
+@import '~themes/vars';
+
+// .personList {
+//   width: 100%;
+//   position: relative;
+
+//   :global {
+//   }
+
+//   .contentRight {
+//     position: absolute;
+//     top: 5px;
+//     right: 0;
+//   }
+// }
+.authorItem {
+  display: flex;
+  margin-bottom: 18px;
+  border: 1px solid #cbcbcb;
+  border-radius: 2px;
+  min-height: 180px;
+  padding: 15px 15px 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  // position: relative;
+  // width: 100%;
+  // color: @color-base;
+  // border-bottom: 1px solid @border-color-split;
+  // margin-bottom: 10px;
+  // padding: 7px 0 7px 0;
+  // font-size: @font-size-12;
+  :global {
+    .image_box {
+      width: 120px;
+      min-width: 120px;
+      // margin-right: 20px;
+      height: 160px;
+      margin-bottom: 20px;
+      margin-right: 15px;
+      overflow: hidden;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+        // justify-content: center;
+      }
+
+      img {
+        // width: 100%;
+        height: 100%;
+        margin: 0 -100%;
+      }
+    }
+
+    .imgBox {
+      margin-right: 14px;
+      width: 90px;
+      min-width: 90px;
+      cursor: pointer;
+      .img {
+        max-height: 100px;
+        overflow: hidden;
+        min-height: 90px;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .views {
+        margin-top: 14px;
+        text-align: center;
+        font-size: @font-size-12;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //  cursor: pointer;
+
+        i {
+          margin-right: 8px;
+        }
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .info_box {
+      text-align: left;
+      position: relative;
+      top: -3px;
+      min-height: 134px;
+      flex-grow: 1;
+      width: calc(100% - 290px);
+
+      .person_name_line {
+        margin-right: 5px;
+        margin-bottom: 3px;
+        overflow: hidden;
+        padding-right: 30px;
+        color: #181818;
+        font-weight: 700;
+        font-size: 18px;
+        // display: flex; align-items: baseline;
+        font-family: 'STHeitiSC-Medium', 'STHeiti', 'Heiti SC', 'Hiragino Sans GB', 'SimHei',
+          'AvenirNext-Regular', 'Helvetica Neue', 'lucida grande', 'PingFangHK-Light',
+          'WenQuanYi Micro Hei', 'Droid Sans', 'Roboto', Helvetica, Tahoma, Arial, 'sans-serif';
+        .profileName {
+          display: flex;
+        }
+        .sub {
+          font-size: 16px;
+          line-height: 27px;
+        }
+        .titleName {
+          color: #181818;
+          display: inline-block;
+          cursor: pointer;
+        }
+        i {
+          color: #d3d3d3;
+          margin-left: 5px;
+        }
+        .bind {
+          color: @color-high;
+        }
+        .nameRightZone {
+          display: inline-block;
+          svg {
+            font-size: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      p {
+        margin: 0 0 3px;
+        font-size: 12px;
+        line-height: 16px;
+
+        a {
+          color: #555;
+        }
+        i {
+          width: 20px;
+        }
+        svg {
+          margin-right: 5px;
+        }
+        &.black {
+          color: #000;
+        }
+        &.tags {
+          max-height: 46px;
+          overflow: hidden;
+          margin: 8px 0 6px;
+
+          .tag {
+            border: 1px solid #e7e7e7;
+            border-radius: @border-radius-base;
+            margin: 0 5px 4px 0;
+            padding: 1px 5px;
+            background: #f6f7f9;
+            outline: none;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 12px;
+            color: #555;
+
+            a {
+              color: @color-base;
+            }
+
+            &:hover {
+              border-color: #61b611;
+            }
+          }
+        }
+        .mr {
+          margin-right: 10px;
+        }
+        .nominate {
+          float: right;
+          background-color: #428bca;
+          color: #fff;
+          border-radius: 2px;
+          border-color: #3292e2;
+          outline: none;
+          cursor: pointer;
+        }
+        &.desc {
+          min-height: 76px;
+          max-height: 76px;
+          overflow: hidden;
+          margin-bottom: 30px;
+          font-size: 85%;
+        }
+      }
+
+      .itemRightTop {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        display: flex;
+
+        .little_image {
+          width: 20px;
+          height: 20px;
+          margin-left: 10px;
+          span {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .contentRank {
+        // background: red;
+      }
+    }
+
+    .right_split {
+      width: 0;
+      margin: 20px 0;
+      border-left: 1px dashed #979797;
+    }
+
+    .rightZone {
+      padding: 20px;
+    }
+  }
+}
+
+.little_statistic_box {
+  // width: 170px;
+  // min-width: 170px;
+  // padding: 10px 20px;
+  // margin: 10px 0;
+  // border-left: 1px dashed #979797;
+
+  :global {
+    .statistic {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 5px;
+      .split {
+        margin: 0 8px;
+        width: 0;
+        height: 10px;
+        border-right: 1px solid #181818;
+      }
+      .statistic_line {
+        // margin-right: 7px;
+        color: #666666;
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 0;
+
+        .count {
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 1000px) {
+//   .personList {
+//     :global {
+//       .personItem {
+//         .info_box {
+//           padding: 15px 10px 20px;
+//         }
+//         .statistic_box {
+//           padding: 10px 20px;
+//           width: 140px;
+//           min-width: 140px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   // .carousel { display: flex; }
+//   .personList {
+//     .carousel {
+//       .contentLeft {
+//         display: none;
+//       }
+//       .content {
+//         .title {
+//           padding-right: 0;
+//         }
+//         .tags {
+//           max-height: 77px !important;
+//         }
+//       }
+//     }
+//     .contentRight {
+//       display: none;
+//       // top: 125px;
+//       // transform: scale(0.8);
+//       // transform-origin: right top;
+//     }
+//     .contentBottom {
+//       // display: none;
+//     }
+//   }
+// }

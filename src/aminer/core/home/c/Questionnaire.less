@@ -1,0 +1,40 @@
+.questionnaire {
+  position: fixed;
+  left: 20px;
+  bottom: 66px;
+  z-index: 100;
+  width: 360px;
+  // height: 90px;
+  // background: red;
+
+  :global {
+    .image {
+      position: relative;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      .close {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.questionnaire.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .questionnaire {
+  }
+}

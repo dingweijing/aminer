@@ -1,0 +1,110 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+@imgWidth: 74px;
+@margin10: 10px;
+
+.searchEBListContent {
+  display: flex;
+  // margin: 0 0 8px;
+
+
+  :global {
+    .eb_title {
+      align-self: flex-start;
+    }
+    .logo {
+      height: @imgWidth; border: 1px solid #DFDFDF;
+      img {
+        width: 120px; height: 100%;
+        // max-height: @imgWidth;
+        overflow: hidden;
+      }
+    }
+    .ebInfo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: @margin10;
+      position: relative;
+      top: -3px;
+      .title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        display: flex; align-items: flex-start;
+        justify-content: space-between;
+        a { color: #000; }
+      }
+      .otherInfo {
+        display: flex; font-size: 12px;
+        margin-bottom: 8px;
+        color: #666; align-items: center;
+
+        .split {
+          width: 0; border-left: 1px solid #DFDFDF;
+          margin: 0 12px; height: 12px;
+        }
+        .member {
+          // margin-left: 16px;
+        }
+      }
+      .desc {
+        text-align: justify;
+        // height: 40px;
+        overflow: hidden;
+        color: #444; font-size: 12px;
+
+        max-height: 40px;
+        line-height: 20px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+      }
+      .right {
+        min-width: 150px; text-align: right;
+      }
+      .total {
+        font-size: 12px; color: #6D6D6D;
+        .figure {
+          font-weight: 600; font-size: 15px; font-style: normal;
+          color: #EC6B10;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .searchEBListContent {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .searchEBListContent {
+    flex-direction: column;
+    align-items: center;
+    :global {
+      .logo {
+        height: 80px; margin-bottom: 10px;
+      }
+      .ebInfo {
+        margin-left: 0;
+        .title {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          .right { text-align: center; }
+        }
+        .otherInfo {
+          justify-content: center;
+        }
+        .desc {
+          // height: 60px;
+          max-height: 60px;
+          -webkit-line-clamp: 3;
+        }
+      }
+    }
+  }
+}

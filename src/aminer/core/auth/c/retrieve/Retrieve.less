@@ -1,0 +1,111 @@
+@import "~themes/vars";
+
+.formContent {
+  padding: 40px;
+
+
+  .formItem {
+    margin-bottom: 0;
+    // height: 56px;
+    .errors {
+      color: #f00;
+    }
+  }
+
+  .signinBtn { float: right; color: @color-high; cursor: pointer; font-size: 13px; }
+
+  .phoneInput {
+    display: flex;
+    .phoneAreaSelect {
+      width: 128px;
+      color: #000;
+      margin-right: 12px;
+      margin-bottom: 0px;
+    }
+    .formItem {
+      flex: 1;
+    }
+  }
+
+  .marginGap {
+    margin-top: 12px;
+  }
+
+  .sendCodeWrap {
+    margin-bottom: 0px;
+    .codeInput {
+      width: 78px;
+    }
+    .sendCodeBtn {
+      // width: 120px;
+      float: right;
+      width: 230px;
+      cursor: not-allowed;
+      background-color: #eee;
+      &:hover, &:active, &:focus {
+        border-color: #D5D5D5;
+        color: #000;
+      }
+      &::after {
+        box-shadow: none;
+      }
+    }
+    .ready {
+      cursor: pointer;
+      background-color: #fff;
+    }
+    .error {
+      color: #f00;
+    }
+  }
+
+  // .error { color: #f00; }
+
+  .btnLine {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      height: 30px;
+      padding: 0 22px;
+      margin-top: 10px;
+      margin-left: 5px;
+      font: 300 15px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+      cursor: pointer;
+    }
+  }
+
+  .signUpBtn { float: right; color: @color-high; cursor: pointer; margin-top: 5px; padding: 0 12px; font-size: 13px; }
+
+  .loginBtn {
+    width: 100%; line-height: 48px; border: none; background: #eee; height: 48px; margin: 0;
+    font-size: 16px; color: #8D8D8D;
+    background: @color-high; color: @color-white;
+  }
+
+  .forgot { float: right; color: @color-high; cursor: pointer; }
+
+
+  :global {
+    .ant-btn-primary {
+      background-color: @color-high; color: @color-high; color: @color-white;
+    }
+    .has-error .ant-input { border: none; border-bottom: 1px solid #E9E9E9; }
+    .ant-input { border: none; background: #fff; font-size: 16px; border-bottom: 1px solid #E9E9E9; outline: none; padding: 4px 0; }
+    .ant-select-selection__placeholder { font-size: 16px; }
+    .ant-input:focus { box-shadow: none; -webkit-box-shadow: 0 0 0px 1000px white inset;
+      -webkit-text-fill-color: #333;}
+    input:-internal-autofill-selected { -webkit-box-shadow: 0 0 0px 1000px white inset;
+      -webkit-text-fill-color: #333;}
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @color-high;
+      border-color: @color-high;
+    }
+    .ant-checkbox:hover .ant-checkbox-inner {
+      border-color: @color-high;
+    }
+    .ant-select-selection { border: none; border-bottom: 1px solid #E9E9E9; }
+    .ant-select-selection:focus { box-shadow: none; }
+    .ant-select-selection__rendered { margin: 0 !important; padding-right: 30px; }
+  }
+}

@@ -1,0 +1,227 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.orgPage {
+  // width: 100%;
+  padding-top: 40px;
+  .aminer-main-wrap();
+
+  :global {
+    .org_title {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 20px;
+      text-transform: Uppercase;
+      color: #0095ff;
+    }
+    .org_bg {
+      background: #0095ff;
+      // min-height: 100px;
+      width: 100%;
+      position: relative;
+      margin-bottom: 33px;
+      .bg {
+        width: 100%;
+      }
+      .org_info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        img {
+          height: 100%;
+        }
+
+        .org_name {
+          text-transform: Uppercase;
+          font-size: 40px;
+          color: #fff;
+          max-width: 55%;
+          text-align: right;
+        }
+      }
+    }
+
+    .org_list_part {
+      // padding-top: 30px;
+      h2 {
+        font-weight: bold;
+      }
+    }
+
+    .multiple{
+      margin-top: 18px;
+    }
+    .appearances {
+      margin-top: 18px;
+
+      a {
+        color: #444;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .multiple_list {
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        .multiple_item:nth-child(odd) {
+          background: #edf7ff;
+        }
+        .multiple_item:nth-child(even):last-child {
+          border-bottom: 1px solid #dedede;
+        }
+        .multiple_item {
+          display: flex;
+          min-height: 50px;
+          padding: 10px 0;
+          font-size: 12px;
+          color: #444;
+
+          .award_name {
+            width: 20%;
+            min-width: 20%;
+            max-width: 20%;
+            padding: 0 20px;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+          }
+
+          .award_ranks {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+
+            .rank_item {
+              display: flex;
+              padding-right: 10px;
+              .rank {
+                min-width: 32px;
+                margin-right: 5px;
+              }
+            }
+
+            .rank_item.count5 {
+              width: calc(100% / 5);
+            }
+            .rank_item.count4 {
+              width: calc(100% / 4);
+            }
+            .rank_item.count3 {
+              width: calc(100% / 3);
+            }
+            .rank_item.count2 {
+              width: calc(100% / 2);
+            }
+          }
+        }
+        .multiple_item.fields_item {
+          .award_ranks {
+            flex-wrap: wrap;
+            .rank_item {
+              width: 25%;
+              min-width: 25%;
+            }
+          }
+        }
+      }
+    }
+
+    .domains_part {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .orgPage {
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .orgPage {
+    width: 970px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .orgPage {
+    width: 760px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .orgPage {
+    width: 100%;
+    :global {
+      .org_bg {
+        display: none;
+        .org_info {
+          .country_name {
+            
+          }
+        }
+      }
+      .appearances {
+        .multiple_list {
+          .multiple_item.fields_item {
+            .award_ranks {
+              .rank_item {
+                width: 50%;
+              }
+            }
+          }
+          .multiple_item {
+            flex-direction: column;
+            .award_name {
+              margin-bottom: 10px;
+              width: 100%;
+              min-width: 100%;
+              max-width: 100%;
+              display: block;
+              // width: 140px;
+              // min-width: 140px;
+            }
+            .award_ranks {
+              padding: 0 10px;
+              align-items: flex-start;
+              width: 100%;
+              flex-wrap: wrap;
+              .rank_item {
+                padding: 0 10px;
+              }
+              .rank_item.count4 {
+                width: 50%;
+              }
+              .rank_item.count5 {
+                width: 50%;
+              }
+              .rank_item.count3 {
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and(min-width: 768px) {
+//   .article { width: 750px; }
+// }
+
+// @media screen and(min-width: 992px) {
+//   .article { width: 970px; }
+// }
+
+// @media screen and(min-width: @content-wrapper) {
+//   .article { .aminer-main-wrap() }
+// }

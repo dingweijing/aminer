@@ -1,0 +1,24 @@
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexVertical {
+  display: flex;
+  align-items: center;
+}
+
+.rect {
+  position: absolute;
+  background: linear-gradient(to left, green, green) left top no-repeat,
+    linear-gradient(to bottom, red, red) left top no-repeat,
+    linear-gradient(to left, yellow, yellow) right top no-repeat,
+    linear-gradient(to bottom, darkorchid, darkorchid) right top no-repeat,
+    linear-gradient(to left, blue, blue) left bottom no-repeat,
+    linear-gradient(to bottom, chocolate, chocolate) left bottom no-repeat,
+    linear-gradient(to left, aqua, aqua) right bottom no-repeat,
+    linear-gradient(to left, #d4237a, #d4237a) right bottom no-repeat;
+  background-size: 1px 20px, 20px 1px, 1px 20px, 20px 1px;
+  /*左边两条线的宽高 上边两条线的宽高 右边两条线的宽高 下边两条线的宽高*/
+}

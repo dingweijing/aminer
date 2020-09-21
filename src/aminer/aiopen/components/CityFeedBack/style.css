@@ -1,0 +1,54 @@
+.wrapper {
+  position: fixed;
+  z-index: 5;
+  bottom: 2px;
+  right: 1px;
+  width: 300px;
+  color: #fff;
+}
+.wrapper :global .vsbar-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+}
+.wrapper :global .vsbar-wrapper .iicon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #aaa;
+}
+.wrapper :global .vsbar-wrapper .red {
+  background-color: red;
+}
+.wrapper :global .vsbar-wrapper .green {
+  background-color: green;
+}
+.wrapper :global .vsbar-wrapper .bar {
+  height: 8px;
+  width: calc(90% - 40px);
+  border: 2px solid #fff;
+  margin: 0 10px;
+  background: linear-gradient(to right, #FF8300 50%, #fff 50%);
+  margin-bottom: 160px;
+}
+.wrapper :global .vsbar-wrapper .buttonOne {
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
+  background: #021B4D;
+  color: blue;
+}
+.wrapper :global .vsbar-wrapper .buttonTwo {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  background: #021B4D;
+  color: #fff;
+}

@@ -1,0 +1,211 @@
+.reportPage {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  .unCompletedMRT {
+    height: calc(100vh - 120px);
+  }
+  .paperMRT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 16px 24px;
+
+    .paperTitle {
+      font-size: 26px;
+      text-align: center;
+    }
+    .authors {
+      font-size: 18px;
+      margin: 12px 0;
+      text-align: center;
+      .personName {
+        &::after {
+          content: ', ';
+        }
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+    .mrtContent {
+      margin-top: 40px;
+      .steps {
+        max-width: 800px;
+        font-size: 22px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .linerGradientRight {
+          background-image: -webkit-linear-gradient(left,#060606,#d6d6d6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: absolute;
+        }
+        .linerGradientLeft {
+          background-image: -webkit-linear-gradient(right,#060606,#d6d6d6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: absolute;
+        }
+        .arrowBetweenStatus {
+          margin: 0 32px;
+          width: 48px;
+          height: 48px;
+          position: absolute;
+        }
+        .step {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .subTitle {
+            text-align: center;
+            font-size: 16px;
+            font-weight: normal;
+            width: 200px;
+          }
+        }
+      }
+      .statusContent {
+        text-align: center;
+        margin: 24px 0 16px;
+        font-size: 18px;
+        .downArrow {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 12px;
+        }
+        .shareLink {
+          max-width: calc(100vw - 48px);
+          word-wrap: break-word;
+          margin-bottom: 12px;
+        }
+
+      }
+      .sponsorBtns {
+        text-align: center;
+        .btn {
+          height: 32px;
+          width: 104px;
+          border-radius: 16px;
+          margin: 0 16px;
+          font-size: 14px;
+        }
+        .acceptBtn {
+          background-color: #b3d7aa;
+          border-color: #b3d7aa;
+        }
+        .rejectBtn {
+          background-color: #f3999a;
+          border-color: #f3999a;
+        }
+      }
+    }
+  }
+  .ruleWrap {
+    text-align: left;
+    .rules {
+      width: 400px;
+      max-width: calc(100vw - 48px);
+      padding: 0 24px;
+      color: rgba(0, 0, 0, 0.75);
+    }
+  }
+  .qrcodeWrap {
+    display: flex;
+    justify-content: center;
+  }
+  .background {
+    position: absolute;
+    width: 75%;
+    right: 0;
+    padding: 1rem 0rem;
+    height: 100%;
+    overflow: hidden;
+    img.horizontal {
+      width: 100%;
+      mask-image: linear-gradient(255deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 20%, rgba(255,255,255,0) 75%);
+    }
+    img.diagonal {
+      width: 100%;
+      mask-image: linear-gradient(315deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 20%, rgba(255,255,255,0) 75%);
+    }
+  }
+  .askingForSponsor {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    text-align: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    h1 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.35rem;
+      font-weight: 300;
+    }
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      span {
+        font-weight: 600;
+        color: #0056ad;
+      }
+    }
+    .acceptBtn {
+      color: white;
+      background-color: #0056ad;
+      border: none;
+      padding: 0.2rem 3rem;
+      border-radius: 1rem;
+      margin: 2rem 0 1rem 0;
+      font-size: 1rem;
+      &:hover {
+        background-color: #6fa2d6;
+      }
+    }
+    a {
+      display: block;
+      font-size: 1rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .reportPage {
+    .ruleWrap {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .reportPage {
+    .paperMRT {
+      .mrtContent{
+        .pcOnly {
+          display: none !important;
+        }
+      }
+    }
+    .background {
+      width: 100vw;
+    }
+    .askingForSponsor {
+      width: 90%;
+      left: 5%;
+      a {
+        display: none;
+      }
+    }
+  }
+}

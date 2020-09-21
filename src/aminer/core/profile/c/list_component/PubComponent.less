@@ -1,0 +1,314 @@
+.profilePapers {
+  border: 1px solid #eeeeee;
+  // margin-top: 20px;
+
+  :global {
+    .part_title {
+      padding: 10px 20px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .num {
+        font-size: 13px;
+        color: #666;
+        margin-left: 15px;
+      }
+
+      .refresh {
+        float: right;
+        cursor: pointer;
+      }
+    }
+    .part_content {
+      padding: 0 22px 0;
+
+      .opr_line {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0 0;
+        align-items: flex-start;
+        .pubs_sort {
+          .pubs_sort_line {
+            display: flex;
+            margin-bottom: 5px;
+            // align-items: center;
+
+            .affirms {
+              margin-right: 20px;
+            }
+          }
+
+          .label {
+            font-size: 14px;
+            margin-right: 16px;
+            min-width: 30px;
+          }
+
+          .sorts {
+            // display: flex;
+          }
+          .sort {
+            margin-right: 8px;
+            border-radius: 2px;
+            color: #666;
+            border: 1px solid #666666;
+            padding: 0 6px;
+            cursor: pointer;
+            line-height: 18px;
+            font-size: 14px;
+
+            &.active {
+              border-color: #0078d7;
+              background: #0078d7;
+              color: #fff;
+            }
+          }
+        }
+        .opr_pubs {
+          display: flex;
+          .btn {
+            margin-right: 8px;
+            border-radius: 2px;
+            color: #666;
+            border: 1px solid #666666;
+            padding: 0 6px;
+            cursor: pointer;
+            line-height: 18px;
+            font-size: 14px;
+            height: 20px;
+
+            &.active {
+              border-color: #0078d7;
+              background: #0078d7;
+              color: #fff;
+            }
+          }
+          .del_btn {
+            position: relative;
+
+            .select_btn {
+              position: absolute;
+              display: flex;
+              right: 0;
+              width: 240%;
+              justify-content: flex-end;
+              .btn {
+                word-wrap: none;
+
+                &.del {
+                  background: #f00;
+                  color: #fff;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .pubs_year {
+        padding: 10px 0 0;
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+
+        &.pubs_citation {
+          .years {
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+
+        .label {
+          font-size: 14px;
+          // margin-right: 16px;
+          min-width: 46px;
+        }
+
+        .years {
+          // display: flex;
+          // flex-wrap: wrap;
+          width: calc(100% - 50px);
+          max-width: calc(100% - 50px);
+
+          .select_year {
+            // border: 1px solid red;
+            overflow-x: auto;
+
+            .select_year_inner {
+              display: flex;
+              align-items: stretch;
+              height: 44px;
+              margin-top: 8px;
+              // padding-bottom: 17px;
+              box-sizing: content-box;
+            }
+
+            .year_bar {
+              min-width: 12px;
+              max-width: 22px;
+              // border: 1px solid #000;
+              position: relative;
+              margin-right: 2px;
+              display: flex;
+              align-items: flex-end;
+              flex-grow: 1;
+              background: #f1f1f1;
+              cursor: pointer;
+              // margin-bottom: -17px;
+
+              .bar {
+                background: #8ed0ff;
+                display: block;
+                width: 100%;
+                min-height: 1px;
+              }
+
+              .bar_label {
+                color: #666;
+                width: 100%;
+                // border: 1px solid skyblue;
+                text-align: center;
+                transform: rotateZ(90deg) scale(0.8);
+                display: block;
+                position: absolute;
+                top: 13%;
+              }
+            }
+            .year_bar:hover {
+              background: #dedede;
+
+              .bar {
+                background: #ffe98e;
+              }
+              .bar_label {
+                color: #444;
+              }
+            }
+            .year_bar.active {
+              background: #dedede;
+
+              .bar {
+                background: #ffe98e;
+              }
+              .bar_label {
+                color: #444;
+              }
+            }
+          }
+          .year {
+            margin-right: 8px;
+            border-radius: 2px;
+            border: 1px solid #666666;
+            padding: 0 6px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #666;
+            cursor: pointer;
+            margin-bottom: 5px;
+
+            &.active {
+              border-color: #0078d7;
+              background: #0078d7;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .more_paper {
+        text-align: center;
+        padding: 10px 0;
+
+        .more_btn {
+          color: #3c80bc;
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .profliePaperList.publication_list {
+      .cited {
+        color: #ec6b10;
+      }
+      .urlPart {
+        .url {
+          color: #666;
+          span {
+            color: #666;
+          }
+        }
+      }
+      .paper-item {
+        border-bottom-style: dashed;
+      }
+      .content-right {
+        display: flex;
+        align-items: center;
+        min-width: 170px;
+
+        .checkbox {
+          margin-left: 10px;
+          height: 100%;
+          background-color: #fafafa;
+          display: flex;
+          align-items: center;
+          padding: 0 6px;
+        }
+      }
+    }
+  }
+}
+:global {
+  .profilePaperDelList.publication_list {
+    padding: 20px;
+    .paper-item {
+      border-bottom-style: dashed;
+      .del_btn {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        width: 18px;
+        min-width: 18px;
+
+        svg {
+          color: #666;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .profilePaperDelListCommitBtn {
+    padding: 0 20px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .ant-btn {
+      width: 100%;
+      border: none;
+      color: #fff;
+      background: red;
+      border-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profilePapers {
+    :global {
+      .profliePaperList.publication_list {
+        .content-right {
+          display: none;
+        }
+      }
+    }
+  }
+}

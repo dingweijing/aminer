@@ -1,0 +1,107 @@
+.topRanks {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // max-width: calc(100vw - 100px);
+  .topRank {
+    // max-width: 685px;
+    // min-width: 260px;
+    border: 1px solid #E9E9E9;
+    padding: 24px 26px 0px;
+    margin: 16px 0px;
+    // flex: 1;
+    // width: 49%;
+    .rankTitle {
+      font-size: 18px;
+      // margin-bottom: 20px;
+      padding: 0px 8px 4px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      .seeMore {
+        color: #9E9EA7;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: #0095FF;
+        }
+        svg {
+          font-size: 14px;
+          margin-right: 4px;
+        }
+      }
+    }
+    .rankContent {
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      .topItem {
+        padding: 10px 8px;
+        
+        font-size: 16px;
+        line-height: 40px;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-width: 1px;
+        border-bottom-color: #E0E0E0;
+        border-bottom-style: dashed;
+        position: relative;
+        &:hover {
+        }
+
+        .venueName {
+          padding-right: 30px;
+        }
+
+        .personRanking {
+          line-height: 22px;
+          position: absolute;
+          right: 0px;
+        
+          .top {
+            color: #6d7682;
+            display: inline-block;
+            width: 26px;
+            text-align: center;
+            svg {
+              font-size: 22px;
+            }
+          }
+          .no {
+            color: #999;
+            font-size: 18px;
+            font-family: @font-helvetica;
+            font-style: italic;
+            display: inline-block;
+            width: 26px;
+            text-align: center;
+          }
+          .no.top {
+            color: rgba(109,118,130,1);
+          }
+          .no.red {
+            span {
+              box-shadow: 0 0 2px rgba(255, 102, 49, 0.3);
+              border-color: #ffbc1d;
+              background: rgba(255, 102, 49, 1);
+              color: #fff;
+            }
+          }
+        }
+        
+      }
+    }
+    
+  }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+  .topRanks .topRank .rankContent .topItem {
+    width: 100%;
+  }
+}

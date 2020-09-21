@@ -1,0 +1,19 @@
+@import "~themes/vars";
+
+.menuList {
+  font-size: 12px;
+  :global {
+    .menu_item {
+      color: #555; padding: 5px 10px;
+      svg { margin-right: 5px; }
+      a { color: inherit; }
+
+      &:hover {
+        color: #428bca;
+      }
+      &.active {
+        color: #333; font-weight: bold;
+      }
+    }
+  }
+}

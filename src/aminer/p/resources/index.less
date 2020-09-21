@@ -1,0 +1,104 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+
+.resourcePage {
+  .aminer-main-wrap(); position: relative;
+
+  :global {
+
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 20px 0;
+      h1 {
+        
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .links {
+        display: flex;
+
+        .link {
+          margin-left: 20px;
+          font-size: 14px;
+        }
+
+        a {
+          color: #3c80bc; font-weight: bold; text-decoration: underline;
+        }
+      }
+    }
+
+    
+
+    .awards_container {
+      // background: yellow;
+
+      .select_line {
+        display: flex;
+        align-items: center;
+
+        .ant-select-selection {
+          border-color: #999;
+        }
+        .ant-select-selection:focus {
+          box-shadow: none;
+        }
+        .ant-select-selection:active {
+          box-shadow: none;
+        }
+        .ant-select-selection__placeholder {
+          color: #999;
+        }
+        .ant-select-open .ant-select-selection {
+          box-shadow: none;
+        }
+      }
+
+      .awards_table_container {
+        margin: 30px 0;
+
+        .awards_table {
+          width: 100%;
+          border-collapse: collapse;
+          color: #333;
+
+          td, th { 
+            border: 1px solid #999; 
+            padding: 4px 10px;
+
+            a {
+              color: #3c80bc;
+            }
+          }
+          tr th:nth-child(4) {
+            min-width: 100px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resourcePage {
+    :global {
+      .awards_container {
+        .awards_table_container {
+          .awards_table {
+            tr th:nth-child(3),th:nth-child(4),td:nth-child(3),td:nth-child(4) {
+              display: none;
+            }
+            td, th {
+              padding: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

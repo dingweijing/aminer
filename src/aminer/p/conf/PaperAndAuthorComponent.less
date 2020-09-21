@@ -1,0 +1,41 @@
+@leftBlockWidth: 28%;
+
+.paperAndAuthorComponent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-width: calc(100% - @leftBlockWidth);
+  :global {
+    .leftBlock {
+      position: relative;
+      min-width: 18%;
+      width: 23%;
+    }
+    .centerContent {
+      margin: 0 20px;
+      flex-grow: 1;
+      width: calc(100% - 23%);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paperAndAuthorComponent {
+    // position: absolute !important;
+
+    :global {
+      .leftBlock {
+        position: absolute;
+        z-index: 2;
+        min-height: 20px;
+        top: 4px;
+        // width: 0 !important;
+        // min-width: 0 !important;
+      }
+      .centerContent {
+        margin: 0 20px;
+        flex-grow: 1;
+      }
+    }
+  }
+}

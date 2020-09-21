@@ -1,0 +1,77 @@
+[
+  {
+    "id": "5dd3de98e07b013b38cf3399",
+    "title": "BERT",
+    "description": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. One of the most popular work in Natural Language Processing area this year."
+  },
+  {
+    "id": "5e033a8207da232cfd4fda2d",
+    "title": "Disentangle Causal Mechanism",
+    "description": "A Meta-Transfer Objective for Learning to Disentangle Causal Mechanisms. Latest work from Yoshua Bengio on causal inference."
+  },
+  {
+    "id": "5dde43bc3d282234b621399f",
+    "title": "ResNet",
+    "description": "Deep Residual Learning for Image Recognition. A masterpiece in Computer Vision bringing deep network in practice."
+  },
+  {
+    "id": "5df4a0e26f52ac2c9ae6068c",
+    "title": "XLNet",
+    "description": "XLNet: Generalized Autoregressive Pretraining for Language Understanding. The strongest competitor to top models in NLP."
+  },
+  {
+    "id": "5df49f20e8cc00e7af330f6b",
+    "title": "GAN",
+    "description": "'Generative Adversarial Networks. \"The most interesting idea in the last 10 years in ML.\" - Yann LeCun.'"
+  },
+  {
+    "id": "5df4a1280e552f7b742b2da9",
+    "title": "GraphSage",
+    "description": "Inductive Representation Learning on Large Graphs. Representation learning for dynamic graphs by Jure Leskovec."
+  },
+  {
+    "id": "5e05b691900bcb5788ea51d8",
+    "title": "Variational Information Bottleneck", 
+    "description": "Specializing Word Embeddings (for Parsing) by Information Bottleneck. Best paper for EMNLP 2019."
+  },
+  {
+    "id": "5e05b7ef2494d6242d4e1d04",
+    "title": "Visual Question Answering",
+    "description": "VQA: Visual Question Answering. New challenge for understanding both vision and language."
+  },
+  {
+    "id": "5e05b8176438ae128ad73227",
+    "title": "Deep RL",
+    "description": "Playing Atari with Deep Reinforcement Learning. Stepping into Deep RL."
+  },
+  {
+    "id": "5e05b6c84617f37dbc69d4b4",
+    "title": "DCNN",
+    "description": "Densely Connected Convolutional Networks. Best Paper on CVPR 2017."
+  },
+  {
+    "id": "5e05b7b92fcdf7c4fe2e2135",
+    "title": "Masked R-CNN",
+    "description": "Mask R-CNN. Milestone for object recognition."
+  },
+  {
+    "id": "5e05c5cd8f9400cf67483a7c",
+    "title": "Adam",
+    "description": "Adam: A method for stochastic optimization. One of the most popular optimizer for deep learning."
+  },
+  {
+    "id": "5dad518257b37126d6d1136b",
+    "title": "ArnetMiner",
+    "description": "ArnetMiner: extraction and mining of academic social networks. The ground work of AMiner."
+  },
+  {
+    "id": "5e05c875169229b773000190",
+    "title": "NetSMF",
+    "description": "NetSMF: Large-Scale Network Embedding as Sparse Matrix Factorization. A sparse network embedding methond on WWW'2019."
+  },
+  {
+    "id": "5dad7f5457b37126d6dd5853",
+    "title": "ProNE",
+    "description": "ProNE - Fast and Scalable Network Representation Learning. An advanced highly efficient network embedding technique."
+  }
+]

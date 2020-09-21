@@ -1,0 +1,119 @@
+@paperBorderColor: #d5d5d5;
+@leftBlockWidth: 26%;
+.Schedules {
+  display: flex;
+  flex-direction: column;
+  // width: calc(100% - 21%);
+  flex-grow: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  // .leftBlock {
+  //     display: flex;
+  //     flex-direction: column;
+  //     width: @leftBlockWidth;
+  //     .mostBlock {
+  //         margin-top: 30px;
+  //     }
+  // }
+
+  // width: 100%;
+  // min-width: calc(100% - @leftBlockWidth);
+
+  .expandAndCollapseBtn {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px 2px #f3f3f3;
+    border-top: 1px solid #e9e9e9;
+    min-width: 100%;
+    padding: 5px 0 5px 24px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    :global {
+      //   .schedule_legend {
+      //     svg {
+      //       margin-right: 16px;
+      //     }
+      //   }
+      .scheduleAction {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        svg {
+          margin-right: 14px;
+        }
+        .action_btn {
+          width: 146px;
+          color: #545454;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            border: 1px solid #e9e9e9;
+          }
+        }
+        .action_btn:last-child {
+          margin-left: 34px;
+          margin-right: 8px;
+        }
+        .action_btn.active {
+          border: 1px solid #0095ff;
+          color: #0095ff;
+        }
+      }
+    }
+  }
+  :global {
+    .annotationArea {
+      border: 1px dashed #8fbc8f;
+      background-color: #f0fff0;
+      padding: 0px 8px;
+    }
+    .content {
+      margin-top: 20px;
+    }
+  }
+
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Schedules {
+    :global {
+      .content {
+        margin-top: 0px;
+      }
+      .scheduleAction {
+        .action_btn:last-child {
+          margin-left: 15px;
+          margin-right: 8px;
+        }
+      }
+      .schedule {
+        margin: 0 0;
+        .headMain {
+          align-items: center;
+          .right {
+            flex-wrap: wrap;
+
+            .title {
+              font-size: 14px;
+              .chair {
+                margin-left: 0px !important;
+                font-size: 12px;
+              }
+            }
+            .time {
+              margin-left: 0px !important;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

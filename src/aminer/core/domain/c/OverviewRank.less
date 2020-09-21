@@ -1,0 +1,72 @@
+.topRanks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // max-width: calc(100vw - 100px);
+  .topRank {
+    // max-width: 685px;
+    // min-width: 260px;
+    border: 1px solid #E9E9E9;
+    padding: 24px 26px 0px;
+    margin: 16px 0px;
+    // flex: 1;
+    width: 49%;
+    .rankTitle {
+      font-size: 18px;
+      // margin-bottom: 20px;
+      padding: 0px 8px 4px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      .seeMore {
+        color: #9E9EA7;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: #0095FF;
+        }
+        svg {
+          font-size: 14px;
+          margin-right: 4px;
+        }
+      }
+    }
+    .rankContent {
+      .topItem {
+        padding: 0px 8px;
+        text-align: justify;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        font-style: italic;
+        &:hover {
+          background:rgba(245,245,245,1);
+        }
+
+        .authorLink {
+          color: #000;
+          &:hover {
+            color: #0E63CB;
+          }
+        }
+      }
+    }
+    
+  }
+  :global {
+    .small-card {
+      line-height: 18px;
+      white-space: break-spaces;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .topRanks .topRank {
+    width: 100%;
+  }
+}

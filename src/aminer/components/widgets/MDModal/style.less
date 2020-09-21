@@ -1,0 +1,59 @@
+.wrapper {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+
+  :global {
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    p {
+      position: relative;
+
+      img {
+        max-width: 700px;
+      }
+
+      a {
+        display: inline-block;
+        width: inherit;
+        white-space: pre-wrap;
+        /* height: 300px; */
+        word-break: break-all;
+      }
+    }
+
+
+    /*     img {
+      text-align: center;
+      max-width: 750px;
+      position: absolute;
+      left: 50%;
+      margin-top: 35px;
+      transform: translateX(-50%);
+    } */
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 414px) {
+  .wrapper {
+    height: 500px;
+
+
+    :global {
+      p {
+        img {
+          max-width: 300px;
+        }
+      }
+
+    }
+  }
+}

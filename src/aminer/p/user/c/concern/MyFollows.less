@@ -1,0 +1,91 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.myFollows {
+  :global {
+    .label {
+      .user-fz(22);
+      .user-lh(24, 22);
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .follow_topics_content {
+      position: relative;
+      border: 1px solid #eeeeef;
+      border-radius: 2px;
+      background: #00936b;
+      padding: 17px 20px 20px;
+
+      .suggest_part {
+        width: 40%;
+        min-width: 400px;
+        margin-top: 12px;
+      }
+
+      .hot_recommend {
+        color: #fff;
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .text {
+          font-weight: bold;
+          .user-fz(22);
+          margin-bottom: 10px;
+        }
+        .recomment_keyword {
+          .user-fz(16);
+        }
+      }
+
+      .edit {
+        margin-top: 14px;
+      }
+
+      .change {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .user-fz(16);
+        color: #fff;
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+    .margin {
+      margin-bottom: 20px;
+    }
+    .follow_entities {
+      // background: #fff;
+      .label {
+        padding: 17px 20px 0;
+        margin-bottom: 0;
+        background: #fff;
+        color: #000e28;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+  .myFollows {
+    :global {
+      .follow_topics_content {
+        .suggest_part {
+          width: 400px;
+          min-width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

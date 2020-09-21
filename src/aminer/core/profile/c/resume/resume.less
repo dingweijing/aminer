@@ -1,0 +1,81 @@
+@import "~themes/vars";
+
+.note {
+  position: relative;
+  // height: 100%; 
+  // font-size: 12px;
+
+  :global {
+    .op_user {
+      // position: absolute; bottom: 0; right: 0;
+      display: block;  text-align: right;
+    }
+  }
+}
+
+.login {
+  // color: #067C08; cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+  padding: 5px 20px;
+  font-size: 16px!important;
+  color: #333;
+  cursor: pointer;
+  background-color: #f5f7f7;
+  // border: 1px dashed #82be83;
+}
+
+// .bio { font-size: 12px; }
+// .education { font-size: 12px; }
+// .experience { font-size: 12px; }
+.citations {
+  padding: 0;
+
+  :global {
+    .citation {
+      margin-bottom: 5px;
+
+      .country {
+        margin-bottom: 0;
+      }
+
+      .cit {
+        font-style: italic;
+      }
+    }
+  }
+
+}
+
+.experiences {
+  padding-left: 0; color: #000;
+  font-size: 14px;
+  :global {
+    .experience {
+      margin-bottom: 8px; padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+      .rightBtn {
+        float: right; cursor: pointer;
+        display: none;
+        .deleteBtn {
+          color: #ff4d4f; margin-left: 16px; 
+          font-size: 13px;
+        }
+      }
+      &:hover {
+        .rightBtn { display: inline; }
+      }
+      .date {
+        margin-bottom: 3px;
+      }
+      .aff_inst {
+        margin-bottom: 5px;
+        h5 { font-size: 15px; margin-bottom: 0; }
+        a { color: #000; }
+      }
+      .aff_dept {
+        a { color: #000; }
+      }
+    }
+  }
+}

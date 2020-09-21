@@ -1,0 +1,33 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.mydata {
+  .aminer-main-wrap();
+  padding-top: 60px;
+
+  :global {
+    .mydata_list {
+      display: table; padding: 0; margin: 0; width: 100%;
+      border-collapse: collapse; 
+
+      .list_item {
+        display: table-row;
+
+        .item {
+          display: table-cell; border: 1px solid #dfdfdf;
+          padding: 4px 10px;
+
+          &.item1 {
+            width: 80px; text-align: center;
+          }
+
+          &.item6 {
+            width: 200px; text-align: center;
+
+            .update_item { margin-right: 10px; }
+          }
+        }
+      }
+    }
+  }
+}

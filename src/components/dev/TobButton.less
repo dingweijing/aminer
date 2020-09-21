@@ -1,0 +1,57 @@
+@import "~themes/vars";
+
+.dropIcon {
+  position: fixed;top: 72px;right: 4px;
+  opacity: 0.85; color: #454545;
+  // &:before { box-shadow: 0 1px 3px; }
+}
+
+.dropIcon:hover {
+  opacity: 1;color:black;cursor: pointer;
+}
+
+.icon {
+  font-size: 18px;padding: 5px 0px;
+  background: white; border-radius: 100%;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.8), 0 0 1px rgba(0, 0, 0, 0.6);
+  width: 30px; height: 30px;
+}
+
+.dropList {
+  position: fixed; top: 8px;right: 36px;
+  z-index: 999;
+  opacity: 0.94;
+}
+
+.menu {
+  height: 80vh; background: #fff; box-shadow: 0 0 1px;
+
+  .headerMenuItem {
+    background-color: #999; color: white; font-size: @font-size-lg;cursor: auto;
+  }
+
+  :global {
+    .ant-layout-sider {
+      margin-bottom: 20px;
+      .ant-menu {flex-direction: column}
+    }
+    .ant-layout-content {
+      width: 200px;
+      .ant-menu {width: 200px; flex-direction: column}
+    }
+    .ant-menu {
+      width: 150px;
+
+      .ant-menu-item {
+        height: 30px; line-height: 30px; margin: 3px;
+      }
+
+    }
+  }
+
+  .syslogo {
+    img { width: 16px;height: 16px;vertical-align: sub;}
+    span {margin-left: 5px;}
+  }
+
+}

@@ -1,0 +1,32 @@
+@import "~themes/vars";
+
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  width: 100%;
+
+  .content {
+    width: 450px;
+    border-radius: 6px;
+    padding: 24px;
+    .loginHeader {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .rightZone {
+        order: 2;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: @content-wrapper) {}
+
+@media screen and(min-width: 992px) {}
+
+@media screen and(min-width: 768px) {}

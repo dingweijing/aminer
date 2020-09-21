@@ -1,0 +1,120 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.statusLabel {
+  margin-top: 10px;
+  // margin-bottom: 10px;
+  padding: 8px 15px;
+  :global {
+    .workingTime {
+      display: flex;
+
+      .year {
+        .timeLabel {
+          width: 90px;
+          min-width: 90px;
+        }
+      }
+    }
+    .dead {
+      .timeLabel {
+        width: 90px;
+      }
+    }
+    .top_lable {
+      display: inline-block;
+      font-size: 12px;
+      cursor: pointer;
+      color: #353535;
+      &:hover {
+        // text-decoration: underline;
+      }
+      .arrow {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #000;
+        border-top: none;
+        border-left: none;
+        margin-left: 5px;
+        position: relative;
+      }
+      .arrow_down {
+        top: -4px;
+        transform: rotateZ(45deg);
+      }
+      .arrow_up {
+        top: 1px;
+        transform: rotateZ(-135deg);
+      }
+    }
+
+    .form {
+      .ant-form {
+        color: #353535;
+        font-size: 12px;
+      }
+
+      .error {
+        color: red;
+        margin-top: 8px;
+        margin-bottom: 4px;
+        padding-left: 5px;
+      }
+
+      .btn {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+
+        .candles {
+          margin-left: 20px;
+          .text {
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .form_item.base {
+        .ant-input {
+          width: 140px;
+        }
+      }
+      .form_item {
+        display: flex;
+        margin-bottom: 4px;
+        // align-items: center;
+        textarea.ant-input {
+          min-height: 24px;
+          padding: 0 5px;
+          margin-bottom: 0;
+        }
+        .ant-input {
+          width: calc(100% - 150px);
+        }
+        .label {
+          text-align: right;
+          width: 70px;
+          min-width: 70px;
+          margin-right: 8px;
+          position: relative;
+          top: 2px;
+        }
+        .date {
+          .text {
+            margin-right: 8px;
+          }
+          .ant-input {
+            // width: calc((100% - 167px) / 3);
+            width: 60px;
+            margin-right: 4px;
+          }
+          .ant-input:nth-child(3),
+          .ant-input:nth-child(5) {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}

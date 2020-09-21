@@ -1,0 +1,39 @@
+.EbMemberTable {
+  text-align: center;
+  .EbMemberList {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 10px;
+    .avatar { padding-right: 10px; width: 50px; }
+    .name {
+      font-weight: 700;
+      font-size: 15px;
+      color: #555;
+    }
+    .role {
+      font-weight: 700;
+      color: #555;
+    }
+    :global {
+      .memberEdit {
+        margin: 0 5px;
+        cursor: pointer;
+        border: 1px solid #999;
+        box-sizing: content-box;
+        padding: 2px;
+        border-radius: 3px;
+      }
+      .delete {
+        box-sizing: content-box;
+        padding: 2px;
+        border: 1px solid #999;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+  .pagination {
+    margin-top: 10px;
+  }
+}

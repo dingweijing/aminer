@@ -1,0 +1,35 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+@zpl: #0095ff;
+.topic {
+  margin-bottom: 43px;
+  :global {
+    .topic_list {
+      span {
+        background: #f3f3f3;
+        border-radius: 22.5px;
+        border-radius: 22.5px;
+        .user-fz(14, 18);
+        color: #545454;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        display: inline-block;
+      }
+      span:hover {
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        background-color: rgba(0, 149, 255, 0.8);
+      }
+      span.active {
+        background-color: @zpl;
+        color: #fff;
+      }
+    }
+    .topic_list span:last-child {
+      margin-right: 0px;
+    }
+  }
+}

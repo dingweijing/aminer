@@ -1,0 +1,41 @@
+.message {
+  position: relative;
+  margin-bottom: 10px;
+
+  :global {
+    .robot-msg {
+      max-width: 70%;
+
+      &>span {
+        background-color: #edf3f8;
+        padding: 5px 16px;
+        text-align: left;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 28px;
+        display: block;
+
+        &>div {
+          color: #b1bcc7;
+          text-align: right;
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .user-msg {
+      &>span {
+        padding: 5px 16px;
+        text-align: left;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 28px;
+        display: block;
+        background: #806dab;
+        color: #fff;
+      }
+    }
+  }
+}

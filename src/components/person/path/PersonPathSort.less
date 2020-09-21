@@ -1,0 +1,29 @@
+.personPathSort {
+  .pathSort { border: 1px solid #eee; padding: 10px;
+    display: flex; margin-bottom: -1px; margin-top: 10px;
+
+
+
+
+    .selectedBtn { color: #1890ff; border-bottom: 2px solid #1890ff; padding: 2px 4px; font-weight: bold;
+      margin: 0 5px; border-radius: 0;
+    }
+    .sortLabel { align-self: center; font-size: 13px;
+      &:hover {
+        background-color: #1089ff;
+        color: #1089ff;
+      }
+    }
+    .count { align-self: center; margin-left: 20px; }
+    :global {
+      button {
+      border: none;
+        padding: 2px 4px;
+        margin: 0 5px;
+        color:#666666;
+        &:hover { color: #1089ff; }
+      }
+    }
+    .pathNote { font-size: 13px;margin-bottom: 16px; }
+  }
+}

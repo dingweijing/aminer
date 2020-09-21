@@ -1,0 +1,52 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+.visResearchInterest {
+  border: 1px solid #eee;
+  margin-top: 10px;
+  height: 290px;
+
+  :global {
+    .title {
+      height: 40px;
+      background: #f5f5f5;
+      padding-left: 20px;
+      padding-right: 10px;
+      font-size: 16px;
+      line-height: 40px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+
+      .retry {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .cut {
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: underline;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+      .edit_interest {
+        svg {
+          cursor: pointer;
+        }
+      }
+      .title_right {
+        display: flex;
+        align-items: center;
+        .retry {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .content {
+      padding: 20px;
+      height: calc(100% - 40px);
+    }
+  }
+}

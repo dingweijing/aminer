@@ -1,0 +1,28 @@
+.wrapper {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: red;
+
+  :global {
+    img {
+      max-width: 700px !important;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 414px) {
+  .wrapper {
+    height: 500px;
+
+    :global {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+}

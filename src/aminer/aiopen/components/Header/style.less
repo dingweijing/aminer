@@ -1,0 +1,117 @@
+.header {
+  color: #fff;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  transition: all ease .5s;
+  :global {
+    .top {
+      width: inherit;
+      height: 73px;
+      background-color: rgba(39, 39, 39, 0.5);
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+        display: flex;
+        flex-direction: row;
+        &>a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .aiopenIcon {
+          height: 32px;
+          width: 107px;
+          position: relative;
+        }
+        .aiopenIconWrapper {
+          position: relative;
+        }
+        .aminerIcon {
+          width: 72px;
+          position: relative;
+          margin-left: 22px;
+        }
+        .aiopenIconWrapper::after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 32px;
+          width: 1px;
+          right: -10px;
+          background-color: #fff;
+          box-shadow: 1px 1px 1px #e7e7e7;
+        }
+        span {
+          font-size: 20px;
+          color: #FFFFFF;
+          padding-left: 20px;
+        }
+      }
+      .right {}
+    }
+    .bottom {
+      height: 275px;
+      width: inherit;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      .inner {
+        width: 1200px;
+        &>h2 {
+          color: #fff;
+          font-size: 29px;
+          margin-bottom: 15px;
+        }
+        &>h1 {
+          color: #fff;
+          font-size: 37px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        &>p {
+          width: 707px;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: justify;
+          line-height: 31px;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    :global {
+      .top {
+        padding: 0 20px;
+      }
+      .bottom {
+        .inner {
+          width: 350px;
+          margin: 10px;
+          h2 {
+            font-size: 23px;
+          }
+          p {
+            font-size: 13px;
+            width: 320px;
+            white-space: pre-wrap;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+  }
+}

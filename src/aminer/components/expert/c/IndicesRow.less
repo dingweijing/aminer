@@ -1,0 +1,48 @@
+@import '~themes/vars';
+
+.indicesRow {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  :global {
+    .stat_item {
+      color: #181818;
+      display: flex;
+      align-items: center;
+      .statst {
+        color: @zp_blue;
+        font-weight: 700;
+        margin-left: 2px;
+      }
+    }
+    .stat_item::after {
+      margin: 0 15px;
+      width: 0;
+      height: 11px;
+      border-right: 1px solid #181818;
+      display: inline-block;
+      content: '';
+      position: relative;
+      // top: -1px;
+    }
+    .stat_item:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.indicesRow.column {
+  flex-direction: column;
+  :global {
+    .stat_item {
+      margin-bottom: 6px;
+      color: #666;
+      .statst {
+        color: #222;
+      }
+    }
+    .stat_item::after {
+      display: none;
+    }
+  }
+}

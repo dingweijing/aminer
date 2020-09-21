@@ -1,0 +1,186 @@
+@import '~themes/vars';
+
+.addPaperComponent {
+  padding: 20px 20px;
+  height: 100%;
+
+  :global {
+    .publication_list {
+      .title-line {
+        font-size: 14px;
+      }
+      .paper-item {
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+    }
+    .addPaperList_search {
+      .content-right {
+        position: absolute;
+        top: 18px;
+        right: 0;
+      }
+    }
+    .addPaperList_commit .authors-zone {
+      .authors {
+        .author {
+          padding: 2px 6px;
+          background: #ccc;
+          border-radius: 2px;
+          color: #333;
+          margin-right: 2px;
+          margin-bottom: 2px;
+          color: #067c08;
+        }
+        .author.active {
+          background: #4daf4a;
+          color: #fff;
+        }
+        .author.active.warn {
+          background: orangered;
+        }
+        .to_profile {
+          margin-right: 5px;
+          color: #0095ff;
+        }
+      }
+    }
+    .content-right {
+      .cont {
+        display: flex;
+      }
+    }
+    .tab_content {
+      border: 1px solid #ddd;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .tab_line {
+        border-bottom: 1px solid #ddd;
+        height: 40px;
+        min-height: 40px;
+        .tab {
+          // font-size: 16px;
+          font-weight: bold;
+          padding: 8px 20px 7px;
+          border-bottom: 1px solid #fff;
+          border-top: 2px solid #3c80bc;
+          border-right: 1px solid #ddd;
+          display: inline-block;
+        }
+      }
+
+      .main-content {
+        // padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 80px);
+        flex-grow: 1;
+
+        .wrapper {
+          height: calc(100% - 80px);
+          flex-grow: 1;
+        }
+      }
+
+      .search_content,
+      .commit_content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .search_wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .search_part {
+            flex-grow: 1;
+
+            .search_line {
+              margin-bottom: 5px;
+              display: flex;
+
+              .name {
+                margin-right: 8px;
+              }
+              .search_btn {
+                margin-left: 8px;
+                min-width: 46px;
+                background: #3c80bc;
+                border-color: #3c80bc;
+              }
+            }
+
+            // .name, .aff {
+            //    width: 49%;
+            // }
+          }
+          .right_part {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .filter_part {
+              margin-left: 25px;
+              display: flex;
+              align-items: center;
+              .ant-switch-inner {
+                width: 22px;
+              }
+            }
+            .recheck {
+              align-self: flex-end;
+            }
+          }
+        }
+
+        .paperlist_wrapper {
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          background: #eee;
+          flex-grow: 1;
+          padding: 10px;
+          overflow-y: auto;
+          .emptyText {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+          }
+        }
+
+        .load_more {
+          width: 100%;
+          padding: 4px 0;
+          background: #95a5a6;
+          color: #fff;
+          text-align: center;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .commit_content {
+        padding: 10px;
+
+        .submit_line {
+          display: flex;
+          justify-content: space-between;
+
+          svg {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .submit_line {
+        text-align: right;
+        margin-top: 10px;
+        // padding: 0 10px 10px;
+      }
+    }
+  }
+}

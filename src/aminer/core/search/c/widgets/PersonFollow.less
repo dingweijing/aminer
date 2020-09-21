@@ -1,0 +1,90 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.personFollow {
+  .followIcon {
+    font-size: 18px; cursor: pointer;
+  }
+  .followNum {
+    font-size: 13px; 
+    margin-left: 4px;
+    vertical-align: text-bottom;
+  }
+  .followBtns {
+    position: relative;
+    .btnContent {
+      &.absolute { position: absolute; top: 0; right: 0; }
+    }
+  
+    &:hover {
+      .btnContent:nth-child(2) { display: flex; }
+    }
+  }
+  
+  .btnContent{
+    &:nth-child(2) { display: none; }
+  
+    height: 24px; font-size: @font-size-13;
+  
+    display: flex; box-sizing: content-box;
+    .fbtn {
+      border-radius: @border-radius-base; border: 1px solid @border-color-base;
+      background-color: #fff;
+      color: #797979; font-weight: 400;
+      height: 100%; width: 100%;
+      padding: 0;
+      display: flex; align-items: center;
+  
+      .left {
+        flex-grow: 1; height: 100%; padding: 0 6px 0 8px;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .split {
+        // position: relative; top: -1px;
+        // color: @border-color-base;
+        width: 0; height: 12px; border-right: 1px solid @border-color-base;
+      }
+      .right {
+        // width: 40px; max-width: 40px;
+        padding: 0 8px 0 6px;
+        color: #222;
+  
+        .number {
+          // .tiny-number(14px);
+          position: relative; top: -1px;
+        }
+      }
+  
+      i {
+        font-size: 12px; margin-right: 4px; line-height: 20px;
+        position: relative; top: 1px;
+      }
+    }
+  
+    .fbtn.following {
+      background: @color-high;
+      color: #fff; border-color: @color-high;
+      .split { border-color: #fff; }
+      .right { color: #fff; }
+    }
+  
+    .fbtn.unfollow.visibility{
+      visibility: hidden;
+      display: block;
+    }
+  
+    .fbtn.unfollow {
+       color: @color-high-red; border-color: @color-high-red;
+      //  display: none;
+    }
+    .fbtn.unfollow.i {
+      position: absolute;
+    }
+  
+    .fbtn.follow {
+      &:hover {
+        border-color: @color-high;
+      }
+    }
+  }  
+}

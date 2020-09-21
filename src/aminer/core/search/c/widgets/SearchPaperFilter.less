@@ -1,0 +1,192 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+.searchPaperFilter {
+  .sider-normal();
+  min-width: 200px;
+  padding-right: 20px;
+  :global {
+    .ant-collapse-item {
+      background-color: #F9F9F9 !important;
+      border: none !important;
+      border-top: 2px solid #0095FF !important;
+    }
+    .ant-collapse-borderless {
+      background-color: #fff;
+    }
+    .ant-collapse-header {
+      padding: 6px 12px !important;
+    }
+    .ant-collapse-content-box {
+      padding: 0 12px 8px 12px !important;
+    }
+    .ant-checkbox {
+      margin-top: 4px;
+    }
+    .ant-checkbox-inner {
+      border: none;
+      box-shadow: 0px 2px 4px 0px #d8d8d8;
+    }
+    .ant-tree li {
+      padding: 0;
+    }
+    .ant-tree li span.ant-tree-checkbox {
+      margin: 0;
+    }
+    .ant-tree-checkbox-inner {
+      border: none;
+      box-shadow: 0px 2px 4px 0px #d8d8d8;
+    }
+    .ant-checkbox-wrapper-checked {
+      color: #0095ff;
+    }
+    .ant-checkbox-checked::after {
+      border: none;
+    }
+
+    .ant-tree li span.ant-tree-switcher {
+      display: none;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      background: none !important;
+    }
+
+    .ant-tree-treenode-switcher-open {
+      .ant-tree-node-content-wrapper {
+        // word-break: break-word;;
+        width: 124px;
+        height: auto !important;
+        white-space: normal;
+        &:hover {
+          color: #0095ff;
+          background: none !important;
+        }
+      }
+      .ant-tree-node-selected {
+        color: #0095ff;
+        // background-color: transparent !important;
+      }
+    }
+
+    .ant-tree-treenode-checkbox-checked {
+      .ant-tree-node-content-wrapper-normal {
+        .ant-tree-title {
+          color: #0095ff;
+        }
+      }
+      .ant-tree-node-content-wrapper-open {
+        .ant-tree-title {
+          color: #0095ff;
+        }
+      }
+    }
+  }
+  .collapseIcon {
+    width: 12px;
+    height: 12px;
+  }
+  .icon_section {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    .icon {
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      margin-bottom: 4px;
+      fill: #888;
+    }
+  }
+
+  .timeRangeFilter {
+    display: flex;
+    align-items: flex-end;
+    // height: 22px;
+    .timeRange {
+      border-bottom: 1px solid #d8d8d8;
+      .timeInput {
+        width: 34px;
+        border: none !important;
+        padding: 0;
+        font-size: 12px;
+        height: 18px;
+        text-align: center;
+      }
+    }
+    .timeInputValued {
+      color: #0095ff;
+      font-style: italic;
+    }
+    .timeClearBtn {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0;
+      width: 16px;
+      height: 20px;
+      font-size: 12px;
+      margin-left: 1px;
+      color: #ff0000;
+    }
+    .timeFilterBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      width: 28px;
+      margin-left: 8px;
+      height: 20px;
+      border-radius: 2px;
+      font-size: 12px;
+
+      .timeRangeIcon {
+        width: 10px;
+        height: 10px;
+        fill: #888;
+      }
+
+      &:hover {
+        border-color: #0095ff;
+        .timeRangeIcon {
+          fill: #0095ff;
+        }
+      }
+    }
+    .timeFilterBtnCancel {
+      &:hover {
+        border-color: #ff0000;
+        .timeRangeIcon {
+          fill: #ff0000;
+        }
+      }
+    }
+  }
+}
+
+.limitThreeRows {
+  :global {
+    .ant-checkbox-wrapper {
+      .ant-checkbox + span {
+        display: -webkit-box;
+        /* autoprefixer: ignore next */
+        -webkit-box-orient: vertical !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchPaperFilterHide {
+    display: none;
+  }
+  .searchPaperFilter {
+    .sider-tiny();
+    padding: 10px 10px 0 10px;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 0 0 10px #999;
+  }
+}

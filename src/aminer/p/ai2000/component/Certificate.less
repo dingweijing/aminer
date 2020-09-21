@@ -1,0 +1,62 @@
+@import "~themes/vars";
+.certificate {
+    width: 120px; min-height: 24px; font-size: @font-size-13;
+    display: flex; justify-content: center; box-sizing: content-box;
+    .fbtn {
+        border-radius: @border-radius-base;
+        border: 1px solid @border-color-base;
+        background-color: #fff;
+        color: #797979;
+        font-weight: 400;
+        height: 26px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            border-color: @color-high;
+        }
+    }
+    :global {
+        .please_wait{
+            font-style: normal;
+            color: #999;
+            margin-left: 15px;
+        }
+        .download_certificate {
+            position: relative;
+            .certificate_image_box {
+                position: absolute;
+                top: -200px;
+                left: -50px;
+                width: 140px;
+                // display: none;
+                padding: 10px;
+            }
+            img {
+                width: 100%;
+            }
+
+            &:hover .certificate_image_box{
+                display: block;
+            }
+        }
+        // .download_certificate {
+        //     font-size: 12px;
+        //     color: #3C80BC;
+        //     cursor: pointer;
+        //     .please_wait {
+        //         font-style: normal;
+        //         color: #999;
+        //         margin-left: 15px;
+        //     }
+        // } // .vote.active {
+        //   cursor: text;
+        // }
+        .vote.fan {
+            transform: rotateZ(180deg);
+            margin-left: 4px;
+        }
+    }
+}

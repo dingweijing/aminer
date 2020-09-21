@@ -1,0 +1,106 @@
+.personTopPubs {
+  :global {
+    .opr {
+      display: flex;
+      height: 18px;
+
+      &.up {
+        // background: #e6e6e6;
+      }
+
+      .pubBtn {
+        font-size: @font-size-12;
+        color: @color-high;
+        margin-right: 5px;
+        cursor: pointer;
+
+        & > span {
+          margin-right: 5px;
+        }
+      }
+
+      :global {
+        .ant-spin-spinning {
+          display: flex;
+          align-items: center;
+        }
+        .ant-spin-sm .ant-spin-dot {
+          font-size: 12px;
+          width: 0.7em;
+          height: 0.7em;
+        }
+        .ant-spin-sm .ant-spin-dot i {
+          width: 4px;
+          height: 4px;
+        }
+      }
+    }
+
+    .ai10_author_list {
+      max-height: 500px;
+      overflow-y: auto;
+      .title-line {
+        font-size: 14px;
+      }
+
+      .oprs {
+        .cited {
+          color: #ec6b10;
+        }
+      }
+      .abstract-zone {
+        float: left;
+      }
+    }
+    
+  }
+}
+
+.avatar {
+  margin-top: 5px;
+  display: flex;
+
+  .similar {
+    // border: 1px solid #d3d3d3;
+    background: #f5f5f5;
+    width: 48px;
+    height: 55px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    img.autoWidth {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+.name {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  .similar {
+    color: #666;
+    margin-right: 10px;
+
+    span {
+      white-space: nowrap;
+    }
+  }
+  a.similar {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .similarLine .similarAvatar {
+    width: 30px;
+    height: 30px;
+  }
+}

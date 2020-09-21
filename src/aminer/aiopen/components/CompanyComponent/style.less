@@ -1,0 +1,161 @@
+.CompanyInfo {
+  display: flex;
+  align-items: center;
+  color: #5c5c5c;
+  cursor: default;
+  :global {
+    .left {
+      display: flex;
+      flex: 1;
+      position: relative;
+      margin-right: 20px;
+      .iicon {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        margin-right: 29px;
+      }
+      .info-right {
+        .ttitle {
+          color: #000000;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        .companyName {
+          display: inline-block;
+          cursor: pointer;
+          width: fit-content;
+        }
+        .badge {
+          display: inline-block;
+          height: 20px;
+          cursor: pointer !important;
+          margin-left: 6px;
+        }
+        .companyName:hover {
+          text-decoration: underline;
+        }
+        &>div {
+          &>i,
+          span {
+            display: inline-block;
+            padding-right: 5px;
+          }
+        }
+      }
+      .star-wrapper {
+        display: flex;
+      }
+    }
+    .mid {
+      flex: 1.7;
+      display: flex;
+      flex-direction: row;
+      .lleft {
+        flex: 1;
+        .createTime {
+          margin-top: 7px;
+        }
+        .tags-group {
+          display: flex;
+
+          flex-wrap: wrap;
+          .tags {
+            color: #476eed;
+            font-size: 14px;
+            padding: 2px 10px;
+            border-radius: 2px;
+            background: rgba(238, 240, 248, 1);
+            border: 1px solid #476eed;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+        }
+        .member-group {
+          width: fit-content;
+          cursor: pointer;
+
+          .member {
+            color: #000000;
+            padding: 0 5px;
+          }
+          .member:not(:last-child) {
+            border-right: 1px solid #5c5c5c;
+          }
+        }
+      }
+      .rright {
+        flex: 1;
+        span {
+          color: #000000;
+        }
+        i {
+          padding-right: 10px;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .CompanyInfo {
+    flex-direction: column;
+    align-items: unset;
+    position: relative;
+    :global {
+      .mid {
+        flex-direction: column;
+        margin-top: 10px;
+        .tags-group {
+          display: none !important;
+        }
+        .createTime {
+          padding-left: 19px;
+        }
+        .member-group {
+          width: 80% !important;
+          padding-left: 19px;
+        }
+        .rright {
+          padding-left: 23px;
+          padding-top: 10px;
+          p {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .left {
+        .iicon {
+          position: absolute;
+          top: 5px;
+          left: -4px;
+        }
+        .info-right {
+          margin-left: 20px;
+
+        }
+      }
+
+
+      .right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img {
+          max-width: 80px;
+          max-height: 50px;
+        }
+      }
+    }
+  }
+}

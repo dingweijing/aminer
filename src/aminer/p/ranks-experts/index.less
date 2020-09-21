@@ -1,0 +1,134 @@
+@import "~themes/vars";
+
+// .wrapper {
+//   max-width: 750px; margin: 0 auto; padding-top: 20px;
+// }
+
+// @media screen and (min-width: 768px) {
+//   .wrapper { display: flex; }
+// }
+
+// @media screen and (min-width: 992px) {
+//   .wrapper { max-width: 970px; }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .wrapper { max-width: 1200px; }
+
+// }
+
+.expertRP {
+  width: 100%; margin: 10px auto; min-width: 375px; padding: 0 10px;
+
+  h1 {
+    font-size: 28px; line-height: 35px; font-weight: 300; 
+  }
+
+  .menuItems {
+    background: #f7f7f7; line-height: 40px;
+    display: flex; box-shadow: 0 0 1px lightgrey; margin: 10px 0;
+    flex-wrap: wrap;
+
+    .label { 
+      width: 80px; text-align: center;  
+      &.select { color: @color-high; }
+      span { cursor: pointer;  }
+    }
+    
+  }
+
+  .container {
+    display: flex; justify-content: space-between;
+
+    .left { width: 100%; }
+    .right { min-width: 300px; max-width: 300px; margin-left: 20px; display: none;}
+    .listContent {
+      min-height: calc(100vh - 225px); display: flex; flex-direction: column;
+      justify-content: space-between;
+    }
+    .list {
+      .line {
+        display: flex; justify-content: space-between; width: 100%;
+        
+        &.listTitle .text {
+          font-size: 20px; line-height: 27px; border-bottom: solid 2px #428bca;
+        }
+      }
+      .row {
+        text-align: center;
+      }
+      .row1 {
+        flex-grow: 1; text-align: left;
+        width: calc(100% - 260px);
+      }
+      .row2 {
+        min-width: 100px; max-width: 100px; 
+        font-size: 24px; line-height: 33px;
+        font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+        font-weight: 300;
+      }
+      .listTitle .row2 {
+        text-align: center; 
+      }
+      .row3 {
+        min-width: 60px; max-width: 60px;
+        text-align: center; font-size: 24px; line-height: 33px;
+        font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+        font-weight: 300;
+      }
+    }
+    .pagination {
+      display: flex; justify-content: center;
+    }
+    .personList {padding: 0; 
+      .line { border-bottom: 1px dashed #eee; padding: 10px 0;}
+    }
+
+    .help { 
+      box-shadow: 0 0 5px #d3d3d3; padding: 10px 15px; 
+      .helpTitle { 
+        font-size: 20px;
+        line-height: 27px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+      }
+
+      .helpContent {
+        .subTitle {
+          font-size: 15px;
+          margin: 10px 0;
+          font-weight: 700;
+        }
+
+        .info {
+          font-size: 13px;
+          line-height: 1.6;
+
+          a { color: @color-high; }
+        }
+      }
+    }
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) {
+  .expertRP { width: 750px; padding: 0; }
+}
+
+@media screen and (min-width: 992px) {
+  .expertRP { 
+    width: 970px; 
+    .container .right { display: block; }
+  }
+}
+
+@media screen and (min-width: @content-wrapper) {
+  .expertRP { 
+    width: @content-wrapper; 
+    .container .right { min-width: 360px; max-width: 360px; }
+  }
+
+}

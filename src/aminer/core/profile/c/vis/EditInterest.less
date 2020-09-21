@@ -1,0 +1,257 @@
+/** Created by BoGao on 2017-06-04 */
+
+.editInterest {
+  //height: 200px;
+  padding: 20px 40px 20px 40px;
+
+  :global {
+    .select_num {
+      display: flex;
+      justify-content: space-between;
+      .right {
+        .retry {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.interestsFix {
+  max-height: 40vh;
+  height: 40vh;
+  :global {
+    .addclear.disable {
+      .btn {
+        cursor: not-allowed;
+        color: rgba(0, 0, 0, 0.25);
+        background-color: #f5f5f5;
+        border-color: #d9d9d9;
+      }
+    }
+    .addclear {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      .btn {
+        border: 1px solid #dfdfdf;
+        padding: 2px 8px;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: #efefef;
+
+        &.ok {
+          background: #0095ff;
+          color: #fff;
+        }
+      }
+      .add_btn {
+        margin-right: 4px;
+        &.is_add {
+          // background: #eee;
+          cursor: not-allowed;
+          color: rgba(0, 0, 0, 0.25);
+          background-color: #f5f5f5;
+          border-color: #d9d9d9;
+        }
+        svg {
+          margin-right: 4px;
+        }
+      }
+      .sort_btns {
+        .btn:first-child {
+          border-right: none;
+          border-radius: 2px 0 0 2px;
+          border-color: #1890ff;
+        }
+        .btn:last-child {
+          border-left: none;
+          border-radius: 0 2px 2px 0;
+        }
+      }
+    }
+    .srcoll_view {
+      margin-right: -40px;
+      padding-right: 40px;
+      height: calc(100% - 56px);
+
+      .interest_title {
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid #eee;
+        border-bottom: none;
+        background: #efefef;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        padding: 0 10px 0 0;
+        .label {
+          width: 50px;
+          min-width: 50px;
+          // padding: 0 10px;
+          text-align: center;
+          // border-right: 1px solid #eee;
+          display: inline-block;
+        }
+        .interest {
+          padding-left: 5px;
+          flex-grow: 1;
+        }
+        .total {
+          margin-right: 15px;
+          width: 70px;
+          min-width: 70px;
+          text-align: center;
+        }
+        .edit_btns {
+          margin-right: 10px;
+          .btn {
+            border-radius: 2px;
+            margin: 0 0 0 4px;
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+          }
+          .btn.del {
+            width: 35px;
+          }
+          .btn.hide {
+            border: none;
+          }
+        }
+      }
+
+      .srcoll_inner {
+        border: 1px solid #eee;
+        height: calc(100% - 32px);
+        // padding: 10px 0;
+        overflow-y: auto;
+      }
+    }
+    .interest_list {
+      padding-left: 0;
+      margin-bottom: 0;
+      .total {
+        margin-right: 15px;
+        width: 70px;
+        min-width: 70px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.interestItem {
+  display: flex;
+  justify-content: space-between;
+  // margin: 3px 0px;
+  padding: 3px 10px 3px 0;
+
+  &:hover {
+    background: #f5f5f5;
+  }
+  :global {
+    .label {
+      width: 50px;
+      min-width: 50px;
+      line-height: 24px;
+      // padding: 0 10px;
+      text-align: center;
+      // border-right: 1px solid #eee;
+    }
+    .interest_name {
+      padding-left: 5px;
+      // line-height: 24px;
+      min-height: 24px;
+      flex-grow: 1;
+      text-align: left;
+
+      &.highlight {
+        color: #1890ff;
+      }
+
+      .ant-input {
+        line-height: 24px;
+        padding: 0 11px;
+        height: 24px;
+        position: relative;
+        // left: -12px;
+      }
+    }
+
+    .edit_btns {
+      display: flex;
+      .btn {
+        // border: 1px solid #dfdfdf;
+        border-radius: 2px;
+        padding: 0 5px;
+        margin: 0 0 0 4px;
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 200ms;
+      }
+      .btn.del {
+        // margin-right: 15px;
+        &:hover {
+          background: #ff4d4f;
+          color: #fff;
+        }
+      }
+      .btn.move {
+        svg {
+          color: #555;
+        }
+        &:hover {
+          background: #1890ff;
+
+          svg {
+            color: #fff;
+          }
+        }
+      }
+      .btn.hide {
+        border: none;
+      }
+    }
+  }
+}
+.interestItem.add {
+  justify-content: flex-start;
+  margin-top: 10px;
+  &:hover {
+    background: #fff;
+  }
+  :global {
+    .interest_name {
+      flex-grow: 0 !important;
+    }
+  }
+}
+
+.previewView {
+  margin-bottom: 20px;
+  padding: 10px 10px 6px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+
+  :global {
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 4px;
+
+      .interest {
+        border: 1px solid #ccc;
+        margin-right: 5px;
+        padding: 0 5px;
+        white-space: nowrap;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.itemsTitleLine {
+}

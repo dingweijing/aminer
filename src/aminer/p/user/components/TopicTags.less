@@ -1,0 +1,44 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+
+.topicTags {
+  max-height: 20px;
+  overflow: hidden;
+  margin: 6px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  :global {
+    .tag {
+      border: 1px solid #9e9ea7;
+      height: 20px;
+      border-radius: 10px;
+      margin: 0 5px 4px 0;
+      padding: 1px 8px;
+      background: #f6f7f9;
+      outline: none;
+      // cursor: pointer;
+      font-weight: 400;
+      .user-fz(13);
+      .user-lh(18, 13);
+      color: #9e9ea7;
+      display: flex;
+      align-items: center;
+      cursor: text;
+      // &:hover {
+      //   border-color: #61b611;
+      // }
+    }
+  }
+}
+
+@media screen and(max-width: 2000px) {
+  
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

@@ -1,0 +1,42 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.keynotesComponent {
+  padding: 0;
+  width: 100%;
+  min-width: calc(100% - 36% * 2);
+
+  :global {
+    .keynote_item {
+      margin-bottom: 10px;
+      color: #333;
+      /* background: linear-gradient(#feade4,#fd9edf); */
+      box-shadow: 0 0 6px 2px #f3f3f3;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      /* border-color: #fd91db #d77bba #d77bba #fd91db; */
+      /* border-style: solid; */
+      /* border-width: 1px; */
+      /* border-radius: 4px; */
+      padding: 5px 10px 10px;
+
+      .date {
+        margin-bottom: 3px;
+      }
+
+      .title {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+
+        a {
+          color: inherit;
+        }
+      }
+
+      .authors {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

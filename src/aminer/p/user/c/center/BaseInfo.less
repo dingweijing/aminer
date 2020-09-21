@@ -1,0 +1,115 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.baseInfo {
+  :global {
+    .form_content {
+      width: 100%;
+
+      .form_item {
+      }
+      .ant-form-item {
+      }
+
+      .ant-form label {
+        font-size: 16px;
+        color: #6e6d7a;
+      }
+      .ant-input {
+        background: #f3f3f4;
+        // color: #F3F3F4;
+        // line-height: 40px;
+        // height: 40px;
+        min-height: 40px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        color: #6e6d7a;
+      }
+      .ant-input:focus {
+        box-shadow: 0 0 0 4px rgba(92, 30, 121, 0.1);
+        background: #fff;
+      }
+      .ant-select-selection {
+        background: #f3f3f4;
+        border-radius: 8px;
+        border: none;
+      }
+      .ant-select-selection:focus {
+        box-shadow: 0 0 0 4px rgba(92, 30, 121, 0.1);
+        background: #fff;
+      }
+
+      .ant-select {
+        font-size: 16px;
+        line-height: 40px;
+        height: 40px;
+        border-radius: 8px;
+      }
+      .ant-select-selection--single {
+        height: 40px;
+      }
+      .ant-select-selection__rendered {
+        line-height: 40px;
+        color: #6e6d7a;
+      }
+      .ant-form-vertical .ant-form-item {
+        padding-bottom: 0;
+      }
+      .ant-btn {
+        height: 34px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+      .ant-btn:hover {
+        color: #000;
+        border-color: #d5d5d5;
+        box-shadow: 0 0 0 4px rgba(92, 30, 121, 0.1);
+        // border-color: rgba(92, 30, 121, 0.1);
+      }
+      .ant-btn:focus {
+        color: #000;
+        border-color: #d5d5d5;
+        box-shadow: 0 0 0 4px rgba(92, 30, 121, 0.1);
+      }
+      .submit_btn {
+        margin-bottom: 0;
+        .ant-form-item-control {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      .ant-radio-inner {
+        background: #f3f3f4;
+        width: 20px;
+        height: 20px;
+      }
+      form input[type='radio'] {
+        width: 20px;
+        height: 20px;
+      }
+      .ant-radio-inner::after {
+        top: 5px;
+        left: 5px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+:global {
+  .userpage-edit-baseinfo {
+    .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+      background: rgba(92, 30, 121, 0.1);
+    }
+    .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+      background: rgba(92, 30, 121, 0.1);
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

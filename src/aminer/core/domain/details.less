@@ -1,0 +1,299 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+
+.article {
+  width: 100%;
+  margin: 0 auto;
+  :global {
+    .ant-tabs {
+      overflow: visible;
+      .adataTabWrap {
+        width: auto;
+      }
+    }
+    .react-autosuggest__input {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    .advanceSearchBoxWrap {
+      margin-top: 84px;
+    }
+    .breadcrumb {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      margin-left: 24px;
+      .history {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        .homepage {
+          font-family: PingFangSC-Regular;
+          color: #fff;
+          margin-left: 4px;
+          cursor: pointer;
+          .icon {
+            margin-right: 8px;
+          }
+        }
+        .split {
+          width: 14px;
+          height: 2px;
+          border: 1px solid #979797;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .cur {
+          opacity: 0.68;
+          color: #fff;
+        }
+      }
+      .view {
+        .user-fz(15);
+        color: #021a24;
+      }
+    }
+    .topRankTime {
+      display: flex;
+      align-items: center;
+      margin: 6px 8px;
+    }
+    .tabWrap {
+      background-color: #f5f5f5;
+      h2 {
+        color: #000E28;
+        font-weight: normal;
+        font-size: 18px;
+      }
+      .ant-tabs-nav {
+        height: 48px;
+      }
+      .ant-tabs-nav .ant-tabs-tab {
+        padding: 0px 24px;
+        margin-right: 0px;
+        line-height: 48px;
+        &:hover {
+          background-color: #5C1E79;
+          h2 {
+            color: #FFF;
+          }
+        }
+      }
+      .ant-tabs-nav .ant-tabs-tab-active {
+        background-color: #5C1E79;
+        h2 {
+          color: #FFF;
+        }
+      }
+      .ant-tabs-ink-bar {
+        display: none !important;
+        // background-color: #1F1F1F;
+        // height: 1px;
+      }
+      .ant-tabs-bar {
+        border-color: #5C1E79;
+      }
+    }
+
+    .ant-radio-group {
+      display: flex;
+    }
+
+    .ant-radio-wrapper {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-radio-inner {
+      border-color: #ECECEC;
+      box-shadow: 0px 3px 3px 0px rgba(194,194,194,0.5);
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: #0095FF;
+    }
+  }
+  .headerBar {
+    display: flex;
+    justify-content: center;
+    background-color: #5C1E79;
+    margin-top: -1px;
+    position: relative;
+    height: 126px;
+    align-items: center;
+    .domainName {
+      font-size: 24px;
+      color: #FFFFFF;
+      max-width: 100vw;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      min-height: 40px;
+      text-align: center;
+      font-weight: 500;
+      .displayNameEn {
+        font-size: 18px;
+      }
+    }
+    .searchBoxWrap {
+      max-width: 740px;
+      width: 100%;
+      padding: 0px 40px;
+    }
+  }
+  .channelContent {
+    max-width: 1920px;
+    padding: 0 25px;
+    margin: 0 auto;
+    .topZone {
+      position: relative;
+      margin-top: 24px;
+      .paperSearchWrap {
+        position: absolute;
+        right: 0;
+        margin: 12px 25px 16px;;
+        .paperSearch {
+          width: 300px;
+          border-radius: 4px;
+          .paperSearchIcon {
+            fill: #4e4e4e;
+            margin-left: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .statsGraphs {
+      display: flex;
+      flex-wrap: wrap;
+      // margin: 24px 0px;
+      margin-bottom: 24px;
+      .graphWrap {
+        flex: 1;
+        min-width: 400px;
+        max-width: 100%;
+        margin: 0px 25px;
+        .graphTitle {
+          font-size: 20px;
+          color: #020E26;
+          margin: 12px 0 16px;
+          display: flex;
+          justify-content: space-between;
+          
+        }
+        .statsGraph {
+          box-shadow:2px 2px 5px 2px rgba(228,230,236,1);
+        }
+      }
+    }
+    .hotTopicsAndTopRank {
+      display: flex;
+      flex-wrap: wrap;
+      color: #202020;
+      .hotTopicsWrap {
+        margin: 16px 25px 0px;
+        flex: 1;
+        max-width: 400px;
+        width: 1px;
+        min-width: 400px;
+        .hotTopics {
+          border: 1px solid #E9E9E9;
+          padding-bottom: 16px;
+          .topicsHeader {
+            height: 48px;
+            line-height: 48px;
+            background-color: #f5f5f5;
+            color: #000E28;
+            font-size: 18px;
+            padding: 0 34px;
+            border-bottom: 1px solid rgba(92,30,121,1);
+          }
+          .topicsContent {
+            .topicItem {
+              overflow : hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              height: 40px;
+              font-size: 16px;
+              line-height: 40px;
+              padding: 0px 30px;
+              cursor: pointer;
+              &:hover {
+                background:rgba(245,245,245,1);
+                color: #0E63CB;
+              }
+            }
+          }
+        }
+      }
+      .topRanksWrap {
+        flex: 1 1;
+        margin: 16px 25px 0px;
+        /* max-width: 400px; */
+        width: 1px;
+        min-width: 400px;
+      }
+
+      .filterAndSortZone {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .article {
+      .channelContent {
+        .topZone .paperSearchWrap {
+          position: relative;
+          margin-bottom: 0px;
+          text-align: right;
+          .paperSearch {
+            width: 60%;
+            max-width: calc(100vw - 100px);
+          }
+        }
+        .hotTopicsAndTopRank {
+          .hotTopicsWrap {
+            max-width: 100%;
+          }
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .article {
+      .channelContent {
+        .topZone .paperSearchWrap {
+          margin: 12px 0 0 0;
+          .paperSearch {
+            width: 80%;
+          }
+        }
+        .statsGraphs .graphWrap {
+          margin-left: 0px; margin-right: 0px;
+          min-width: 260px;
+        }
+        .hotTopicsAndTopRank {
+          .hotTopicsWrap {
+            margin-left: 0px; margin-right: 0px;
+            min-width: 260px;
+          }
+          .topRanksWrap {
+            margin-left: 0px; margin-right: 0px;
+            min-width: 260px;
+          }
+        }
+      }
+  }
+}

@@ -1,0 +1,146 @@
+.CompanyPerson {
+  display: flex;
+  position: relative;
+  max-height: 200px;
+  overflow-y: hidden;
+  :global {
+    .left {
+      position: relative;
+      width: 130px;
+      max-height: 100%;
+      overflow-y: overlay;
+      padding-top: 16px;
+      cursor: pointer;
+      .IconIcon {
+        margin-left: 10px;
+      }
+      &>span {
+        display: block;
+        font-size: 14px;
+        color: #000000;
+        margin-bottom: 30px;
+        white-space: nowrap;
+      }
+      &>span.active {
+        color: #4f3585;
+        position: relative;
+        transition: color ease .5s;
+      }
+      &>span.active::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 21px;
+        height: 4px;
+        z-index: 10;
+        background-color: #4f3585;
+      }
+    }
+    .left::after {
+      /*     content: '';
+      position: absolute;
+      width: 2px;
+      height: inherit;
+      background-color: #8B87A7;
+      right: 0; */
+    }
+    .right {
+      flex: 1;
+      max-height: 100%;
+      overflow-y: overlay;
+      display: flex;
+      justify-content: center;
+      .detail {
+        width: 90%;
+        // border-bottom: 1px solid #979797;
+        margin-bottom: 10px;
+
+        .ttitle {
+          color: #000000;
+          margin-bottom: 10px;
+        }
+        .authors {
+          color: #007f13;
+          margin-bottom: 0;
+        }
+        .journal {
+          color: #444444;
+          margin-bottom: 7px;
+        }
+        .refer_num {
+          color: #fb6d15;
+          margin-bottom: 12px;
+        }
+      }
+
+
+    }
+    .giantDetail {
+      padding-left: 20px;
+      display: unset;
+      .detail {
+        margin-bottom: 24px;
+        border-bottom: 1px solid #ccc;
+        .ttitle {
+          font-size: 20px;
+        }
+        .ttitle:hover, .authors>a>span:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :global {
+    .myHeader {
+      height: 330px !important;
+      .bottom {
+        .inner>h1 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .CompanyPerson {
+    flex-direction: column;
+    :global {
+      .left {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        &>span {
+          display: flex;
+          margin-right: 18px;
+          margin-bottom: 30px;
+          align-items: flex-end;
+          justify-content: end;
+          vertical-align: bottom;
+        }
+        &>span.active {
+          // font-size: 16px;
+        }
+        &>span.active::after {
+          // width: 100%;
+        }
+      }
+      .right {
+        min-height: 110px;
+        max-height: 110px;
+      }
+      .giantDetail {
+        padding-left: 0;
+      }
+    }
+
+  }
+}

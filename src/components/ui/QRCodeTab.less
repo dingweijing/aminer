@@ -1,0 +1,74 @@
+.TabComponent {
+  position: relative;
+  height: 200px;
+  :global {
+    .icon-wrapper {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 40px;
+      cursor: pointer;
+      transition: background-color ease .5s;
+    }
+    .tabIcon {
+      /* width: 33px;
+      height: 33px; */
+    }
+    .tab-bottom {
+      width: 132px;
+      height: 132px;
+      position: absolute;
+      margin-top: 6px;
+      .arrow {
+        width: 7px;
+        height: 7px;
+        margin-left: 15px;
+        border-left: 3.5px solid transparent;
+        border-right: 3.5px solid transparent;
+        border-bottom: 7px solid #fff;
+      }
+      .midArrow {
+        margin-left: 62.5px;
+      }
+      .img-wrapper {}
+
+      img {
+        width: 132px;
+        height: 132px;
+      }
+    }
+
+    .tab1 {
+      left: -50px;
+    }
+  }
+
+
+
+}
+
+.QRCodeTab {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .QRCodeTab {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .TabComponent {
+    :global {
+      .icon-wrapper {
+        margin-right: 0;
+      }
+      .arrow {
+        margin-left: 12px;
+      }
+    }
+  }
+}

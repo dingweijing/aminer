@@ -1,0 +1,38 @@
+.confYearPaper {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    overflow: auto;
+    position: relative;
+    .papercon {
+        white-space: nowrap;
+        .yearItem {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            z-index: 1;
+            .ytitle {
+                font-weight: bolder;
+                text-align: left;
+                color: #333;
+            }
+            .author { 
+                padding: 3px 4px;
+                z-index: 99;
+                &:hover {
+                    background-color: #1890ff;
+                    color: #fff;
+                }
+            }
+            .activeAuthor {
+                background-color: #1890ff;
+                color: #fff;
+            }
+
+        }
+    }
+    .svg {
+        z-index: 0; width: 100%;
+        position: absolute; top: 0;
+    }
+}

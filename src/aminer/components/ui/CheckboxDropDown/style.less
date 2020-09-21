@@ -1,0 +1,43 @@
+.PlusSvg {
+  display: inline-flex;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #DADADA;
+  cursor: pointer;
+}
+
+.CheckboxDropDown {
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  :global {
+    .handler-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 3px;
+    }
+    .options {
+      padding: 10px;
+      box-shadow: 0 0 10px 2px #ccc;
+      background-color: #fff;
+      width: 105%;
+      .ant-checkbox-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .ant-checkbox-wrapper+.ant-checkbox-wrapper {
+        margin-left: 0;
+      }
+
+    }
+
+    .btn-wrapper {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.concernComponent {
+  :global {
+    .margin {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+  .concernComponent {
+    :global {
+      .right-zone {
+        display: none !important;
+      }
+    }
+  }
+}

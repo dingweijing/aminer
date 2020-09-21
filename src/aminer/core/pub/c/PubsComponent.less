@@ -1,0 +1,46 @@
+@import "~themes/vars";
+
+.pubsList {
+  margin-bottom: 16px;
+  .topCite {
+    border-bottom: 1px dotted #e9e7e7;
+    font-size: 16px; font-weight: bolder;
+    margin-bottom: 0px;
+    padding-bottom: 6px;
+  }
+  .listContent {
+    .list {
+      padding-bottom: 8px; color: #333;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      .listItem {
+        margin-bottom: 0;
+        .index { display:inline-block; width: 35px; }
+        .name { color:#3c763d; }
+        .title { color: #428bca; }
+      }
+  
+      :global {
+        .ant-list-item { padding: 4px; font-size: 13px;}
+      }
+    }
+
+    // .seeMore {
+    //   text-align: center; margin-bottom: 16px;
+    //   .point { opacity: .8 }
+    // }
+  
+    :global {
+      .ant-list-split .ant-list-item { border-bottom: none; }
+    }
+  
+    .pagination {
+      padding: 10px 0px; text-align: center;
+    }
+  }
+  
+  .noData {
+    padding: 30px 0;
+    // border: 1px solid #E8E8E8; border-top: none;
+    text-align : center; font-size: 20px; font-weight: 400;
+  }
+}

@@ -1,0 +1,64 @@
+.confInfo {
+    .form {
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        border-radius: 4px;
+        .select { width: 80px; }
+    }
+    .colud {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 326px;
+        padding: 12px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 20px;
+    }
+    .threeCharts {
+        display: flex;
+        justify-content: space-around;
+        .chartg { width: 250px; height: 250px }
+        .chartn { width: 450px; height: 250px }
+        .chartl { width: 350px; height: 250px }
+    }
+    @media screen and (max-width: 768px) {
+        .threeCharts {
+            display: block;
+            .chartg, .chartn, .chartl {
+                width: 100%;
+            }
+        }
+    }
+    .titlenote {
+        font-size: 16px;
+        font-weight: 200;
+    }
+    :global {
+        @media screen and (max-width: 768px) {
+            .ant-tabs-nav .ant-tabs-tab {
+                margin: 0;
+            }
+        }
+    }
+    .clittitle {
+        display: flex;
+        .bgimg {
+            flex: 1;
+            border: 1px solid #ddd;
+            background-image: url('/sys/aminer/breadcrumbs.png');
+        }
+        .titleby {
+            box-shadow: 0 -2px 0 #428bca;
+            border-top-width: 0;
+            margin-top: 1px;
+            font-weight: 700;
+            padding: 10px 15px;
+        }
+    }
+
+    // @media screen and (max-width: 768px) {
+    // }
+}

@@ -1,0 +1,154 @@
+.carousel {
+  position: relative; width: 100%; color: #555;
+
+  .endorseGroup {
+    width: 35px; min-width: 35px; margin-right: 5px;
+    
+    .upGroup {
+      position: relative; border-radius: 4px 4px 0 0;
+
+      .upBtn {
+        position: absolute; top: 0; left: 0; z-index: 10; 
+        border-radius: 4px; background: rgba(50,146,226,.1);
+        font-size: 160%;
+        height: 24px;
+      }
+      .endorseCount {
+        height: 44px; padding: 20px 0 0;
+        border-radius: 4px 4px 0 0;
+      }
+      &:hover {
+        background: #e5e5e5 !important;
+        .upBtn, .endorseCount { background: transparent; }
+      }
+      &.checked {
+        background: rgba(66,139,202,.9); color: #fff;
+        button { color: #fff !important; }
+      }
+    }
+    .endorseBtn {
+      margin-left: 0; width: 100%;
+      background: rgba(50,146,226,.2); color: #428bca;
+      border: none; box-shadow: none;
+    }
+    .endorseSort { height: 24px; padding: 0; font-size: 160%; }
+    
+    .downBtn {
+      margin-top: 3px; border-radius: 0 0 4px 4px;
+      i { vertical-align: top; }
+      &:hover { background: #e5e5e5 !important; }
+
+      &.checked {
+        background: rgba(66,139,202,.9); color: #fff;
+
+        button { color: #fff !important; }
+      }
+    }
+  }
+
+  .imgBox {
+    overflow: hidden; margin-right: 20px;
+
+    img { width: 100%; }
+  }
+
+  .content {
+    text-align: left;
+
+    .title {
+      margin-right: 5px; max-height: 44px; overflow: hidden;
+      font-weight: 700; font-size: 15px;
+      
+      a { color: #555; }
+      i { color: #d3d3d3; margin-left: 5px; }
+      .bind { color: #428bca; }
+    }
+
+    p {
+      margin: 5px 0;
+
+      a { color: #555; }
+      i { width: 20px; }
+      &.black { 
+        color: #000; 
+        // height: 36px; 
+        overflow: hidden;
+        // span {
+        //   // text-overflow: ellipsis;
+        //   // display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        //   // -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        //   // -webkit-line-clamp: 2; /** 显示的行数 **/
+        //   // overflow: hidden;  /** 隐藏超出的内容 **/
+        // }
+      }
+      &.tags {
+        // height: 48px; 
+        overflow: hidden; display: flex; flex-wrap: wrap;
+
+        .tag {
+          border: 1px solid #F4F5F1; border-radius: 4px;
+          margin: 0 5px 4px 0; padding: 1px 5px;
+          font-weight: 200; font-size: 12px; line-height: 18px;
+          outline: none; cursor: pointer;
+
+          &:hover { border-color: #61B611; }
+        }
+
+        .distag {
+          border: 1px solid #F4F5F1; border-radius: 4px;
+          margin: 0 5px 4px 0; padding: 1px 5px;
+          font-weight: 200; font-size: 12px; line-height: 18px;
+        }
+      }
+      .mr { margin-right: 10px; }
+      .nominate {
+        float: right;
+        background-color: #428bca; color: #fff;
+        border-radius: 2px; border-color: #3292E2; 
+        outline: none; cursor: pointer;
+      }
+      &.desc {
+        min-height: 76px; max-height: 76px; overflow: hidden; margin-bottom: 30px;
+        font-size: 85%;
+      }
+      
+    }
+    .statsLine {
+      .statst { color: #a94442; font-weight: bold; }
+      .split { margin: 0 5px; }
+    }
+  }
+
+  .followBtn {
+    position: absolute; top: 0; right: 0;
+    border-color: #3292E2; border-radius: 2px; background-color: #428bca;
+    color: #fff; font-weight: 400;
+    height: 31px; padding: 0 10px;
+
+    .icon { margin-right: 8px; }
+  }
+
+  .followBtns {
+    position: absolute; top: 0; right: 0;
+    .icon { margin-right: 8px; }
+    .followingBtn {
+      border-color: #3292E2; border-radius: 2px;
+      color: #428bca; font-weight: 400;
+      height: 31px; padding: 0 10px;
+    }
+    .unfollowBtn {
+      background: #a7092d; color: #fff;
+      border-color: #a7092d; border-radius: 2px;
+      height: 31px; padding: 0 10px; display: none;
+    }
+
+    &:hover {
+      .followingBtn { display: none; }
+      .unfollowBtn { display: block; }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousel { display: flex; }
+}

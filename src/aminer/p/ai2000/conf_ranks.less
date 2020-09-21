@@ -1,0 +1,191 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.confRankPage {
+  width: 100%;
+
+  :global {
+    .conf_header {
+      height: 166px; // min-height: 180px;
+      background-size: cover;
+      margin-top: -1px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .homepage {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content {
+          display: flex;
+          flex-direction: column;
+          // position: absolute;
+          // right: 50%;
+          bottom: 10px;
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          :global {
+            .short_name {
+              color: #fff4c8;
+              font-size: 62px;
+              text-shadow: 2px 2px #000;
+            }
+            .full_name {
+              font-size: 27px;
+              margin-top: -13px;
+            }
+          }
+        }
+      }
+      .viewed {
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        background-color: hsla(0, 0%, 100%, 0.53);
+        padding: 4px;
+        font-size: 18px;
+        color: initial;
+        text-shadow: none;
+        font-weight: normal;
+        padding-left: 8px;
+        .viewed_num {
+          font-size: 16px;
+          margin-left: 6px;
+          line-height: 20px;
+          margin-right: 18px;
+        }
+      }
+    }
+
+    .article {
+      .aminer-main-wrap();
+      width: 960px;
+      // padding-top: 20px;
+
+      .rank_title {
+        margin-bottom: 15px;
+      }
+      .rank_desc {
+        color: #333;
+      }
+    }
+
+    .ant-tabs {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .ant-tabs-tab {
+      font-size: 18px;
+    }
+
+    .ant-tabs-bar {
+      background: rgb(243, 243, 243);
+      width: 100vw;
+    }
+
+    .ant-tabs-nav-container {
+      text-align: center;
+    }
+  }
+}
+
+.personRanking {
+  // position: absolute; top: -2px; width: 44px; display: flex;
+  // left: -22px; justify-content: center;
+  .top {
+    svg {
+      font-size: 24px;
+    }
+  }
+  .no {
+    color: #999;
+    font-size: 18px;
+    font-family: @font-helvetica;
+    font-style: italic;
+  }
+  .no.top {
+    color: peru;
+  }
+  .no.red {
+    span {
+      // border-color: #EC1010;
+      box-shadow: 0 0 2px rgba(255, 102, 49, 0.3);
+      border-color: #ffbc1d;
+      background: rgba(255, 102, 49, 1);
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .confRankPage {
+    :global {
+      .article {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .confRankPage {
+    :global {
+      .article {
+        width: 100%;
+      }
+      .conf_header {
+        height: 120px;
+
+        .homepage {
+          .content {
+            :global {
+              .short_name {
+                margin-top: 10px;
+                font-size: 32px;
+              }
+              .full_name {
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                margin-top: 2px;
+                width: 80%;
+              }
+              .url {
+                font-size: 12px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+        .viewed {
+          font-size: 12px;
+          .viewed_num {
+            font-size: 12px;
+            margin-right: 0;
+          }
+        }
+      }
+
+      .ant-tabs-tab {
+        font-size: 14px;
+      }
+    }
+  }
+  .personRanking {
+    .top {
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+}

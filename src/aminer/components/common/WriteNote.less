@@ -1,0 +1,25 @@
+.writeNote {
+  :global {
+    .btns {
+      padding: 12px 0;
+      display: flex;
+      justify-content: flex-end;
+
+      .cancel_btn {
+        border: none;
+        margin-right: 8px;
+
+        
+      }
+      button[ant-click-animating-without-extra-node]:after {
+        border: 0 none;
+        opacity: 0;
+        animation: none 0 ease 0 1 normal;
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}

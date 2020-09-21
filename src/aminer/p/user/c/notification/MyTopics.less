@@ -1,0 +1,123 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.myTopics {
+  color: #fff;
+  :global {
+    .select_topics {
+      // width: 70%;
+      width: 100%;
+      display: flex;
+    }
+    .label {
+      white-space: nowrap;
+      margin-right: 6px;
+      .user-lh(28, 16);
+    }
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      .user-lh(28, 16);
+      // .topic_btn.all:hover {
+      //   .topic {
+      //     border-color: #00936B;
+      //   }
+      // }
+      // .topic_btn.all.active .topic {
+      //   border-color: #00936B;
+      //   background: #00936B;
+      //   color: #fff;
+      // }
+      .topic_btn {
+        position: relative;
+        display: flex;
+        margin-right: 8px;
+        // margin-bottom: 10px;
+        .topic {
+          padding: 6px 8px;
+          white-space: nowrap;
+          // background: #fff;
+          // color: #6d7682;
+          font-weight: bold;
+          .user-fz(16);
+          .user-lh(16, 16);
+          // border-radius: 2px;
+          // border: 1px solid #dadada;
+          // box-shadow: 0 2px 4px 0 #dadada;
+          // cursor: pointer;
+          transition: all 200ms;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .close {
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: 0;
+          right: 0;
+          background: rgba(0, 14, 40, 0.6);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 10;
+          cursor: pointer;
+          transition: all 200ms;
+          .close_svg {
+            color: #fff;
+            font-size: 10px;
+          }
+        }
+      }
+      // :not(.active)
+      .topic_btn:hover {
+        .topic {
+          // color: #000e28;
+          // border-color: #0095ff;
+          background: rgba(0, 0, 0, .3);
+          border-radius: 4px;
+        }
+        .close {
+          width: 18px;
+          height: 18px;
+          top: -9px;
+          right: -9px;
+        }
+      }
+      .topic_btn .close:hover {
+        background: rgba(224, 32, 32, 0.8);
+        .close_svg {
+          text-shadow: 0 1px 1px #6d7682;
+        }
+      }
+      .topic_btn .close:hover + .topic {
+        // background: #ff2222;
+        // border-color: #ff2222;
+        // color: #fff;
+        // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+      }
+
+      // .topic_btn.active .topic {
+      //   border-color: #0095ff;
+      //   background: #0095ff;
+      //   color: #fff;
+      // }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .myTopics {
+    :global {
+      .select_topics {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+}

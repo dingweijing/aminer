@@ -1,0 +1,44 @@
+@import "~themes/theme-aminer-func";
+
+.paperIndex {
+    .aminer-main-wrap();
+    .renderAuthors {
+        margin: 12px 0px;
+        cursor: pointer;
+        display: flex;
+        :global {
+            .author {
+                display: flex; padding: 4px 8px;
+            }
+            .nameorg {
+                margin-right: 12px;
+                .aff { color: #678; }
+            }
+            .hasIdLink { color: #067c08; }
+            .noIdlink {
+                color: #f33;
+                margin-bottom: 6px;
+                display: inline-block;            
+            }
+            .editLink {
+                border: 1px solid #b7eb8f;
+            }
+            .addIcon { color: #1890ff; }
+            .split {
+                margin: 0 12px;
+                border-right: 1px solid #e8e8e8;
+            }
+        }
+    }
+    .demoHeader{
+        text-align: center;
+        font-weight: bold; 
+    }
+   .footer {
+        display: flex; justify-content: space-between;
+        .pagination {
+            flex: 1; text-align: center;
+        }
+        .subBtn { margin-right: 24px; }
+    }
+}

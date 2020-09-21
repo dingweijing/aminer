@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  :global {
+    .modal-inner {
+      min-width: 30%;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: #fff;
+      z-index: 3;
+    }
+
+    .line {
+      position: absolute;
+      width: 0px;
+      height: 1000px;
+      /* background-color: red; */
+      z-index: 2;
+      opacity: 0.4;
+      box-shadow: 0 0 4px 3px #fff;
+    }
+  }
+}

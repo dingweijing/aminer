@@ -1,0 +1,69 @@
+@import '~themes/vars';
+
+.similarPart {
+  border: 1px solid #eee;
+  height: 390px;
+  box-shadow: 0 2px 4px rgba(236, 236, 236, 0.8);
+
+  .title {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+}
+.similarPersons {
+  padding: 15px;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    width: 78px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+    .personImg {
+      width: 67px;
+      height: 67px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 5px #d3d3d3;
+
+      img {
+        width: 100%;
+      }
+      img.autoWidth {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    a {
+      color: #777;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .photo_wrap_last {
+    margin-right: 0;
+  }
+}

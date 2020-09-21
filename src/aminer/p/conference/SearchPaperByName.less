@@ -1,0 +1,126 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.aminerPaperList {
+  :global {
+
+  }
+}
+
+.paperComponent {
+
+  .paperSearch {
+    // position: relative;
+    
+    .bibTab {
+      padding: 10px;
+    }
+    
+
+    .resultTip {
+      margin: 0 0 10px 0; padding-left: 10px; font-size: 13px;
+
+      .searchQuery {
+        // color: @color-orange;
+        // .match-text();
+        font-style: italic;
+      }
+      em {
+        font-style: normal;
+        // .tiny-number()
+      }
+    }
+
+    .controlLine {
+      // display: flex; justify-content: space-between; align-items: center;
+      // background: #f9f9f9; border: 1px solid #e8e8e8;
+      // margin-bottom: 10px;
+      
+      .smallPagination {
+        display: flex; justify-content: flex-end;
+      }
+    }
+
+    .smallPagination {
+      // margin: 9px 0; display: flex; justify-content: flex-end;
+      // position: absolute; top: 44px; right: 2px;
+
+      :global {
+        .ant-pagination-disabled .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-next .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-prev .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-simple .ant-pagination-simple-pager input {
+          pointer-events: none; border: none; background: transparent; margin-right: 0; padding: 0; color: #3C80BC;
+        }
+        .ant-pagination-prev, .ant-pagination-simple .ant-pagination-simple-pager {
+          margin-right: 0;
+        }
+        .ant-pagination-simple-pager input {
+          text-align: right;
+        }
+        .ant-pagination-slash { margin: 0 5px; }
+        .ant-pagination-prev .ant-pagination-item-link { text-align: right; }
+        .ant-pagination.ant-pagination-simple .ant-pagination-simple-pager {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .listContent {
+      display: flex; flex-direction: column; position: relative; width: 100%;
+      // .paperList { overflow: hidden; }
+      .searchKgContent { }
+    }
+
+    
+
+    .paginationWrap {
+      display: flex; justify-content: center; margin-top: 40px;
+
+      :global {
+        .ant-pagination .ant-pagination-item:nth-last-of-type(3){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.bibContent {
+  :global {
+    .ant-tabs.ant-tabs-card .ant-tabs-card-content > .ant-tabs-tabpane {
+      padding: 10px; border: 1px solid #d3d3d3; border-top: none;
+    }
+  }
+  .bibTitle { font-weight: 700; font-size: 15px; margin: 10px 0; }
+}
+
+@media screen and(min-width: 768px) {
+  // .article { width: 750px; }
+}
+
+@media screen and(min-width: 992px) {
+  .paperComponent .paperSearch .listContent {
+    flex-direction: row; justify-content: space-between;
+    .paperList { width: calc(100% - 345px;) }
+    // .searchKgContent { width: 320px; margin-left: 20px; }
+  }
+  .controlLine {
+    display: flex; justify-content: space-between; align-items: center;
+    background: #f9f9f9; border: 1px solid #e8e8e8;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and(min-width: @content-wrapper) {
+  .paperComponent .paperSearch .listContent {
+    .paperList { flex-grow: 1; width: calc(100% - 460px;) }
+    // .searchKgContent { min-width: 445px; width: 445px;}
+  }
+}

@@ -1,0 +1,197 @@
+.covid_banner {
+  position: relative;
+  :global {
+    .titlebar {
+      position: relative;
+      width: 100%;
+      height: 48px;
+      padding-top: 6px;
+      background-color: #001025;
+      // border-bottom: 1px solid white;
+    }
+
+    .logo1 {
+      float: left;
+      margin-top: 4px;
+      margin-left: 12px;
+      width: 42px;
+    }
+
+    .logo2 {
+      float: left;
+      margin-top: 2px;
+      width: 78px;
+    }
+
+    .logo_line {
+      float: left;
+      width: 2px;
+      height: 22px;
+      margin: 6px 10px;
+      background-color: rgb(151, 151, 151);
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      color: #8fa1b8;
+      text-align: center;
+      user-select: none;
+    }
+
+    .menu_m {
+      display: none;
+    }
+
+    .menu_item {
+      flex: 1;
+      line-height: 52px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .menu_item_highlight {
+      .menu_item();
+      color: #0095ff;
+      font-weight: bold;
+    }
+
+    .menu_item:hover {
+      color: #0095ff;
+      font-weight: bold;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+    }
+
+    .banner_img {
+      width: 100%;
+    }
+
+    .banner_content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .banner_text1 {
+      font-size: 4vw;
+      color: #AF000E;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.8vw;
+    }
+
+    .banner_text2 {
+      width: 100%;
+      text-align: center;
+      font-size: 2vw;
+      font-weight: bold;
+      color: #000E28;
+    }
+
+    @media screen and (max-width: 850px) {
+      .titlebar {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        padding-top: 6px;
+        background-color: #001025;
+      }
+
+      .logo1 {
+        float: left;
+        margin-top: 4px;
+        margin-left: 12px;
+        width: 42px;
+      }
+
+      .logo2 {
+        float: left;
+        margin-top: 2px;
+        width: 78px;
+      }
+
+      .logo_line {
+        float: left;
+        width: 2px;
+        height: 22px;
+        margin: 6px 10px;
+        background-color: rgb(151, 151, 151);
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .menu_m {
+        display: block;
+        float: right;
+        margin-right: 10px;
+        margin-top: 8px;
+      }
+
+      .menu_svg {
+        width: 18px;
+        height: 20px;
+        fill: #8fa1b8;
+      }
+
+      .menu_box {
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        right: -14px;
+        width: 192px;
+        height: 260px;
+        display: flex;
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        opacity: .75;
+      }
+
+      .menu_box_item {
+        position: relative;
+        flex: 1;
+        margin-top: 1px;
+        background-color: #000e28;
+      }
+
+      .menu_box_item div {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+      }
+
+      .banner_text1 {
+        font-size: 4.2vw;
+        color: #AF000E;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.8vw;
+      }
+
+      .banner_text2 {
+        width: 100%;
+        text-align: center;
+        font-size: 2vw;
+        font-weight: bold;
+        color: #000E28;
+      }
+    }
+  }
+}

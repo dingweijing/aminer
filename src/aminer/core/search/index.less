@@ -1,0 +1,159 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.article {
+  width: 100%;
+  margin: 0 auto;
+  :global {
+    .ant-tabs {
+      overflow: visible;
+      .adataTabWrap {
+        width: auto;
+      }
+    }
+  }
+  .searchPageSearchBox {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // min-height: 86px;
+    background-color: #0E63CB;
+    margin-top: -1px;
+    padding: 0px 15px;
+    // display: none;
+    .searchBoxWrap {
+      max-width: 740px;
+      width: 100%;
+    }
+  }
+  .tabWrap {
+    // border-bottom: 1px solid #d8d8d8;
+    background-color: #0E63CB;
+    width: 100vw;
+    padding: 0px 15px;
+    // margin: 0 0 16px;
+    .searchPageTab {
+      margin: -1px auto 0px;
+      border: none;
+      overflow: visible;
+      .tabPaneItem {
+        display: inline-block;
+      }
+      :global {
+        h2 {
+          font-size: 14px;
+          font-weight: normal;
+          position: relative;
+        }
+        .ant-tabs {
+        }
+        .ant-tabs-tab {
+          border: none;
+        }
+        .ant-tabs-tabpane .ant-tabs-tabpane-active {
+          &>p {
+            display: none;
+          }
+        }
+        .ant-tabs-ink-bar {
+          display: none !important;
+        }
+        
+        .ant-tabs-nav .ant-tabs-tab {
+          padding: 14px 12px 8px;
+          margin-right: 0;
+          font-weight: 500;
+          font-size: 14px;
+          // margin-bottom: 2px;
+          // min-width: 70px;
+          line-height: 1;
+          text-align: center;
+          h2 {
+            color: #80b3e4 !important;
+          }
+          &:hover {
+            // border-bottom: 2px solid #0095ff;
+            h2 {
+              color: #fff !important;
+            }
+            // &::after {
+            //   content: '\2022';
+            //   color: #0095ff;
+            //   display: inline-block;
+            //   position: absolute;
+            //   right: 18px;
+            //   margin-left: 8px;
+            //   bottom: 12px;
+            //   font-size: 16px;
+            // }
+          }
+        }
+        .ant-tabs-nav .ant-tabs-tab-active {
+          color: #fff;
+            // background: #fff;
+          // padding: 12px 25px;
+          border-bottom: 3px solid #7EBC3C;
+          h2 {
+            color: #fff !important;
+            font-weight: 500 !important;
+          }
+          // &::after {
+          //   content: '\2022';
+          //   color: #0095ff;
+
+          //   display: inline-block;
+          //   position: absolute;
+          //   right: 18px;
+          //   margin-left: 8px;
+          //   bottom: 12px;
+          //   font-size: 16px;
+          // }
+        }
+      }
+    }
+  }
+  .componentContent {
+    padding: 10px 15px 40px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .componentContent { width: 740px; }
+  .searchPageSearchBox { 
+    display: flex !important;
+    .searchBoxWrap {  width: 500px !important; } 
+  }
+  .tabWrap {
+    .searchPageTab {
+      width: 500px;
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+  .componentContent { width: 970px; }
+  .searchPageSearchBox { 
+    // display: flex !important;
+    .searchBoxWrap {  width: 600px !important; } 
+  }
+  .tabWrap {
+    .searchPageTab {
+      width: 600px;
+    }
+  }
+}
+
+@media screen and(min-width: @content-wrapper) {
+  .componentContent { .aminer-main-wrap() }
+  .searchPageSearchBox { 
+    // display: flex !important;
+    .searchBoxWrap {  width: 755px !important; } 
+  }
+  .tabWrap {
+    .searchPageTab {
+      width: 740px;
+      // padding: 0 15px;
+    }
+  }
+}

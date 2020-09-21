@@ -1,0 +1,38 @@
+@import "~themes/vars";
+
+.loginContainer {
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 4px 4px rgba(199, 199, 199, 0.7);
+  :global {
+    .ant-col{
+      min-height: 51px;
+    }
+    .ant-tabs-nav {
+      width: 100%;
+      padding-top: 20px;
+
+      .ant-tabs-tab {
+        margin: 0;
+        width: 50%;
+        padding: 0px 0px 10px 0px;
+        text-align: center;
+
+        &:first-child {
+          border-right: 1px solid #dadada;
+        }
+      }
+      .ant-tabs-tab-active {
+        color: #0095FF;
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      background: #0095FF;
+      height: 1px;
+    }
+  }
+}
+
+@media screen and(min-width: 900px) {
+  .loginContainer { border: 0; box-shadow: none; }
+}

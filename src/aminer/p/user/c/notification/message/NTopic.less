@@ -1,0 +1,60 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.ntopic {
+  // background: linear-gradient(45deg, #1D4AA0, #750096, #1F6276);
+  padding: 30px 28px;
+  margin: 0 -18px;
+  font-size: 16px;
+  color: #fff;
+  // border: 1px solid #9E9EA7;
+  box-shadow: 6px 6px 6px 0 #dfe1e5;
+  color: #000e28;
+  display: flex;
+  align-items: center;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  .common-transition();
+
+  :global {
+    .ant-btn {
+      background: transparent;
+      margin-left: 20px;
+      height: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000e28;
+      border-radius: 18px;
+      border-color: #651190;
+      transition: all 300ms;
+    }
+    .ant-btn:hover,
+    .ant-btn:focus {
+      border-color: #651190;
+    }
+    .ant-btn:hover {
+      background: #651190;
+      color: #fff;
+    }
+    .field {
+      // color: #000E28;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+.ntopic.hide {
+  margin-top: -10px;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  box-shadow: none;
+  visibility: hidden;
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

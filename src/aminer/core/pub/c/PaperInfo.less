@@ -1,0 +1,58 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+.paperInfo {
+  margin-bottom: 0;
+  display: flex; 
+  .index {
+    display:inline-block;
+    // width: 35px; min-width: 35px;
+    margin-right: 10px;text-align: right;
+  }
+  :global {
+    .oprs {
+      font-size: @font-size-12; margin-top: 5px;
+      .cited {
+        color: @color-high;
+        // font-weight: bold;
+        &.zero { color: #999 !important; }
+        // strong { .tiny-number(12px) }
+      }
+      .bibtex {
+        color: @color-high-green; cursor: pointer; font-weight: bold;
+        i { margin-right: 2px; }
+        &:hover { text-decoration: underline; }
+      }
+      .views {
+        // display: flex; align-items: center;
+        color: #555;
+        span {
+          // display: flex; align-items: center;
+          color: #555; cursor: pointer;
+        }
+        svg, i { margin-right: 4px; color: #666; }
+      }
+      .labels {
+        .label {
+          padding: 0 8px; border: 1px solid #DDDDDD;
+          border-radius: 8px; color: #EC6B10; line-height: 16px;
+          margin-left: 8px;
+          &:first-child { margin-left: 0; }
+        }
+      }
+      .split { margin: 0 10px; color: #d5d5d5; }
+      .url {
+        i, svg {
+          color: #666; margin-right: 4px;
+          position: relative;
+        }
+        .url-link { display: none; position: absolute; top: 0; left: 15px; }
+        &:hover svg { color: @color-high; }
+        &:hover .url-link  { display: inline-block;}
+  
+      }
+    }
+  }
+  .name { color:#3c763d; }
+  .title { color: #428bca; }
+}

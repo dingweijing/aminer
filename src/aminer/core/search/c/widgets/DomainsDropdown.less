@@ -1,0 +1,119 @@
+
+.domainsDropdown {
+  margin-right: -1px;
+  width: 112px;
+  flex: 1;
+  :global {
+    .ant-checkbox-group {
+      width: 100%;
+    }
+    .domainBtn {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px 0 12px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border: 0px;
+      opacity: 0.8;
+      color: #000E28;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &:focus {
+        opacity: 0.9;
+      }
+
+      &:hover, &:focus, &:active, &.active {
+        color: #000E28;
+        border-color: #D5D5D5;
+      }
+
+      .domainBtnText {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .dropdownIcon {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2px;
+        border-radius: 2px;
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    .domainBtnOnAdvance {
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+
+
+
+:global {
+  html {
+    --antd-wave-shadow-color: none;
+  }
+
+  
+  .domainDropDownContent {
+    max-height: 68vh;
+    max-width: 200px;
+    overflow-y: scroll;
+    box-shadow: rgb(213, 213, 213) 0px 0px 4px;
+    :global {
+      .ant-checkbox {
+        margin-top: 4px;
+      }
+      .ant-checkbox + span {
+        padding-right: 20px;
+        padding-left: 8px;
+        display: block;
+        flex: 1;
+      }
+      .ant-checkbox-checked::after {
+        border: none;
+      }
+      .ant-checkbox-wrapper {
+        display: flex;
+      }
+      .domainText {
+        white-space: normal;
+        display: inline-block;
+        word-break: break-word;
+      }
+      .ant-dropdown-menu-item:hover {
+        background-color: rgba(244,244,244,1) !important;
+        color: #0E63CB !important;
+      }
+    }
+  }
+
+  .domainDropDownContent.home {
+    max-height: 50vh;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .domainsDropdown {
+    width: 180px;
+    max-width: 180px;
+  }
+  :global {
+    .domainDropDownContent {
+      max-width: 200px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.notification {
+  margin-bottom: 20px;
+  :global {
+    .part {
+      margin-top: 20px;
+
+      .msg_time {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        text-align: right;
+        padding-right: 20px;
+        .user-fz(18);
+        color: #545454;
+      }
+    }
+    .customize {
+      // height: 160px;
+      background: #00936b;
+      text-align: center;
+      margin-bottom: 28px;
+      // display: flex;
+      // align-items: center;
+      // padding-left: 25px;
+      // color: #fff;
+      .top {
+        padding: 34px 15px 46px;
+        border-bottom: 1px solid #dadada;
+        .customize_part {
+          text-align: center;
+          color: #fff;
+
+          .title {
+            .user-fz(34);
+            .user-lh(40, 34);
+            margin-bottom: 15px;
+            font-weight: bold;
+          }
+          .desc {
+            .user-fz(16);
+            .user-lh(22);
+            margin-bottom: 0;
+          }
+        }
+        .change_btn {
+          display: inline-block;
+          margin-top: 40px;
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 18px;
+          height: 36px;
+          line-height: 34px;
+          padding: 0 15px;
+          .user-fz(18);
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      // .top {
+      //   text-align: center;
+      //   color: #fff;
+
+      //   .title {
+      //     .user-fz(34);
+      //     .user-lh(40, 34);
+      //     margin-bottom: 15px;
+      //     font-weight: bold;
+      //   }
+      //   .desc {
+      //     .user-fz(16);
+      //     .user-lh(22);
+      //     margin-bottom: 0;
+      //   }
+      // }
+    }
+    .person-list-item {
+      padding: 16px 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .recommend_list {
+      // background: #fff;
+    }
+    .no_tip {
+      display: block;
+      color: #999999;
+      text-align: center;
+      padding: 8px 30px 6px;
+      .time {
+        font-weight: bold;
+      }
+    }
+    .loadmore_btn {
+      background: #fff;
+      color: #6e6d7b;
+      // border-radius: 8px;
+      display: block;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 200ms;
+
+      &:hover {
+        background: rgba(228, 230, 236, 0.7);
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

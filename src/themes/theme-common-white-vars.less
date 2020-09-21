@@ -1,0 +1,102 @@
+// 本文件是对 ant-design:
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+// 相应变量值的覆盖
+// 注意：只需写出要覆盖的变量即可（不需要覆盖的变量不要写）
+// http://www.iconfont.cn/collections/detail?cid=790
+//
+// 注意：本文件只提供不可变的基础配置，无法进行热替换，因此无法在此文件之后覆盖。
+// npm run build之后就已经将所有变量编译到css中。
+
+// ! 由于aminer-vars中包含大量的新建变量，会导致其他系统起不来。
+// ! 因此暂时解决方案是：其他系统皮肤，直接引入aminer-vars来使其不报错。
+@import "./theme-aminer-vars.less";
+
+// @import "../../node_modules/antd/lib/style/themes/default.less";
+
+@primary-color: #5a7fd2;
+@content-wrapper: 1170px;
+@content-wrapper-m: 992px;
+@content-wrapper-s: 768px;
+// @item-active-bg: #5a7fd2;
+// @item-hover-bg : @primary-1;
+// @item-hover-bg: #5a7fd2;
+
+// @aminer-bg-color-header: #e2e2e2;
+@aminer-bg-color-footer: #fff;
+// @icon-url: "/antd/iconfont"; // ! I put this line in configure file.
+
+@font-family-no-number: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB",
+  "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+  'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+
+@border-radius-base: 3px;
+@border-radius-sm: 2px;
+@shadow-color: rgba(0, 0, 0, 0.05);
+@shadow-1-down: 4px 4px 40px @shadow-color;
+// @border-color-split: #f4f4f4;
+@border-color-split: #e8e8e8;
+@border-color-base: #e5e5e5;
+@menu-dark-bg: #3e3e3e;
+//@text-color: #666;
+@text-color: #1d2129;
+
+// *** from aminer.less
+@color-white: #fff;
+@color-orange: #EC6B10;
+@color-base: #181818;
+@color-high: #3C80BC;
+@color-high-red: #8B0100;
+@color-high-green: #067C08;
+// *** end
+
+@animation-duration-slow: .2s; // Modal
+@animation-duration-base: .15s;
+@animation-duration-fast: .1s; // Tooltip
+
+@font-size-base: 14px;
+@font-size-13: 13px;
+@font-size-12: 12px;
+@font-size-xs: 11px;
+
+// 其余新加入的设置应该放vars.less里面.
+// 扯淡，
+@font-family-2: "STHeitiSC-Medium", "STHeiti", "Heiti SC", "Hiragino Sans GB", SimHei, "AvenirNext-Regular", "Helvetica Neue", "lucida grande", "PingFangHK-Light", "WenQuanYi Micro Hei", "Droid Sans", "Roboto", Helvetica, Tahoma, Arial, "sans-serif";
+@text-color-gray: #90949c;
+
+@input-placeholder-color: #ddd;
+
+@default-border-color: #e5e6e9; // #dfe0e4 #d0d1d5
+@background-color-gray: #f6f7f9;
+
+@font-size-sm: @font-size-base - 1px; // New ~
+
+@orange: #ff7f0e;
+@dark-gray: #4b4f56;
+@max-width-page: 1128px;
+@min-width-page: 375px; // iphone6 width;
+@menu-dark-bg: #3e3e3e;
+
+// --------------------------------------
+// vars
+// --------------------------------------
+
+@bg-color-header: white;
+@bg-color-footer: white;
+@bg-color-content: white;
+@font-size-huge: @font-size-base + 6px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-large: @font-size-base + 2px;
+@font-size-larger: @font-size-base + 4px;
+
+@bg-color-main: #3e9bc9;
+
+@padding-outer-h: 20px;
+@padding-outer-v: 20px;
+
+@btn-bg-color: #3e9bc9;
+@text-count-color: #f1742f;
+
+@bgtexture: url(/images/bgtexture.png);

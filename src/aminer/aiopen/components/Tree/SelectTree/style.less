@@ -1,0 +1,32 @@
+.SelectTree {
+  width: 230px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  margin-top: 15px;
+  :global {
+    .ant-tree li .ant-tree-node-content-wrapper {
+      height: auto !important;
+      width: 120px;
+      white-space: pre-wrap;
+    }
+
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fafafa;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c7c8c7;
+    /*滚动条的圆角*/
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .SelectTree {
+    width: 100%;
+    max-height: 322px;
+  }
+}

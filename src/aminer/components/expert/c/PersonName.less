@@ -1,0 +1,67 @@
+@import '~themes/vars';
+
+.personName {
+  :global {
+    .person_name {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      color: #181818;
+      font-weight: 700;
+      font-size: 18px;
+      // display: flex; align-items: baseline;
+      font-family: 'STHeitiSC-Medium', 'STHeiti', 'Heiti SC', 'Hiragino Sans GB', 'SimHei',
+        'AvenirNext-Regular', 'Helvetica Neue', 'lucida grande', 'PingFangHK-Light',
+        'WenQuanYi Micro Hei', 'Droid Sans', 'Roboto', Helvetica, Tahoma, Arial, 'sans-serif';
+
+      .bind_icon {
+        color: #d3d3d3;
+        margin-left: 6px;
+        .icon {
+          font-size: 18px;
+        }
+      }
+      .bind_icon.bind {
+        color: @zp_blue;
+      }
+
+      .profileName {
+        word-break: break-all;
+      }
+      .sub {
+        font-size: 16px;
+        line-height: 27px;
+        position: relative;
+        // top: -1px;
+      }
+
+      .title {
+        
+        .titleName {
+          color: #181818;
+          display: inline-block;
+          cursor: pointer;
+        }
+        i {
+          color: #d3d3d3;
+          margin-left: 5px;
+          cursor: auto;
+        }
+        .bind {
+          color: @color-high;
+        }
+        .covid {
+          border: 1px solid #dfdfdf;
+          color: #dd4b39;
+          border-radius: 2px;
+          font-style: italic;
+          font-size: 12px;
+          line-height: 14px;
+          margin-left: 5px;
+          padding: 4px 6px 2px 4px;
+          font-family: @font-helvetica;
+        }
+      }
+    }
+  }
+}

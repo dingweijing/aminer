@@ -1,0 +1,31 @@
+@leftBlockWidth: 28%;
+.flexGrow{
+  flex-grow: 1;
+}
+.recommend {
+  width: calc(100% - @leftBlockWidth - 10px);
+  // min-width: 100%;
+  min-width: calc(100% - @leftBlockWidth - 10px);
+  // flex-grow: 1;
+  // margin: 0px 20px 0px 20px;
+  :global {
+    .like_legend {
+      display: flex;
+      font-size: 18px;
+      align-items: center;
+      svg {
+        margin-right: 16px;
+      }
+    }
+    .like_content {
+      box-shadow: 0px 0px 6px 2px #f3f3f3;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recommend {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,59 @@
+@import "~themes/vars";
+
+.dailyNews {
+  display: flex; font-size: 13px; margin-bottom: 20px;
+
+  :global {
+    a { color: #000015; }
+
+    .daily_title {
+      min-width: 200px; position: relative;
+      background: #F5F5F5; font-size: 16px;
+      padding-left: 35px; display: flex; align-items: center;
+      a { color: @color-high; }
+
+      &:after {
+        display: block; content: ''; width: 0; height: 0;
+        border: 5px solid #F5F5F5;
+        transform: rotate(45deg);
+        position: absolute; top: 50%; margin-top: -4px;
+        right: -5px;
+      }
+    }
+    .daily_list {
+      display: flex; margin-bottom: 0; margin-left: 20px;
+      width: calc(100% - 220px); padding-left: 0;
+
+      .list_item {
+        width: calc(100% / 3); padding-right: 25px;
+        a:hover{
+          color: @color-high; text-decoration: underline;
+        }
+        img { width: 28px; position: relative; top: -5px; left: 5px;}
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dailyNews { 
+    flex-direction: column; margin-bottom: 12px;
+    :global {
+      .daily_title {
+        line-height: 26px; padding-left: 10px; font-size: 14px;
+        &:after {
+          display: none;
+        }
+      }
+
+      .daily_list {
+        margin: 0; width: 100%; margin-top: 10px;
+        flex-direction: column; 
+
+        .list_item {
+          padding: 0 10px; width: 100%; margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}

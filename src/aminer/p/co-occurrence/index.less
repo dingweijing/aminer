@@ -1,0 +1,39 @@
+.cooccurrence {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  // margin-left: 20px;
+  width: 100%;
+  align-items: center;
+  .legend {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    top: 52px;
+    select {
+      width: 93px;
+      margin-left: 5px;
+      font-size: 10px;
+    }
+  }
+  .background {
+    fill: #eee;
+  }
+  .cellHover:hover {
+    cursor: pointer;
+  }
+  .expertNameHover {
+    fill: red;
+  }
+
+  line {
+    stroke: #fff;
+  }
+
+  text {
+    font: 10px sans-serif;
+  }
+  text.active {
+    fill: red;
+  }
+}

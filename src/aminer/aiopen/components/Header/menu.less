@@ -1,0 +1,37 @@
+.menu {
+  display: flex;
+  height: inherit;
+  :global {
+    .menuItem {
+      display: flex;
+      width: inherit;
+      height: inherit;
+      justify-content: center;
+      align-items: center;
+      margin: 0 40px;
+      color: #fff;
+      position: relative;
+      &>span {
+        display: inline;
+      }
+    }
+    .menuItem::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      bottom: 0;
+      height: 3px;
+      background-color: #fff;
+      transition: width ease-in .2s;
+      border-radius: 1px;
+    }
+    .menuItem:hover::after {
+      width: 100%;
+    }
+    .active::after {
+      width: 100%;
+    }
+  }
+
+}

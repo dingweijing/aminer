@@ -1,0 +1,22 @@
+
+.popdelay {
+  position: relative;
+
+  :global {
+    .dropcontent {
+      // position: relative; z-index: 10;
+      position: absolute;
+      top: 50px;
+      right: -11px; z-index: 10;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 200ms;
+      z-index: 9999;
+    }
+
+    .dropcontent.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

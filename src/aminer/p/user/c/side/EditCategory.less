@@ -1,0 +1,192 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.editCategory {
+  :global {
+    .under_color {
+      opacity: 1 !important;
+      border-bottom: 1px solid #9e9ea7 !important;
+    }
+    .up {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      .left,
+      .right {
+        display: flex;
+        align-items: center;
+      }
+      .left {
+        width: calc(100% - 50px);
+        .name {
+          display: inline-block;
+          width: calc(100% - 26px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .right {
+        min-width: 50ps;
+        visibility: hidden;
+        justify-content: flex-end;
+        opacity: 0;
+        .common-transition();
+        .opr_btn {
+          width: 20px;
+          height: 20px;
+          background: rgba(76, 194, 117, 0.7);
+          transition: all 300ms;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        .opr_btn:hover {
+          background: rgba(76, 194, 117, 1);
+        }
+        .opr_btn.remove_btn,
+        .opr_btn.cancel_btn {
+          background: rgba(224, 32, 32, 0.5);
+        }
+        .opr_btn.cancel_btn {
+          svg {
+            font-size: 10px;
+          }
+        }
+        .opr_btn.edit_btn {
+          svg {
+            font-size: 12px;
+          }
+        }
+        .opr_btn.remove_btn:hover,
+        .opr_btn.cancel_btn:hover {
+          background: rgba(224, 32, 32, 0.7);
+        }
+        .opr_btn.edit_btn,
+        .opr_btn.confirm_btn {
+          margin-right: 4px;
+        }
+        svg {
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+    }
+    .up .right {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .color {
+      position: relative;
+      transition: all 300ms;
+      .color_icon {
+        background: inherit;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        .color_list {
+          position: absolute;
+          left: 22px;
+          top: -18px;
+          z-index: 4;
+          transition: all 300ms linear;
+          transform-origin: left center;
+          transform: scale(1) rotateX(0deg);
+        }
+        .color_list.hide {
+          transform: scale(0) rotateX(180deg);
+        }
+      }
+    }
+    .name {
+      .ant-input {
+        padding: 0;
+        line-height: 17px;
+        height: 17px;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      .ant-input:focus {
+        box-shadow: none;
+      }
+    }
+    .dots {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 2px;
+      height: 10px;
+      position: absolute;
+      bottom: 1px;
+      right: -4px;
+
+      .dot {
+        width: 2px;
+        height: 2px;
+      }
+      .dot:nth-child(1) {
+        background: #e4484f;
+      }
+      .dot:nth-child(2) {
+        background: #3019ff;
+      }
+      .dot:nth-child(3) {
+        background: #00e8c3;
+      }
+    }
+  }
+}
+
+.colorList {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  padding: 6px 15px;
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotateZ(45deg);
+    box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.6);
+  }
+  :global {
+    .color_span {
+      width: 20px;
+      height: 28px;
+      transition: all 300ms;
+    }
+    .color_span.select {
+      height: 40px;
+    }
+    .color_span:hover {
+      height: 40px;
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+}
+@media screen and(max-width: 992px) {
+}
+
+@media screen and(max-width: 768px) {
+}

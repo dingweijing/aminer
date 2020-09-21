@@ -1,0 +1,22 @@
+.basicForm {
+  .active {
+    color: #0095FF;
+  }
+  :global {
+    .ant-form-item-required::after {
+      display: inline-block;
+      margin-right: 4px;
+      color: #f5222d;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*' !important;
+    }
+    .ant-form-item-required::before {
+      content: '';
+    }
+    .ant-form-item-label {
+      text-align: left;
+    }
+  }
+}

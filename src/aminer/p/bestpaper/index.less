@@ -1,0 +1,46 @@
+@import "~themes/theme-aminer-func";
+
+.bestPaperHome {
+    .aminer-main-wrap();
+    padding-top: 16px;
+    :global {
+      h2 {
+        margin-bottom: 20px;
+        // display: flex;
+        .right {
+          float: right; display: flex;
+          font-size: 14px;
+          a { color: #3C80BC; text-decoration: underline; font-weight: bold; margin-left: 10px; }
+        }
+      }
+      .text {
+          text-indent: 2em;
+      }
+
+    }
+    .paperTable {
+      .alink {
+        color: #3C80BC;
+      }
+    }
+    @media screen and (max-width: 768px) {
+        .paperTable {
+            :global {
+                .ant-table-thead > tr  {
+                    th { padding: 4px; }
+                    th:nth-child(3){
+                      display: none;
+                    }
+                  }
+                  .ant-table-tbody > tr > {
+                    td {
+                      padding: 4px;
+                    }
+                    td:nth-child(3) {
+                      display: none;
+                    }
+                  }
+            }
+          }
+    }
+}

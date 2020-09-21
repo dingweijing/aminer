@@ -1,0 +1,156 @@
+.RankComponent {
+  background-color: #fff;
+  display: flex;
+  border-radius: 12px;
+  box-shadow: 0px 10px 18px 0px rgba(204, 204, 204, 0.5);
+  margin-bottom: 40px;
+  cursor: pointer;
+  transform: none;
+  transition: transform ease .5s;
+  position: relative;
+  :global {
+    .player-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+    .info {
+      &>h3 {
+        color: #575757;
+        font-size: 29px;
+      }
+      .desc {
+        font-size: 14px;
+        color: #7a7a7a;
+        margin-top: 14px;
+        height: 82px;
+        overflow: hidden;
+      }
+      .btn {
+        margin-top: 26px;
+        a {
+          color: #f56d26;
+          font-size: 14px;
+          margin-right: 62px;
+        }
+      }
+    }
+    .videoBtn {
+      background: rgba(0, 0, 0, 0.08);
+      &>img {
+        width: 49px;
+        height: 49px;
+      }
+    }
+  }
+}
+
+.RankComponent:hover {
+  transform: scale(1.05);
+  transition: transform ease .5s;
+}
+
+.vertical {
+  width: 387px;
+  height: 348px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: height ease 0.2s;
+
+  :global {
+    .info {
+      width: 326px;
+      margin: 10px auto;
+      .btn {}
+      .desc {
+        margin-top: 5px;
+      }
+    }
+  }
+  .playerWrapper {
+    width: 100% !important;
+    border-radius: 14px 0 0 !important;
+  }
+}
+.vertical:not(:nth-child(3n + 1)) {
+  margin-right: 18px;
+}
+
+
+
+.align {
+  width: 1200px;
+  padding: 35px 43px;
+  :global {
+    .info {
+      margin-left: 58px;
+      .desc {
+        margin-top: 0;
+        height: 130px;
+        overflow-y: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .RankComponent:hover {
+    transform: none;
+  }
+  .vertical {
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    :global {
+      .info {
+        width: 313px;
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .btn {
+          margin: 10px 0;
+          display: flex;
+          justify-content: space-between;
+          a {
+            margin-right: 0;
+          }
+        }
+      }
+      /* .am-aminer-components-video-tiny-player-TinyPlayer>img {
+        width: 92% !important;
+      } */
+      .desc {
+        max-height: 200px;
+        overflow: unset;
+      }
+      .btn {
+        width: auto;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+  }
+  .vertical:not(:nth-child(3n + 1)) {
+    margin-right: 0;
+  }
+  .player {
+    border-radius: 14px 14px 0 0 !important;
+    width: 356px !important;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  /*  .vertical:hover {
+    height: 383px;
+    transition: height ease 0.5s;
+    :global {}
+  } */
+
+}

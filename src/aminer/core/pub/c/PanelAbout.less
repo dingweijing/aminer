@@ -1,0 +1,117 @@
+@import "~themes/vars";
+
+.content {
+  padding: 25px 20px;
+  .btns {
+    position: relative; display: flex; width: 100%; font-size: 12px;
+    margin-bottom: 25px;
+    :global {
+      .ant-btn {
+        padding: 0 10px; width: 100%; font-size: 12px; background: #F5F5F5;
+        border-radius: 0;
+      }
+    }
+    .btn {
+      position: relative; margin-left: -1px; z-index: 2;
+
+      &:hover { z-index: 5; }
+      &:first-child { margin-left: 0; }
+      // width: 25%;
+
+      i { margin-right: 5px; }
+
+      &.mark {}
+
+      &.marked {
+        position: relative;
+        .mark {
+          background: @color-high; color: #fff; border-color: @color-high;
+        }
+        .unmark { display: none; }
+
+        &:hover {
+          .unmark { display: block; }
+          .mark { display: none; }
+        }
+      }
+    }
+  }
+
+  .rating {
+    padding: 15px 0; margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    display: flex; justify-content: space-between;
+
+    .rateLine {
+      margin-bottom: 0;
+    }
+
+    :global {
+      .ant-rate {
+        color: #FFAE00;
+      }
+    }
+    .score {
+      width: 100px; display: flex; justify-content: center; align-items: center;
+      border-left: 1px solid #eee;
+
+      i {
+        font-size: 36px; position: relative;
+
+        span {
+          position: absolute;
+          font-size: 16px;
+          color: #fff;
+          top: 9px;
+          left: 11px;
+        }
+      }
+    }
+
+    .userRate {
+      display: flex; align-items: center;
+      span { margin-right: 10px; }
+      ul { position: relative; top: -2px; }
+    }
+    .rate { font-size: 22px; color: #FFAE00; margin-left: 10px;}
+    .views { float: right; }
+    .citation { color: #a94442; font-weight: bold; margin-right: 10px;}
+    .bibtex { color: #3c763d;}
+  }
+
+  .confInfo {
+    font-size: 13px; margin-bottom: 15px;
+  }
+
+  .oprs {
+    display: flex; align-items: center; height: 20px;
+    font-size: @font-size-12; line-height: 20px;
+    .cited {
+      color: @color-high;
+      // font-weight: bold;
+      &.zero { color: #999; }
+    }
+    .bibtex {
+      color: @color-high-green; cursor: pointer; font-weight: bold;
+      i { margin-right: 2px; }
+    }
+    .views {
+      color: #555;
+      display: flex; align-items: center;
+      svg, i { margin-right: 4px; }
+
+    }
+    .split { margin: 0 10px; color: @border-color-split; }
+  }
+}
+
+.dataSourceModal {
+  margin: 12px 16px;
+  .btnLine {
+    text-align: right;
+    .btn {
+      margin: 0 8px;
+    }
+  }
+}

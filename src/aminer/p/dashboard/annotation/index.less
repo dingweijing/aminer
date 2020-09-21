@@ -1,0 +1,52 @@
+@import "~themes/vars";
+@import "~themes/theme-aminer-func";
+
+
+.annotationContect{
+  
+  :global {
+    .create_btn {
+      padding: 5px 8px; background: #428bca;
+      display: inline-block; color: #fff;
+      margin-bottom: 8px;
+    }
+    .annotation_list {
+        padding: 0; background: #fff;
+      .list_item {
+        display: flex; font-size: 13px; font-family: @font-helvetica;
+        &:first-child { background: #ebebeb; font-weight: bold; }
+        span { border-bottom: 1px solid #bbb; padding: 8px; margin: 0 2px;}
+        a { color:#428bca; }
+        .row1 {
+          width: 45px; min-width: 45px; text-align: center;
+        }
+  
+        .row2 {
+          max-width: 220px; min-width: 220px;
+        }
+  
+        .row4 {
+          flex-grow: 1;
+        }
+        .row3 {
+          max-width: 220px; min-width: 220px;
+        }
+        .row5 {
+          max-width: 90px; min-width: 90px; text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 768px) {
+}

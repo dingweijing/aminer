@@ -1,0 +1,56 @@
+@import "~themes/vars";
+
+.langindector {
+  margin: 0 10px;
+  :global {
+    .simpleLanguage {
+      svg {
+        font-size: 20px;
+      }
+
+      &.hover {
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+
+    }
+
+    .change_language_tip {
+      .ant-tooltip-content {
+        .ant-tooltip-inner {
+          box-shadow: none !important;
+        }
+      }
+    }
+    .change_language_tip_home {
+      .ant-tooltip-inner {
+        background: #0095ff;
+        box-shadow: none;
+      }
+      .ant-tooltip-arrow::before {
+        background: #0095ff;
+        box-shadow: none;
+      }
+    }
+
+  }
+}
+:global {
+  .change_language_tip, .change_language_tip_home {
+    .ant-tooltip-content {
+      .ant-tooltip-inner {
+        box-shadow: 0px 0px 4px rgb(2, 26, 36);
+      }
+    }
+  }
+}
+
+@media (min-width: 319px) and (max-width: 736px) {
+  .langindector {
+    margin: 0 5px;
+  }
+}

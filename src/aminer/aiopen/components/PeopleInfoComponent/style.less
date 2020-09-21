@@ -1,0 +1,110 @@
+.PeopleInfoComponent {
+  width: 1160px;
+  display: flex;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  align-items: center;
+  border-radius: 8px;
+  :global {
+    .left {
+      &>img {
+        width: 124px;
+        height: 152px;
+        border-radius: 8px;
+      }
+    }
+    .mid {
+      width: 600px;
+      margin-left: 30px;
+      .name {
+        font-size: 22px;
+        color: #333333;
+        margin-bottom: 10px;
+      }
+      .desc {
+        color: #777777;
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        &>span {
+          display: block;
+          padding: 0 14px;
+          border-right: 1px solid #979797;
+        }
+        &>span:first-child {
+          padding-left: 0;
+        }
+        &>span:last-child {
+          border-right: none;
+        }
+      }
+      .tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &>span {
+          display: flex;
+          background-color: #E9EAF6;
+          height: 35px;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          color: #676767;
+          white-space: nowrap;
+          margin: 5px;
+        }
+      }
+      .quoteNum {
+        color: #808080;
+        font-size: 15px;
+        &>.num {
+          color: #474EE3;
+        }
+      }
+    }
+    .right {
+      border-left: 1px solid #c9c9c9;
+      padding: 0 25px;
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .lleft {
+        color: #949494;
+        font-size: 14px;
+        &>.num {
+          color: #3C3C3C;
+        }
+      }
+      .rright {
+        .btn {
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: #474EE3;
+          border: 1px solid #474EE3;
+          width: 103px;
+          height: 35px;
+          border-radius: 18px;
+          margin-bottom: 23px;
+          transition: all ease .5s;
+          box-shadow: 0.5px 0 0.5px #474EE3;
+          &>span {
+            padding-right: 10px;
+          }
+        }
+        .btn:hover {
+          color: #fff;
+          background-color: #474EE3;
+          box-shadow: 1px 1px 5px #474EE3;
+          transition: all ease .5s;
+        }
+      }
+    }
+  }
+}

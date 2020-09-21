@@ -1,0 +1,31 @@
+.urlPart {
+  :global {
+    .url {
+      color: #0d0c22;
+      span {
+        color: #0d0c22;
+      }
+      i,
+      svg {
+        color: #0d0c22;
+        margin-right: 8px;
+        position: relative;
+      }
+      .url-link {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 15px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      // &:hover svg {
+      //   color: @color-high;
+      // }
+      // &:hover .url-link {
+      //   display: inline-block;
+      // }
+    }
+  }
+}

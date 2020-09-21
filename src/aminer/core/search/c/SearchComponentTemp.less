@@ -1,0 +1,218 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.searchComponent {
+  min-height: 150px;
+  width: 100%;
+  :global {
+    .searchContent .leftRight {
+      display: flex;
+      flex-direction: column;
+      .personListRightZone {
+        margin-left: 20px;
+        // .topicIntro {
+        //   position: relative;
+        //   min-width: 280px; width: 280px;
+        //   margin-left: 20px; margin-bottom: 10px;
+        //   padding: 0 1px;
+        //   cursor: pointer;
+        //   .topicBgImgWrap {
+        //     width: 100%;
+        //     display: flex; justify-content: center; align-items: center;
+        //     overflow: hidden;
+        //     .topicBgImg {
+        //       width: 100%;
+        //     }
+        //   }
+        //   .topicIntroTip {
+        //     position: absolute;
+        //     top: 0; left: 0; right: 0;
+        //     height: 100%;
+        //     display: flex; align-items: center; justify-content: center;
+        //     font-size: 22px; line-height: 26px; color: #fff;
+        //     text-align: center;
+        //     text-shadow: 0px 3px 2px #1F5076;
+        //     padding: 0px 12px;
+        //   }
+        // }
+      }
+      .personList {
+        flex-grow: 1;
+      }
+      .searchKgContent {
+        // display: none;
+      }
+    }
+    .resultTip {
+      margin: 0 0 15px 0;
+      padding-left: 10px;
+      font-size: 13px;
+
+      .searchQuery {
+        // color: @color-orange;
+        // .match-text();
+        font-style: italic;
+      }
+      em {
+        font-style: normal;
+        // .tiny-number()
+      }
+      .tipWrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .filterItem {
+          margin: 0 4px;
+          cursor: pointer;
+          padding: 0 4px;
+          font-size: 12px;
+          color: #e31917;
+          border: 1px solid #e31917;
+          background: #fff;
+          border-radius: 2px;
+          overflow: hidden;
+          padding-right: 25px;
+          position: relative;
+          :global .anticon.anticon-close {
+            background: #e31917;
+            color: #fff;
+            position: absolute;
+            right: -2px;
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .filterItem:hover {
+          .filterCount {
+            color: white;
+          }
+        }
+      }
+    }
+    .controlLine {
+      // display: flex; justify-content: space-between; align-items: center;
+      // background: #f9f9f9; border: 1px solid #e8e8e8;
+      // margin-bottom: 10px;
+      .smallPagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+      :global {
+        .toggleMode {
+          cursor: pointer;
+          margin-right: 12px;
+        }
+        .activeMode {
+          color: #3c80bc;
+        }
+      }
+    }
+    .paginationWrap {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      :global {
+        // .ant-pagination .ant-pagination-item:nth-last-of-type(3) {
+        //   display: none;
+        // }
+        // .ant-pagination .ant-pagination-item:nth-of-type(2) {
+        //   display: inline-block;
+        // }
+      }
+    }
+    .smallPagination {
+      // margin: 9px 0; display: flex; justify-content: flex-end;
+      // position: absolute; top: 44px; right: 2px;
+
+      :global {
+        .ant-pagination-disabled .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-next .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-prev .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-simple .ant-pagination-simple-pager input {
+          pointer-events: none;
+          border: none;
+          background: transparent;
+          margin-right: 0;
+          padding: 0;
+          color: @color-high;
+        }
+        .ant-pagination-prev,
+        .ant-pagination-simple .ant-pagination-simple-pager {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.trajecotry {
+  margin-top: 10px;
+  float: right;
+  padding: 5px 8px;
+  background: #000;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .searchComponent {
+    :global {
+      .controlLine {
+        .smallPagination {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+  .searchComponent {
+    :global {
+      .searchContent .leftRight {
+        flex-direction: row;
+        justify-content: space-between;
+        .personList {
+          flex-grow: 1;
+          width: calc(100% - 345px;);
+        }
+        // .searchKgContent { min-width: 320px; width: 320px; margin-left: 20px;}
+      }
+      .controlLine {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f9f9f9;
+        border: 1px solid #e8e8e8;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: @content-wrapper) {
+  .searchComponent {
+    :global {
+      .searchContent .leftRight {
+        .personList {
+          flex-grow: 1;
+          width: calc(100% - 460;);
+        }
+        // .searchKgContent { min-width: 445px; width: 445px; }
+      }
+    }
+  }
+}

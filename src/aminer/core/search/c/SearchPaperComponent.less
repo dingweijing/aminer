@@ -1,0 +1,392 @@
+@import '~themes/vars';
+@import '~themes/theme-aminer-func';
+
+.aminerPaperList {
+  :global {
+  }
+}
+
+.paperComponent {
+  // margin-top: 24px !important;
+  // margin: 24px auto 0 !important;
+  // .filters {
+  //   width: 200px;
+  //   padding-right: 20px;
+  // }
+  :global {
+    .paper-item {
+      .title-line {
+        display: flex;
+        justify-content: space-between;
+        .title-right-zone {
+          min-width: 100px;
+        }
+      }
+      .content {
+        .oprs {
+          & > *:last-child {
+            margin-left: auto;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .filterItem {
+      margin: 0 4px;
+      cursor: pointer;
+      padding: 0 4px;
+      font-size: 12px;
+      color: #e31917;
+      border: 1px solid #e31917;
+      background: #fff;
+      border-radius: 2px;
+      overflow: hidden;
+      padding-right: 25px;
+      position: relative;
+      :global .anticon.anticon-close {
+        background: #e31917;
+        color: #fff;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .filterItem:hover {
+      .filterCount {
+        color: white;
+      }
+    }
+  }
+
+  .searchResultTopZone {
+    display: flex;
+    justify-content: center;
+    margin: -10px 0 10px;
+
+    
+  }
+
+  .moreRes {
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(228,230,236,.6);
+    color: #222;
+    cursor: pointer;
+    transition: all 300ms;
+    // span {
+    //   text-decoration: underline;
+    // }
+
+    &:hover {
+      background: rgba(228,230,236,.8);
+    }
+  }
+
+  .paperSearch {
+    // position: relative;
+    .searchResultWrap {
+      display: flex;
+      .searchResult {
+        width: 100%;
+      }
+    }
+    // flex-grow: 1;
+    //   width: 0;
+    .bibTab {
+      padding: 10px;
+    }
+
+    .searchResultLine {
+      display: flex;
+      justify-content: space-between;
+
+      .resultTip {
+        margin: 0 0 10px 0;
+        font-size: 13px;
+        display: flex;
+
+        .searchQuery {
+          // color: @color-orange;
+          // .match-text();
+          color: #d62339;
+          font-weight: 600;
+          font-style: italic;
+        }
+        em {
+          font-style: normal;
+          // .tiny-number()
+        }
+        .tipWrap span {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+      }
+      .mobileFilter {
+        display: none;
+        float: right;
+        .mobileFilterIcon {
+          width: 14px;
+          height: 8px;
+        }
+      }
+      .mobileStatistics {
+        display: none;
+        float: right;
+      }
+    }
+
+    .controlLine {
+      // display: flex; justify-content: space-between; align-items: center;
+      // background: #f9f9f9; border: 1px solid #e8e8e8;
+      // margin-bottom: 10px;
+
+      .smallPagination {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    .smallPagination {
+      // margin: 9px 0; display: flex; justify-content: flex-end;
+      // position: absolute; top: 44px; right: 2px;
+
+      :global {
+        .ant-pagination-disabled .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-next .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-prev .ant-pagination-item-link {
+          background: transparent;
+        }
+        .ant-pagination-simple .ant-pagination-simple-pager input {
+          pointer-events: none;
+          border: none;
+          background: transparent;
+          margin-right: 0;
+          padding: 0;
+          color: #3c80bc;
+        }
+        .ant-pagination-prev,
+        .ant-pagination-simple .ant-pagination-simple-pager {
+          margin-right: 0;
+        }
+        .ant-pagination-simple-pager input {
+          text-align: right;
+        }
+        .ant-pagination-slash {
+          margin: 0 5px;
+        }
+        .ant-pagination-prev .ant-pagination-item-link {
+          text-align: right;
+        }
+        .ant-pagination.ant-pagination-simple .ant-pagination-simple-pager {
+          font-size: 12px;
+        }
+      }
+    }
+    .paperListTopZone {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .listContent {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      .paperList {
+        :global {
+          .paper-item {
+            padding: 16px 0 0;
+          }
+          .paper-title {
+            cursor: pointer;
+          }
+          .content {
+            display: flex;
+            flex-direction: column;
+          }
+          .conf-info-zone {
+            order: 1;
+          }
+          .oprs {
+            order: 2;
+            flex-wrap: wrap;
+            font-size: 12px;
+            margin-top: 5px;
+            border-top: 1px dashed #dfdfdf;
+            padding: 6px 0 3px;
+            .cited,
+            .bibtex,
+            .views,
+            .urlPart {
+              display: none;
+            }
+            .paperVote::before,
+            .paperCollect::before {
+              content: '';
+              margin: 0px;
+            }
+          }
+          .title-line {
+            padding-right: 0px;
+          }
+          .venue-link {
+            font-size: @font-size-12;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .venue-line {
+              font-size: @font-size-13;
+              color: #444444;
+              margin: 5px 0 0;
+            }
+            .paper-link {
+              display: flex;
+              flex-direction: row;
+              margin-top: 9px;
+              .anchor {
+                width: 79px;
+                height: 20px;
+                color: #222222;
+                background-color: #fff3e6;
+                border-radius: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'PingFang SC';
+                cursor: pointer;
+                &:hover {
+                  border: 1px solid #f7b500;
+                }
+              }
+              .anchor:last-child {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+      .searchKgContent {
+      }
+    }
+
+    .paperRightZone {
+      margin-left: 20px;
+    }
+
+    .paginationWrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+
+      // &.hide {
+      //   :global {
+      //     .ant-pagination .ant-pagination-item:nth-last-of-type(3){
+      //       display: none;
+      //     }
+      //   }
+      // }
+    }
+  }
+}
+
+.bibContent {
+  :global {
+    .ant-tabs.ant-tabs-card .ant-tabs-card-content > .ant-tabs-tabpane {
+      padding: 10px;
+      border: 1px solid #d3d3d3;
+      border-top: none;
+    }
+  }
+  .bibTitle {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  // .article { width: 750px; }
+  .paperComponent .paperSearch .listContent .paperList {
+    :global {
+      .oprs {
+        .cited,
+        .bibtex,
+        .views,
+        .urlPart {
+          display: block !important;
+        }
+        .paperVote::before {
+          content: '|';
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+  .paperComponent .paperSearch .listContent {
+    flex-direction: row;
+    justify-content: space-between;
+    .paperList {
+      flex-grow: 1;
+      width: calc(100% - 345px;);
+    }
+    // .searchKgContent { width: 320px; margin-left: 20px; }
+  }
+  .controlLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background: #f9f9f9;
+    // border: 1px solid #e8e8e8;
+    box-shadow: 0px 0px 4px 2px #e8e8e8;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and(min-width: @content-wrapper) {
+  .paperComponent .paperSearch .listContent {
+    .paperList {
+      flex-grow: 1;
+      width: calc(100% - 460px;);
+    }
+    // .searchKgContent { min-width: 445px; width: 445px;}
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // .filters {
+  //   display: none;
+  // }
+  .mobileFilter {
+    display: inline-block !important;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mobileStatistics {
+    display: inline-block !important;
+    margin: 0 8px;
+  }
+}

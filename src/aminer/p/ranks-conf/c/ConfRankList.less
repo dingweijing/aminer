@@ -1,0 +1,117 @@
+// @import "~themes/vars";
+// .confList {
+//   display: table; padding: 0; width: 100%; 
+//   border-collapse: collapse; font-size: 13px; color: #222;
+
+//   :global {
+//     .conf_item { 
+//       display: table-row; border: 1px solid #DFDFDF;
+//       height: 32px; vertical-align: middle;
+  
+//       &:first-child {
+//         height: 34px; font-weight: bold;
+//       }
+  
+//       &:nth-child(even) {
+//         background: #f7fdfb;
+//       }
+  
+//       .item {
+//         display: table-cell; text-align: center;
+//         vertical-align: middle; padding: 0 8px;
+        
+//         a { color: @color-high; }
+  
+//         &.item1 {
+//           width: 55px;
+//           border-right: 1px solid #DFDFDF;
+//         }
+//         &.item2 {
+//           text-align: left;
+//           border-right: 1px solid #DFDFDF;
+
+//           span {
+//             display: inline-block;  visibility: visible;
+//           }
+//         }
+//         &.item3 {
+//           text-align: left;
+//           width: 180px;
+//         }
+//         &.item4 {
+//           width: 80px;
+//           border-left: 1px solid #DFDFDF;
+//         }
+//         &.item5 {
+//           width: 90px;
+//           border-left: 1px solid #DFDFDF;
+//         } 
+//       }
+      
+//     }
+//   }
+//   :global {
+//     .ant-table-tbody > tr > td {
+//       padding: 8px;
+//     }
+//     .ant-rate { font-size: 12px; }
+//   }
+// }
+.confList {
+  .list {
+    .rate {
+      font-size: 12px;
+      :global {
+        .ant-rate-star {
+          margin-right: 2px;
+        }
+      }
+    }
+    .name {
+      color: #3C80BC;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .loader {
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // .confList {
+  //   :global {
+  //     // .conf_item {
+
+  //     //   &.conf_head {
+  //     //     .item2 { 
+  //     //       span { visibility: hidden; }
+  //     //     }
+  //     //   }
+  //     //   .item {
+  //     //     &.item2 {
+  //     //       // span { visibility: hidden; }
+  //     //     }
+  //     //     &.item3 {
+  //     //       // max-width: 80px; width: 80px;
+  //     //       display: none;
+  //     //     }
+  //     //   }
+  //     // }
+  //     .ant-table-thead > tr  {
+  //       th { padding: 4px; }
+  //       th:nth-child(3), th:nth-child(6), th:nth-child(7), th:nth-child(8){
+  //         display: none;
+  //       }
+  //     }
+  //     .ant-table-tbody > tr > {
+  //       td { padding: 4px; }
+  //       td:nth-child(3), td:nth-child(6), td:nth-child(7), td:nth-child(8){
+  //         display: none;
+  //       }
+  //     }
+  //   }
+  // }
+}

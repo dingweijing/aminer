@@ -1,0 +1,48 @@
+.personNoteEditBasic {
+  :global {
+    .threeInOne {
+      display: flex;
+      flex-wrap: wrap;
+      &>li {
+        width: 33.3%;
+      }
+      .ant-checkbox-wrapper {
+        // margin-top: .6rem;
+        .ant-checkbox {
+          margin: 0 .5rem 0 3rem;
+        }
+      }
+    }
+    .forkCheck {
+      .ant-checkbox-checked {
+        .ant-checkbox-inner {
+          &::after, &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 1.6px;
+            background-color: #ffffff;
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          }
+          &::before {
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+        }
+      }
+    }
+    .labelText { width: auto; }
+    .prompt_message { color: #999999; font-size: 12px; }
+  }
+  .timeAndUser {
+    color: #444;
+    text-align: right;
+    margin-bottom: 20px;
+    .text {
+      border: dashed 1px darkseagreen;
+      background-color: honeydew;
+      padding: 2px 4px;
+    }
+  }
+}

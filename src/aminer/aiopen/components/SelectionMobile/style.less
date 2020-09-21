@@ -1,0 +1,80 @@
+.SelectionMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  :global {
+    .mytitle {
+      color: #969696;
+      flex: 1;
+    }
+    .selection {
+      flex: 1;
+      color: #3F3F3F;
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+}
+
+.SelectionModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(38, 38, 38, 0.7);
+  z-index: 10;
+  transition: all ease 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  :global {
+    .selectionWrapper {
+      position: absolute;
+      bottom: 0;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      padding: 10px 20px 0;
+      max-height: 0px;
+      transition: max-height ease .2s;
+      z-index: 11;
+      .mytitle {
+        color: #3F3F3F;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .scroll {
+        li {
+          color: #636363;
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+        .active {
+          color: #474EE3;
+          font-weight: bold;
+          transition: color ease-in .2s;
+        }
+      }
+
+    }
+    .extendScroll {
+      max-height: 400px;
+      transition: max-height ease .3s;
+      .scroll {
+        overflow-y: scroll;
+        max-height: inherit;
+      }
+    }
+  }
+
+}
+
+:global {
+  .visibleClass {
+    visibility: visible;
+    opacity: 1;
+  }
+}
